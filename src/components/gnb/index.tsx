@@ -8,17 +8,17 @@ import { media } from '../share/media'
 const Logo = styled.img`
   width: 306px;
   height: 80px;
-  margin-left: 160px;
+  margin-left: 10rem;
   display: block;
 
   @media ${media.md} {
-    margin-left: 54px;
+    margin-left: 3.375rem;
   }
 `
 
 function GNB() {
   return (
-    <Container padding="12px 0">
+    <Container padding="0.75rem 0">
       <Logo src="/images/logo-gnb@3x.png" />
     </Container>
   )
