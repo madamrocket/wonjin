@@ -24,7 +24,6 @@ export default function Head({
           siteMetadata {
             title
             description
-            author
           }
         }
       }
@@ -60,10 +59,6 @@ export default function Head({
         {
           name: `twitter:card`,
           content: `summary`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author,
         },
         {
           name: `twitter:title`,

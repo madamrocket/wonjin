@@ -1,9 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby.io`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    keyword: [],
+    title: `원진물류`,
+    description: `세상은 점점 물류에 더 많은 것을 기대하고, 그 기대는 시시각각 변하고 있습니다. 그 기대를 만족시킬 물류의 새로운 길, 지금 원진물류를 만나보세요.`,
   },
   plugins: [
     `gatsby-plugin-styled-components`,

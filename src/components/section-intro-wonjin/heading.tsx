@@ -32,7 +32,7 @@ function Heading() {
   return (
     <Container position="relative">
       <Container position="relative" overflow="hidden" height={30}>
-        <CoverImage src="/images/main.png" />
+        <CoverImage src="/images/main-cover.png" />
       </Container>
       <MessageBox padding="3.25rem  2.938rem">
         <Text color="blue" fontSize={3} fontWeight="bold" inlineBlock>
