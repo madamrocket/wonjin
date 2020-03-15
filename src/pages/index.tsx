@@ -1,13 +1,13 @@
 import React from 'react'
-import { Link, PageRendererProps } from 'gatsby'
+import { Link } from 'gatsby'
 
 import { SITE_TITLE } from '../constants'
-import Layout from '../components/layout'
-import Head from '../components/head'
+import Layout from '../components/share/layout'
+import Head from '../components/seo'
 
-function IndexPage({ location }: PageRendererProps) {
+function IndexPage() {
   return (
-    <Layout location={location}>
+    <Layout>
       <Head title={SITE_TITLE} />
       <Link to="/page-2/">Go to page 2</Link>
     </Layout>

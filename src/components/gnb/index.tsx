@@ -1,11 +1,7 @@
 import { Link } from 'gatsby'
 import React from 'react'
 
-interface HeaderProps {
-  siteTitle?: string
-}
-
-const Header = ({ siteTitle = '' }: HeaderProps) => (
+const Header = () => (
   <header
     style={{
       background: `rebeccapurple`,
@@ -27,7 +23,7 @@ const Header = ({ siteTitle = '' }: HeaderProps) => (
             textDecoration: `none`,
           }}
         >
-          {siteTitle}
+          Wonjin
         </Link>
       </h1>
     </div>
