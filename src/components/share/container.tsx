@@ -7,6 +7,7 @@ import overflow, { Overflow } from '../mixins/overflow'
 import float, { Float } from '../mixins/float'
 import position, { Position } from '../mixins/position'
 import height, { Height } from '../mixins/height'
+import width, { Width } from '../mixins/width'
 
 export default styled.div<{
   margin?: Margin
@@ -16,6 +17,7 @@ export default styled.div<{
   float?: Float
   position?: Position
   height?: Height
+  width?: Width
 }>`
   ${margin}
   ${padding}
@@ -24,4 +26,5 @@ export default styled.div<{
   ${float}
   ${position}
   ${height}
+  ${width}
 `
