@@ -6,6 +6,7 @@ module.exports = {
     keyword: [],
   },
   plugins: [
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-typegen`,
     `gatsby-plugin-react-helmet`,
     {
