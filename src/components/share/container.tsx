@@ -19,6 +19,7 @@ export default styled.div<{
   height?: Height
   width?: Width
 }>`
+  box-sizing: border-box;
   ${margin}
   ${padding}
   ${maxWidth}

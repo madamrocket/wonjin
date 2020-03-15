@@ -9,7 +9,7 @@ enum Colors {
   green = '#48d8a3',
 }
 
-type Color = keyof typeof Colors
+export type Color = keyof typeof Colors
 
 export default function getColor(color: Color) {
   return Colors[color]
