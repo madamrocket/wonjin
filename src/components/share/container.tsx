@@ -1,5 +1,15 @@
 import styled from 'styled-components'
 
-const Container = styled.div``
+import margin, { Margin } from '../mixins/margin'
+import padding, { Padding } from '../mixins/padding'
+import maxWidth, { MaxWidth } from '../mixins/max-width'
 
-export default Container
+export default styled.div<{
+  margin?: Margin
+  padding?: Padding
+  maxWidth?: MaxWidth
+}>`
+  ${margin}
+  ${padding}
+  ${maxWidth}
+`

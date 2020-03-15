@@ -378,6 +378,8 @@ export type File = Node & {
   readonly ctime: Scalars['Date'];
   readonly birthtime: Maybe<Scalars['Date']>;
   readonly birthtimeMs: Maybe<Scalars['Float']>;
+  readonly blksize: Maybe<Scalars['Int']>;
+  readonly blocks: Maybe<Scalars['Int']>;
   /** Copy file to static directory and return public url to it */
   readonly publicURL: Maybe<Scalars['String']>;
   readonly childImageSharp: Maybe<ImageSharp>;
@@ -502,6 +504,8 @@ export enum FileFieldsEnum {
   ctime = 'ctime',
   birthtime = 'birthtime',
   birthtimeMs = 'birthtimeMs',
+  blksize = 'blksize',
+  blocks = 'blocks',
   publicURL = 'publicURL',
   childImageSharp___fixed___base64 = 'childImageSharp.fixed.base64',
   childImageSharp___fixed___tracedSVG = 'childImageSharp.fixed.tracedSVG',
@@ -714,6 +718,8 @@ export type FileFilterInput = {
   readonly ctime: Maybe<DateQueryOperatorInput>;
   readonly birthtime: Maybe<DateQueryOperatorInput>;
   readonly birthtimeMs: Maybe<FloatQueryOperatorInput>;
+  readonly blksize: Maybe<IntQueryOperatorInput>;
+  readonly blocks: Maybe<IntQueryOperatorInput>;
   readonly publicURL: Maybe<StringQueryOperatorInput>;
   readonly childImageSharp: Maybe<ImageSharpFilterInput>;
   readonly id: Maybe<StringQueryOperatorInput>;
@@ -1629,6 +1635,8 @@ export type Query_fileArgs = {
   ctime: Maybe<DateQueryOperatorInput>;
   birthtime: Maybe<DateQueryOperatorInput>;
   birthtimeMs: Maybe<FloatQueryOperatorInput>;
+  blksize: Maybe<IntQueryOperatorInput>;
+  blocks: Maybe<IntQueryOperatorInput>;
   publicURL: Maybe<StringQueryOperatorInput>;
   childImageSharp: Maybe<ImageSharpFilterInput>;
   id: Maybe<StringQueryOperatorInput>;
@@ -1723,6 +1731,8 @@ export type Query_allSitePageArgs = {
 export type Query_siteArgs = {
   buildTime: Maybe<DateQueryOperatorInput>;
   siteMetadata: Maybe<SiteSiteMetadataFilterInput>;
+  port: Maybe<IntQueryOperatorInput>;
+  host: Maybe<StringQueryOperatorInput>;
   polyfill: Maybe<BooleanQueryOperatorInput>;
   pathPrefix: Maybe<StringQueryOperatorInput>;
   id: Maybe<StringQueryOperatorInput>;
@@ -1830,6 +1840,8 @@ export type Query_allSitePluginArgs = {
 export type Site = Node & {
   readonly buildTime: Maybe<Scalars['Date']>;
   readonly siteMetadata: Maybe<SiteSiteMetadata>;
+  readonly port: Maybe<Scalars['Int']>;
+  readonly host: Maybe<Scalars['String']>;
   readonly polyfill: Maybe<Scalars['Boolean']>;
   readonly pathPrefix: Maybe<Scalars['String']>;
   readonly id: Scalars['ID'];
@@ -2033,6 +2045,8 @@ export enum SiteFieldsEnum {
   siteMetadata___title = 'siteMetadata.title',
   siteMetadata___description = 'siteMetadata.description',
   siteMetadata___author = 'siteMetadata.author',
+  port = 'port',
+  host = 'host',
   polyfill = 'polyfill',
   pathPrefix = 'pathPrefix',
   id = 'id',
@@ -2126,6 +2140,8 @@ export enum SiteFieldsEnum {
 export type SiteFilterInput = {
   readonly buildTime: Maybe<DateQueryOperatorInput>;
   readonly siteMetadata: Maybe<SiteSiteMetadataFilterInput>;
+  readonly port: Maybe<IntQueryOperatorInput>;
+  readonly host: Maybe<StringQueryOperatorInput>;
   readonly polyfill: Maybe<BooleanQueryOperatorInput>;
   readonly pathPrefix: Maybe<StringQueryOperatorInput>;
   readonly id: Maybe<StringQueryOperatorInput>;
@@ -2718,15 +2734,15 @@ export type StringQueryOperatorInput = {
   readonly glob: Maybe<Scalars['String']>;
 };
 
-export type Unnamed_1_QueryVariables = {};
-
-
-export type Unnamed_1_Query = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title' | 'description' | 'author'>> }> };
-
 export type SiteTitleQueryQueryVariables = {};
 
 
 export type SiteTitleQueryQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title'>> }> };
+
+export type Unnamed_1_QueryVariables = {};
+
+
+export type Unnamed_1_Query = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title' | 'description' | 'author'>> }> };
 
 export type GatsbyImageSharpFixedFragment = Pick<ImageSharpFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet'>;
 
@@ -2775,3 +2791,8 @@ export type GatsbyImageSharpSizes_withWebp_tracedSVGFragment = Pick<ImageSharpSi
 export type GatsbyImageSharpSizes_noBase64Fragment = Pick<ImageSharpSizes, 'aspectRatio' | 'src' | 'srcSet' | 'sizes'>;
 
 export type GatsbyImageSharpSizes_withWebp_noBase64Fragment = Pick<ImageSharpSizes, 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
+
+export type PagesQueryQueryVariables = {};
+
+
+export type PagesQueryQuery = { readonly allSitePage: { readonly nodes: ReadonlyArray<Pick<SitePage, 'path'>> } };
