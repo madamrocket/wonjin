@@ -10,10 +10,12 @@ export default styled.div<{
   fontWeight?: FontWeight
   fontSize?: number
   inlineBlock?: boolean
+  lignHeight?: number | string
 }>`
   ${margin}
   ${padding}
   ${fontWeight}
   ${({ fontSize }) => `font-size: ${fontSize || 1}rem;`}
   ${({ inlineBlock }) => inlineBlock && `display: inline-block;`}
+  ${({ lignHeight }) => `line-height: ${lignHeight || 1.5};`}
 `

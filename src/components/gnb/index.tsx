@@ -10,9 +10,9 @@ const Logo = styled(Link)`
   display: inline-block;
   width: 306px;
   height: 80px;
-  margin-left: 8.33333%;
   background-image: url(/images/logo-gnb@3x.png);
   background-size: 100%;
+  margin: 0.75rem 0 0.75rem 8.33333%;
 
   @media ${media.md} {
     display: block;
@@ -21,7 +21,7 @@ const Logo = styled(Link)`
 
 function GNB() {
   return (
-    <Container padding="0.75rem 0">
+    <Container overflow="hidden">
       <Logo to="/" />
       <Menu />
     </Container>
