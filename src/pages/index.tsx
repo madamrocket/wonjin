@@ -4,12 +4,13 @@ import { Link } from 'gatsby'
 import { SITE_TITLE } from '../constants'
 import Layout from '../components/share/layout'
 import Head from '../components/seo'
+import SectionIntroWonjin from '../components/section-intro-wonjin'
 
 function IndexPage() {
   return (
     <Layout>
       <Head title={SITE_TITLE} />
-      <Link to="/page-2/">Go to page 2</Link>
+      <SectionIntroWonjin />
     </Layout>
   )
 }
