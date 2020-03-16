@@ -14,7 +14,14 @@ module.exports = {
         path: `${__dirname}/static/`,
       },
     },
-    `gatsby-transformer-remark`,
+    `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: `${__dirname}/data`,
+      },
+    },
     `gatsby-plugin-typescript`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
