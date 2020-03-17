@@ -11,15 +11,25 @@ const HistoryFrame = styled(Container)`
 
   @media ${media.md} {
     order: 2;
+    max-width: 48rem;
+    width: 100%;
+    margin: 4rem auto 0 auto;
+  }
+`
+
+const HistoryText = styled(Text)`
+  @media ${media.md} {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
   }
 `
 
 function History() {
   return (
     <HistoryFrame margin="6.5rem 0 0 0">
-      <Text fontWeight="bold" fontSize={2.75} lignHeight={1.48}>
+      <HistoryText fontWeight="bold" fontSize={2.75}>
         Since 1993
-      </Text>
+      </HistoryText>
       <Text color="lightBlack" lignHeight={1.67}>
         원진물류는 1993년부터 국내 유수 기업에 물류 시설을 제공하며 성장해 온
         최장수 물류센터 전문기업입니다. 최첨단 물류센터를 직접 운영하며, 고객사

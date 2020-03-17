@@ -9,9 +9,12 @@ import { media } from '../share/media'
 const ContentFrame = styled.div`
   display: flex;
   padding-top: 6.5rem;
+  max-width: 53.06rem;
+  margin: 0 auto;
 
   @media ${media.md} {
     flex-direction: column;
+    padding-top: 1.813rem;
   }
 `
 

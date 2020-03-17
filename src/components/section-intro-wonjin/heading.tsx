@@ -20,6 +20,7 @@ const MessageBox = styled(Container)`
     transform: translateX(-50%);
     left: 50%;
     right: auto;
+    padding: 3.0319rem 0;
   }
 `
 

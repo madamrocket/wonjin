@@ -16,10 +16,15 @@ const KeywordFrame = styled(Containter)`
 
   @media ${media.md} {
     order: 1;
+    display: flex;
+    justify-content: center;
+    margin: 0;
   }
 `
 
 const Balloon = styled(Containter)`
+  width: 9.875rem;
+  height: 9.875rem;
   border: 2px solid ${getColor('blue')};
   border-radius: 100%;
   text-align: center;
