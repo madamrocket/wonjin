@@ -5,14 +5,23 @@ import Container from '../share/container'
 import Text from '../share/text'
 import { Card } from './types'
 import getColor from '../share/color'
+import { media } from '../share/media'
+
+const CardFrame = styled(Container)`
+  text-align: left;
+  width: 32.38%;
+
+  @media ${media.md} {
+    width: 100%;
+    &:not(:last-child) {
+      margin-bottom: 4.5rem;
+    }
+  }
+`
 
 const Image = styled.img`
   margin-bottom: 24px;
   width: 100%;
-`
-
-const CardFrame = styled(Container)`
-  text-align: left;
 `
 
 const Button = styled.button`
@@ -25,6 +34,7 @@ const Button = styled.button`
   height: 3.75rem;
   padding-left: 1.5rem;
   text-align: left;
+  margin-top: 1.5rem;
 
   &:before {
     content: '';
@@ -46,13 +56,18 @@ function CompetencyCard({ card }: { card: Card }) {
   return (
     <CardFrame>
       <Image src={image} />
-      <Text fontSize={1.25} fontWeight="bold" color="blue">
+      <Text
+        fontSize={1.25}
+        fontWeight="bold"
+        color="blue"
+        margin="0 0 0.75rem 0"
+      >
         Interview
       </Text>
-      <Text fontSize={2} fontWeight="bold" margin="0 0 1.5rem 0">
+      <Text fontSize={2} fontWeight="bold">
         {title}
       </Text>
-      <Text fontSize={1.25} padding="0 0 1.5rem 0">
+      <Text fontSize={1.25} margin="1.5rem 0 0 0">
         {description}
       </Text>
       <Button>글 확인하기</Button>

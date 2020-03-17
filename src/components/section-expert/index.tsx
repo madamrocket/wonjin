@@ -2,18 +2,34 @@ import React from 'react'
 import styled from 'styled-components'
 
 import data from './data.json'
-import CompetencyCard from './compentency-card'
+import ExpertCard from './expert-card'
 import Container from '../share/container'
+import { media } from '../share/media'
 import Text from '../share/text'
 
 const SectionExpertFrame = styled(Container)`
   max-width: 81.25rem;
   text-align: center;
+  margin: 0 auto;
+
+  @media ${media.md} {
+    max-width: 39.5rem;
+  }
+`
+
+const ExpertCardContainer = styled(Container)`
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3.5rem;
+
+  @media ${media.md} {
+    flex-direction: column;
+  }
 `
 
 function SectionExpert() {
   return (
-    <SectionExpertFrame padding="6rem 0">
+    <SectionExpertFrame padding="6rem 3%">
       <Text
         color="blue"
         lignHeight={2}
@@ -27,9 +43,11 @@ function SectionExpert() {
         탄탄한 물류 전문인력으로 구성된 원진물류 팀은 고객사의 성장과 성공을
         가장 가까이에서 지원합니다.
       </Text>
-      {data.map((card, key) => (
-        <CompetencyCard key={key} card={card} />
-      ))}
+      <ExpertCardContainer>
+        {data.map((card, key) => (
+          <ExpertCard key={key} card={card} />
+        ))}
+      </ExpertCardContainer>
     </SectionExpertFrame>
   )
 }
