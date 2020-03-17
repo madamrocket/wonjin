@@ -11,8 +11,7 @@ const KeywordFrame = styled(Containter)`
   display: flex;
   flex: 1;
   order: 2;
-  align-items: flex-start;
-  margin: 12rem 0 0 6.71875%;
+  margin: 11rem 0 0 6.71875%;
 
   @media ${media.md} {
     order: 1;

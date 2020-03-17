@@ -8,16 +8,20 @@ import { media } from '../share/media'
 const HistoryFrame = styled(Container)`
   flex: 1;
   order: 1;
+  padding-left: 3%;
 
   @media ${media.md} {
     order: 2;
     max-width: 48rem;
     width: 100%;
     margin: 4rem auto 0 auto;
+    padding: 3%;
   }
 `
 
 const HistoryText = styled(Text)`
+  margin-bottom: 1.5rem;
+
   @media ${media.md} {
     font-size: 2.5rem;
     margin-bottom: 1rem;
