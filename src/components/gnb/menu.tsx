@@ -2,14 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 
 import { MENUS } from './constants'
-import Text from '../share/text'
 import { media } from '../share/media'
 
-const MenuFrame = styled.div`
-  width: 776px;
-  display: flex;
-  justify-content: space-around;
-  margin-right: 7.5%;
+const MenuFrame = styled.ul`
   float: right;
 
   @media ${media.md} {
@@ -21,24 +16,20 @@ const MenuFrame = styled.div`
   }
 `
 
-const Label = styled(Text)`
-  height: 104px;
+const Label = styled.li`
+  float: left;
+  height: 6rem;
+  margin-right: 3.5rem;
+  font-size: 1.125rem;
+  font-weight: bold;
+  line-height: 6rem;
 `
 
 function Menu() {
   return (
     <MenuFrame>
       {MENUS.map(({ id, label }) => (
-        <Label
-          key={id}
-          padding="0 1.313rem"
-          fontSize={1.5}
-          fontWeight="bold"
-          inlineBlock
-          lignHeight="104px"
-        >
-          {label}
-        </Label>
+        <Label key={id}>{label}</Label>
       ))}
     </MenuFrame>
   )
