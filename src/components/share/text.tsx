@@ -31,7 +31,6 @@ export default function Text({
   ...props
 }: PropsWithChildren<TextProps>) {
   const texts = ((children as string) || '').split('\n')
-  console.log(props)
   return (
     <>
       {texts.map((text: string, i: number) => (

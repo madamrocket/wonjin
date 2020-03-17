@@ -35,14 +35,8 @@ function Keyword() {
   return (
     <KeywordFrame>
       {KEY_WORD.map((text, idx) => (
-        <Balloon>
-          <Text
-            key={idx}
-            color="blue"
-            fontSize={1.5}
-            lignHeight={1.33}
-            fontWeight="bold"
-          >
+        <Balloon key={idx}>
+          <Text color="blue" fontSize={1.5} lignHeight={1.33} fontWeight="bold">
             {text}
           </Text>
         </Balloon>
