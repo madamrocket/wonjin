@@ -8,13 +8,13 @@ import { media } from '../share/media'
 
 const ContentFrame = styled.div`
   display: flex;
-  padding-top: 6.5rem;
+  padding: 6.5rem 0 6rem 0;
   max-width: 75.06rem;
   margin: 0 auto;
 
   @media ${media.md} {
     flex-direction: column;
-    padding-top: 1.813rem;
+    padding: 1.813rem 0 4rem 0;
   }
 `
 
