@@ -12,6 +12,9 @@ const MessageBox = styled(Container)`
   position: absolute;
   top: 21.25rem;
   right: 8.33333%;
+  max-width: 49.25rem;
+  width: 100%;
+  text-align: center;
 
   @media ${media.md} {
     transform: translateX(-50%);
@@ -24,8 +27,14 @@ function Heading() {
   return (
     <Container position="relative">
       <CoverImage src="/images/main-cover.png" height={30} />
-      <MessageBox padding="3.25rem  2.938rem">
-        <Text color="blue" fontSize={3} fontWeight="bold" inlineBlock>
+      <MessageBox padding="3.25rem  0">
+        <Text
+          color="blue"
+          fontSize={3}
+          fontWeight="bold"
+          inlineBlock
+          margin="0 0.625rem 0 0"
+        >
           프리미엄 물류센터,
         </Text>
         <Text color="blue" fontSize={3} inlineBlock>
