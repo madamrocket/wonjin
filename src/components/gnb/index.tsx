@@ -24,6 +24,17 @@ const Logo = styled(Link)`
 
   @media ${media.md} {
     display: block;
+    margin-left: 11.523%;
+  }
+`
+
+const HR = styled.div`
+  display: none;
+
+  @media ${media.md} {
+    display: block;
+    height: 1px;
+    border-top: 1px solid #d3d3d3;
   }
 `
 
@@ -31,6 +42,7 @@ function GNB() {
   return (
     <GNBFrame overflow="hidden">
       <Logo to="/" />
+      <HR />
       <Menu />
     </GNBFrame>
   )

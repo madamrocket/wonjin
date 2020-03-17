@@ -8,10 +8,12 @@ const MenuFrame = styled.ul`
   float: right;
 
   @media ${media.md} {
+    max-width: 788px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
     width: 100%;
     margin-right: auto;
-    border-top: 1px solid #d3d3d3;
-    border-bottom: 1px solid #d3d3d3;
     float: none;
   }
 `
@@ -23,6 +25,14 @@ const Label = styled.li`
   font-size: 1.125rem;
   font-weight: bold;
   line-height: 6rem;
+
+  @media ${media.md} {
+    padding: 0 0.907rem;
+    text-align: center;
+    margin: 0;
+    height: 3.5rem;
+    line-height: 3.5rem;
+  }
 `
 
 function Menu() {
