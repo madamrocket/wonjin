@@ -8,7 +8,6 @@ function IndexPage() {
   return (
     <Layout>
       <SectionIntroWonjin />
-      <SectionIntroService />
     </Layout>
   )
 }
