@@ -6,6 +6,9 @@ import { media } from '../share/media'
 import Text from '../share/text'
 import getColor from '../share/color'
 import IconButton from '../share/icon-button'
+import { CentersQueryQuery } from '../../__generated__/gatsby-types'
+import Carousel from './carousel'
+import { Center } from './types'
 
 const SectionCenterFrame = styled(Container)`
   background: ${getColor('lightGray')};
@@ -51,6 +54,7 @@ function SectionIntroCenter() {
             원진물류센터 둘러보기
           </IconButton>
         </TextContainer>
+        <Carousel />
       </SectionCenterContainer>
     </SectionCenterFrame>
   )

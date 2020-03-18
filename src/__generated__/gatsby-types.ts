@@ -34,6 +34,7 @@ export type DataJson = Node & {
   readonly parent: Maybe<Node>;
   readonly children: ReadonlyArray<Node>;
   readonly internal: Internal;
+  readonly image: Maybe<Scalars['String']>;
   readonly name: Maybe<Scalars['String']>;
   readonly address: Maybe<Scalars['String']>;
   readonly year: Maybe<Scalars['String']>;
@@ -165,6 +166,7 @@ export enum DataJsonFieldsEnum {
   internal___mediaType = 'internal.mediaType',
   internal___owner = 'internal.owner',
   internal___type = 'internal.type',
+  image = 'image',
   name = 'name',
   address = 'address',
   year = 'year',
@@ -187,6 +189,7 @@ export type DataJsonFilterInput = {
   readonly parent: Maybe<NodeFilterInput>;
   readonly children: Maybe<NodeFilterListInput>;
   readonly internal: Maybe<InternalFilterInput>;
+  readonly image: Maybe<StringQueryOperatorInput>;
   readonly name: Maybe<StringQueryOperatorInput>;
   readonly address: Maybe<StringQueryOperatorInput>;
   readonly year: Maybe<StringQueryOperatorInput>;
@@ -912,6 +915,7 @@ export enum FileFieldsEnum {
   childDataJson___internal___mediaType = 'childDataJson.internal.mediaType',
   childDataJson___internal___owner = 'childDataJson.internal.owner',
   childDataJson___internal___type = 'childDataJson.internal.type',
+  childDataJson___image = 'childDataJson.image',
   childDataJson___name = 'childDataJson.name',
   childDataJson___address = 'childDataJson.address',
   childDataJson___year = 'childDataJson.year',
@@ -1775,6 +1779,7 @@ export type Query_dataJsonArgs = {
   parent: Maybe<NodeFilterInput>;
   children: Maybe<NodeFilterListInput>;
   internal: Maybe<InternalFilterInput>;
+  image: Maybe<StringQueryOperatorInput>;
   name: Maybe<StringQueryOperatorInput>;
   address: Maybe<StringQueryOperatorInput>;
   year: Maybe<StringQueryOperatorInput>;
@@ -2747,10 +2752,10 @@ export type StringQueryOperatorInput = {
   readonly glob: Maybe<Scalars['String']>;
 };
 
-export type Unnamed_1_QueryVariables = {};
+export type CentersQueryQueryVariables = {};
 
 
-export type Unnamed_1_Query = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title' | 'description'>> }> };
+export type CentersQueryQuery = { readonly allDataJson: { readonly edges: ReadonlyArray<{ readonly node: Pick<DataJson, 'id' | 'image' | 'name'> }> } };
 
 export type GatsbyImageSharpFixedFragment = Pick<ImageSharpFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet'>;
 
@@ -2800,6 +2805,16 @@ export type GatsbyImageSharpSizes_noBase64Fragment = Pick<ImageSharpSizes, 'aspe
 
 export type GatsbyImageSharpSizes_withWebp_noBase64Fragment = Pick<ImageSharpSizes, 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
 
+export type SiteTitleQueryQueryVariables = {};
+
+
+export type SiteTitleQueryQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title'>> }> };
+
+export type Unnamed_1_QueryVariables = {};
+
+
+export type Unnamed_1_Query = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title' | 'description'>> }> };
+
 export type DataQueryQueryVariables = {
   slug: Scalars['String'];
 };
@@ -2807,12 +2822,12 @@ export type DataQueryQueryVariables = {
 
 export type DataQueryQuery = { readonly dataJson: Maybe<Pick<DataJson, 'id' | 'address' | 'dock' | 'equipment' | 'ev_count' | 'eyepiece' | 'food_storage'>> };
 
-export type SiteTitleQueryQueryVariables = {};
-
-
-export type SiteTitleQueryQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title'>> }> };
-
 export type PagesQueryQueryVariables = {};
 
 
 export type PagesQueryQuery = { readonly allSitePage: { readonly nodes: ReadonlyArray<Pick<SitePage, 'path'>> } };
+
+export type CentersQueryQueryVariables = {};
+
+
+export type CentersQueryQuery = { readonly allDataJson: { readonly edges: ReadonlyArray<{ readonly node: Pick<DataJson, 'id' | 'image' | 'name'> }> } };
