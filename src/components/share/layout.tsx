@@ -5,6 +5,7 @@ import GNB from '../gnb'
 import SEO from '../seo'
 import ResetStyle from './reset-style'
 import Container from './container'
+import Footer from '../footer'
 
 interface LayoutProps {
   children: React.ReactNode
@@ -27,6 +28,7 @@ const Layout = ({ children }: LayoutProps) => {
       <GNB />
       <SEO title={data.site.siteMetadata.title} />
       <Container>{children}</Container>
+      <Footer />
     </>
   )
 }

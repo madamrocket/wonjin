@@ -39,12 +39,12 @@ const Button = styled.button`
   &:before {
     content: '';
     background-image: url(/images/ic-arrow-right@3x.png);
-    background-size: 32px;
-    width: 32px;
-    height: 32px;
+    background-size: 2rem;
+    width: 2rem;
+    height: 2rem;
     display: block;
     position: absolute;
-    right: 24px;
+    right: 1.5rem;
     top: 50%;
     transform: translateY(-50%);
   }
