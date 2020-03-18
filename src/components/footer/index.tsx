@@ -14,7 +14,6 @@ const FooterFrame = styled(Container)`
 const FooterContainer = styled(Container)`
   max-width: 81.25rem;
   margin: 0 auto;
-  background: ${getColor('lightGray')};
 
   @media ${media.md} {
     max-width: 49.25rem;

@@ -9,7 +9,7 @@ import { media } from '../share/media'
 const ContentFrame = styled.div`
   display: flex;
   padding: 6.5rem 0 6rem 0;
-  max-width: 75.06rem;
+  max-width: 81.25rem;
   margin: 0 auto;
 
   @media ${media.md} {
