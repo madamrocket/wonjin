@@ -4,6 +4,7 @@ import getColor, { Color } from './color'
 export default styled.button<{
   width: string
   color: Color
+  margin?: string
 }>`
   position: relative;
   font-size: 1.5rem;
@@ -16,7 +17,7 @@ export default styled.button<{
   height: 3.75rem;
   padding-left: 1.5rem;
   text-align: left;
-  margin-top: 1.5rem;
+  ${({ margin }) => margin && `margin: ${margin};`}
 
   &:before {
     content: '';
