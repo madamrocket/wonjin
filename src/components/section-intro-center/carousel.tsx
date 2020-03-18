@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useStaticQuery, graphql } from 'gatsby'
-import { FlickingEvent, FlickingOptions } from '@egjs/flicking'
-import Flicking, { FlickingProps } from '@egjs/react-flicking'
+import Flicking from '@egjs/react-flicking'
+// import { FlickingEvent, FlickingOptions } from '@egjs/flicking'
+// import Flicking, { FlickingProps } from '@egjs/react-flicking'
 
 import { CentersQueryQuery } from '../../__generated__/gatsby-types'
 import { Center } from './types'
