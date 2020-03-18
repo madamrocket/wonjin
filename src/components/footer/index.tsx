@@ -17,7 +17,7 @@ const FooterContainer = styled(Container)`
   background: ${getColor('lightGray')};
 
   @media ${media.md} {
-    max-width: 39.5rem;
+    max-width: 49.25rem;
   }
 `
 
@@ -28,6 +28,14 @@ const InfoContainer = styled.div`
 
   &:first-child {
     margin-right: 1.875rem;
+  }
+
+  @media ${media.md} {
+    width: 100%;
+
+    &:first-child {
+      margin-right: 0;
+    }
   }
 `
 
@@ -47,15 +55,16 @@ function Footer() {
             label="판교 사무실"
             description="경기도 성남시 수정구 창업로 54 221~223호"
           />
-          <Info
-            description="Copyright © Wonjin Logisitcs Corporation. All Rights Reserved."
-            full
-          />
+          <Info label="이메일" description="info@wonjinlogis.com" />
         </InfoContainer>
         <InfoContainer>
           <Info label="대표번호" description="1588-0714" />
           <Info label="팩스" description="02- 557- 3496" />
-          <Info label="이메일" description="info@wonjinlogis.com" />
+
+          <Info
+            description="Copyright © Wonjin Logisitcs Corporation. All Rights Reserved."
+            full
+          />
         </InfoContainer>
         <LogoContainer>
           <Logo type="naver" />
