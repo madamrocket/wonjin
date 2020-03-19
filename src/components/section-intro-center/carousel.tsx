@@ -2,12 +2,12 @@ import React, { useCallback, useRef, RefObject, useEffect } from 'react'
 import styled from 'styled-components'
 import { useStaticQuery, graphql } from 'gatsby'
 import Flicking from '@egjs/react-flicking'
-// import { FlickingEvent, FlickingOptions } from '@egjs/flicking'
 
 import { CentersQueryQuery } from '../../__generated__/gatsby-types'
 import { Center } from './types'
 import Card from './card'
 import Container from '../share/container'
+import getColor from '../share/color'
 
 const CarouselFrame = styled(Container)`
   overflow: visible;
@@ -16,6 +16,31 @@ const CarouselFrame = styled(Container)`
   img {
     pointer-events: none;
   }
+`
+
+const ControllButton = styled.span<{ type: 'prev' | 'next' }>`
+  ${({ type }) =>
+    type === 'prev'
+      ? `
+    background: ${getColor('green')} url(/images/ic-arrow-left-w@3x.png)
+    no-repeat;
+    left: -1.5rem;
+`
+      : `
+  background: ${getColor('green')} url(/images/ic-arrow-right-w@3x.png)
+    no-repeat;
+  right: 0.7rem;
+`}
+
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: 5.875rem;
+  transform: translateY(-50%);
+  background-position: center;
+  padding: 0.625rem;
+  background-size: 2rem;
+  z-index: 2;
 `
 
 function Carousel() {
@@ -36,7 +61,7 @@ function Carousel() {
   }, [flickingRef])
 
   return (
-    <CarouselFrame float="right">
+    <CarouselFrame float="right" position="relative">
       <Flicking
         ref={flickingRef}
         collectStatistics={false}
@@ -59,6 +84,8 @@ function Carousel() {
           />
         ))}
       </Flicking>
+      <ControllButton type="prev" />
+      <ControllButton type="next" />
     </CarouselFrame>
   )
 }
