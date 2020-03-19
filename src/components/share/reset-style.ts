@@ -49,6 +49,13 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+a {
+  text-decoration: none; 
+  outline: none;
+  color: #1b1b1b;
+}
+
+a:hover, a:active {text-decoration: none;}
 `
 
 export default createGlobalStyle`${reset}`

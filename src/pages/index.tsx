@@ -5,9 +5,13 @@ import SectionIntroWonjin from '../components/section-intro-wonjin'
 import SectionExpert from '../components/section-expert'
 import SectionIntroCenter from '../components/section-intro-center'
 
-function IndexPage() {
+interface IndexPageProps {
+  location: Location
+}
+
+function IndexPage({ location }: IndexPageProps) {
   return (
-    <Layout>
+    <Layout location={location}>
       <SectionIntroWonjin />
       <SectionIntroCenter />
       <SectionExpert />

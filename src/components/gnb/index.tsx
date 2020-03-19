@@ -38,12 +38,12 @@ const HR = styled.div`
   }
 `
 
-function GNB() {
+function GNB({ pathname }: { pathname: string }) {
   return (
     <GNBFrame overflow="hidden">
       <Logo to="/" />
       <HR />
-      <Menu />
+      <Menu pathname={pathname} />
     </GNBFrame>
   )
 }
