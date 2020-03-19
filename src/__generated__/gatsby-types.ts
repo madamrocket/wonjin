@@ -2757,6 +2757,23 @@ export type CentersQueryQueryVariables = {};
 
 export type CentersQueryQuery = { readonly allDataJson: { readonly edges: ReadonlyArray<{ readonly node: Pick<DataJson, 'id' | 'image' | 'name'> }> } };
 
+export type Unnamed_1_QueryVariables = {};
+
+
+export type Unnamed_1_Query = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title' | 'description'>> }> };
+
+export type SiteTitleQueryQueryVariables = {};
+
+
+export type SiteTitleQueryQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title'>> }> };
+
+export type DataQueryQueryVariables = {
+  slug: Scalars['String'];
+};
+
+
+export type DataQueryQuery = { readonly dataJson: Maybe<Pick<DataJson, 'id' | 'address' | 'dock' | 'equipment' | 'ev_count' | 'eyepiece' | 'food_storage'>> };
+
 export type GatsbyImageSharpFixedFragment = Pick<ImageSharpFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet'>;
 
 export type GatsbyImageSharpFixed_tracedSVGFragment = Pick<ImageSharpFixed, 'tracedSVG' | 'width' | 'height' | 'src' | 'srcSet'>;
@@ -2805,29 +2822,7 @@ export type GatsbyImageSharpSizes_noBase64Fragment = Pick<ImageSharpSizes, 'aspe
 
 export type GatsbyImageSharpSizes_withWebp_noBase64Fragment = Pick<ImageSharpSizes, 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
 
-export type SiteTitleQueryQueryVariables = {};
-
-
-export type SiteTitleQueryQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title'>> }> };
-
-export type Unnamed_1_QueryVariables = {};
-
-
-export type Unnamed_1_Query = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title' | 'description'>> }> };
-
-export type DataQueryQueryVariables = {
-  slug: Scalars['String'];
-};
-
-
-export type DataQueryQuery = { readonly dataJson: Maybe<Pick<DataJson, 'id' | 'address' | 'dock' | 'equipment' | 'ev_count' | 'eyepiece' | 'food_storage'>> };
-
 export type PagesQueryQueryVariables = {};
 
 
 export type PagesQueryQuery = { readonly allSitePage: { readonly nodes: ReadonlyArray<Pick<SitePage, 'path'>> } };
-
-export type CentersQueryQueryVariables = {};
-
-
-export type CentersQueryQuery = { readonly allDataJson: { readonly edges: ReadonlyArray<{ readonly node: Pick<DataJson, 'id' | 'image' | 'name'> }> } };

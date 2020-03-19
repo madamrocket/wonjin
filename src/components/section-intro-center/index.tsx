@@ -15,6 +15,7 @@ const SectionCenterFrame = styled(Container)`
 const SectionCenterContainer = styled(Container)`
   max-width: 81.25rem;
   margin: 0 auto;
+  overflow: hidden;
 
   @media ${media.md} {
     max-width: 39.5rem;
@@ -29,7 +30,7 @@ const TextContainer = styled(Container)`
 function SectionIntroCenter() {
   return (
     <SectionCenterFrame>
-      <SectionCenterContainer padding="6.5rem 3% 4.5rem 3%">
+      <SectionCenterContainer padding="6.5rem 0 4.5rem 3%">
         <TextContainer>
           <Text
             fontSize={2.25}

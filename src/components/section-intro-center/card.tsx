@@ -6,20 +6,32 @@ import Text from '../share/text'
 import { Center } from './types'
 
 const CardFrame = styled(Container)`
-  width: 23.5rem;
-  min-height: 400px;
+  left: -10000px;
+  display: block;
+  width: 340px;
+
+  > img {
+    width: 100%;
+    height: 100%;
+  }
 `
 
 const Image = styled.img`
   width: 100%;
 `
 
-function Card({ source }: { source: Center }) {
+function Card({
+  source,
+  imageOnload,
+}: {
+  source: Center
+  imageOnload: () => void
+}) {
   const { name, image, address, id } = source
-  console.log(source)
+
   return (
     <CardFrame>
-      <Image src={image} alt={name} />
+      <Image src={image} alt={name} onLoad={imageOnload} />
       <Text
         lignHeight={1.8}
         fontSize={1.5}
