@@ -32,9 +32,8 @@ const Label = styled.li<{
   position: relative;
 
   @media ${media.md} {
-    padding: 0 0.907rem;
+    margin: 0 0.907rem;
     text-align: center;
-    margin: 0;
     height: 3.5rem;
     line-height: 3.5rem;
   }
