@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'gatsby'
 
 import { MENUS } from './constants'
 import { media } from '../share/media'
@@ -39,7 +40,9 @@ function Menu() {
   return (
     <MenuFrame>
       {MENUS.map(({ id, label }) => (
-        <Label key={id}>{label}</Label>
+        <Label key={id}>
+          <Link to={id}>{label}</Link>
+        </Label>
       ))}
     </MenuFrame>
   )

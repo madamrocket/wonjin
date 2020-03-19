@@ -1,18 +1,18 @@
 export const MENUS = [
   {
-    id: 'intro_wonjin',
+    id: 'wonjin',
     label: '원진 소개',
   },
   {
-    id: 'core_competency',
+    id: 'core-competency',
     label: '핵심 역량',
   },
   {
-    id: 'intro_center',
+    id: 'center',
     label: '센터 소개',
   },
   {
-    id: 'intro_service',
+    id: 'service',
     label: '서비스 소개',
   },
   {
