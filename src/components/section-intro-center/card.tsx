@@ -8,7 +8,7 @@ import { Center } from './types'
 const CardFrame = styled(Container)`
   left: -10000px;
   display: block;
-  width: 340px;
+  width: calc(50% - 36px);
 
   > img {
     width: 100%;
@@ -29,6 +29,8 @@ function Card({
 }) {
   const { name, image, address, id } = source
 
+  console.log(source)
+
   return (
     <CardFrame>
       <Image src={image} alt={name} onLoad={imageOnload} />
@@ -40,7 +42,7 @@ function Card({
       >
         {name}
       </Text>
-      <Text color="lightBlack" fontSize={1.25} lignHeight={1.8}>
+      <Text color="gray" fontSize={1.25} lignHeight={1.8}>
         {address}
       </Text>
     </CardFrame>

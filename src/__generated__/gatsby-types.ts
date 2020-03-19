@@ -2755,7 +2755,7 @@ export type StringQueryOperatorInput = {
 export type CentersQueryQueryVariables = {};
 
 
-export type CentersQueryQuery = { readonly allDataJson: { readonly edges: ReadonlyArray<{ readonly node: Pick<DataJson, 'id' | 'image' | 'name'> }> } };
+export type CentersQueryQuery = { readonly allDataJson: { readonly edges: ReadonlyArray<{ readonly node: Pick<DataJson, 'id' | 'image' | 'name' | 'address'> }> } };
 
 export type Unnamed_1_QueryVariables = {};
 

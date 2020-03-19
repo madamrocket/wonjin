@@ -1,4 +1,4 @@
-import React, { useCallback, useRef, RefObject, useEffect } from 'react'
+import React, { useCallback, useRef, RefObject, useState } from 'react'
 import styled from 'styled-components'
 import { useStaticQuery, graphql } from 'gatsby'
 import Flicking from '@egjs/react-flicking'
@@ -8,13 +8,18 @@ import { Center } from './types'
 import Card from './card'
 import Container from '../share/container'
 import getColor from '../share/color'
+import { media } from '../share/media'
 
 const CarouselFrame = styled(Container)`
   overflow: visible;
-  width: 752px;
+  width: 60%;
 
   img {
     pointer-events: none;
+  }
+
+  @media ${media.md} {
+    width: 100%;
   }
 `
 
@@ -27,10 +32,10 @@ const ControllButton = styled.span<{ type: 'prev' | 'next' }>`
     left: -1.5rem;
 `
       : `
-  background: ${getColor('green')} url(/images/ic-arrow-right-w@3x.png)
-    no-repeat;
-  right: 0.7rem;
-`}
+    background: ${getColor('green')} url(/images/ic-arrow-right-w@3x.png)
+      no-repeat;
+    right: 0.7rem;
+  `}
 
   width: 2rem;
   height: 2rem;
@@ -47,6 +52,7 @@ function Carousel() {
   const {
     allDataJson: { edges },
   } = useStaticQuery<CentersQueryQuery>(query)
+  const [currentIndex, setCurrentIndex] = useState(0)
 
   const flickingRef = useRef() as RefObject<Flicking>
 
@@ -60,6 +66,18 @@ function Carousel() {
     flicking.resize()
   }, [flickingRef])
 
+  const handleMoveEnd = () => {
+    if (!flickingRef || !flickingRef.current) {
+      return
+    }
+
+    const flicking = flickingRef.current
+
+    setCurrentIndex(Math.floor(flicking.getIndex() / 2))
+  }
+  const hasPrevPage = currentIndex > 1
+  const hasNextPage = currentIndex + 1 < edges.length / 2
+
   return (
     <CarouselFrame float="right" position="relative">
       <Flicking
@@ -68,13 +86,14 @@ function Carousel() {
         zIndex={1}
         hanger={'0'}
         anchor={'0'}
-        defaultIndex={0}
+        defaultIndex={currentIndex}
         autoResize={true}
         horizontal={true}
         bound={true}
         duration={100}
         gap={36}
         onMoveStart={handleResizeFlicking}
+        onMoveEnd={handleMoveEnd}
       >
         {edges.map(({ node }, idx) => (
           <Card
@@ -84,8 +103,8 @@ function Carousel() {
           />
         ))}
       </Flicking>
-      <ControllButton type="prev" />
-      <ControllButton type="next" />
+      {hasPrevPage && <ControllButton type="prev" />}
+      {hasNextPage && <ControllButton type="next" />}
     </CarouselFrame>
   )
 }
@@ -98,6 +117,7 @@ export const query = graphql`
           id
           image
           name
+          address
         }
       }
     }

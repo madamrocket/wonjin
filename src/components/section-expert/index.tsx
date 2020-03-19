@@ -13,7 +13,7 @@ const SectionExpertFrame = styled(Container)`
   margin: 0 auto;
 
   @media ${media.md} {
-    max-width: 39.5rem;
+    max-width: 48rem;
   }
 `
 

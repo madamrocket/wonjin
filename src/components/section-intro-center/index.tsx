@@ -10,6 +10,7 @@ import Carousel from './carousel'
 
 const SectionCenterFrame = styled(Container)`
   background: ${getColor('lightGray')};
+  min-height: 30.25rem;
 `
 
 const SectionCenterContainer = styled(Container)`
@@ -18,7 +19,7 @@ const SectionCenterContainer = styled(Container)`
   overflow: hidden;
 
   @media ${media.md} {
-    max-width: 39.5rem;
+    max-width: 48rem;
   }
 `
 
@@ -27,10 +28,22 @@ const TextContainer = styled(Container)`
   display: inline-block;
 `
 
+const ButtonContainer = styled.div`
+  position: absolute;
+  left: 3%;
+  top: 22rem;
+
+  @media ${media.md} {
+    top: 15.88rem;
+    left: auto;
+    right: 0;
+  }
+`
+
 function SectionIntroCenter() {
   return (
     <SectionCenterFrame>
-      <SectionCenterContainer padding="6.5rem 0 4.5rem 3%">
+      <SectionCenterContainer padding="6.5rem 0 4.5rem 3%" position="relative">
         <TextContainer>
           <Text
             fontSize={2.25}
@@ -49,10 +62,12 @@ function SectionIntroCenter() {
           >
             원하시는 조건을 알려주세요. 원진물류가 최적의 창고를 찾아드립니다.
           </Text>
+        </TextContainer>
+        <ButtonContainer>
           <IconButton width="19.88rem" color="blue">
             원진물류센터 둘러보기
           </IconButton>
-        </TextContainer>
+        </ButtonContainer>
         <Carousel />
       </SectionCenterContainer>
     </SectionCenterFrame>
