@@ -6,7 +6,9 @@ import Text from './share/text'
 import getColor from './share/color'
 import CoverImage from './share/cover-image'
 
-const MessageBox = styled(Container)`
+const MessageBox = styled(Container)<{
+  textAlign: string
+}>`
   background: ${getColor('white')};
   position: absolute;
   top: 10.81rem;
@@ -14,21 +16,36 @@ const MessageBox = styled(Container)`
   transform: translateX(-50%);
   max-width: 49.25rem;
   width: 100%;
-  text-align: center;
+  text-align: ${({ textAlign }) => textAlign || 'center'};
+
+  ${({ textAlign }) =>
+    textAlign === 'left'
+      ? `
+        padding-left: 4.188rem;
+        text-align: left;
+  `
+      : 'text-align: center;'}
 `
 
 interface HeadingType {
   title: string
   emphasis: string
   Linebreak?: boolean
+  textAlign?: string
   image: string
 }
 
-function Heading({ title, emphasis, Linebreak, image }: HeadingType) {
+function Heading({
+  title,
+  emphasis,
+  Linebreak,
+  image,
+  textAlign,
+}: HeadingType) {
   return (
     <Container position="relative">
       <CoverImage src={image} height={15} />
-      <MessageBox padding="2.5rem  0">
+      <MessageBox padding="2.5rem  0" textAlign={textAlign}>
         <Text
           color="blue"
           fontSize={2.25}

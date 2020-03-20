@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import data from './data.json.js'
+import data from './data.json'
 import ExpertCard from './expert-card'
 import Container from '../../share/container'
 import { media } from '../../share/media'
