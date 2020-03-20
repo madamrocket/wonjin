@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Heading from './heading'
+import Heading from '../heading'
 import History from './history'
 import Keyword from './keyword'
 
@@ -14,7 +14,11 @@ const ContentFrame = styled.div`
 function SectionIntroWonjin() {
   return (
     <>
-      <Heading />
+      <Heading
+        title="프리미엄 물류센터,"
+        emphasis="그 이상의 가치."
+        image="/images/main-cover.png"
+      />
       <ContentFrame>
         <Keyword />
         <History />

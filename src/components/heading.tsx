@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Container from '../share/container'
-import Text from '../share/text'
-import getColor from '../share/color'
-import CoverImage from '../share/cover-image'
+import Container from './share/container'
+import Text from './share/text'
+import getColor from './share/color'
+import CoverImage from './share/cover-image'
 
 const MessageBox = styled(Container)`
   background: ${getColor('white')};
@@ -17,22 +17,29 @@ const MessageBox = styled(Container)`
   text-align: center;
 `
 
-function Heading() {
+interface HeadingType {
+  title: string
+  emphasis: string
+  Linebreak?: boolean
+  image: string
+}
+
+function Heading({ title, emphasis, Linebreak, image }: HeadingType) {
   return (
     <Container position="relative">
-      <CoverImage src="/images/main-cover.png" height={15} />
+      <CoverImage src={image} height={15} />
       <MessageBox padding="2.5rem  0">
         <Text
           color="blue"
           fontSize={2.25}
           fontWeight="bold"
-          inlineBlock
+          inlineBlock={!Linebreak}
           margin="0 0.625rem 0 0"
         >
-          프리미엄 물류센터,
+          {title}
         </Text>
-        <Text color="blue" fontSize={2.25} inlineBlock>
-          그 이상의 가치.
+        <Text color="blue" fontSize={2.25} inlineBlock={!Linebreak}>
+          {emphasis}
         </Text>
       </MessageBox>
     </Container>
