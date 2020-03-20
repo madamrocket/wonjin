@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Container from '../share/container'
-import Text from '../share/text'
-import getColor from '../share/color'
-import IconButton from '../share/icon-button'
+import Container from '../../share/container'
+import Text from '../../share/text'
+import getColor from '../../share/color'
+import IconButton from '../../share/icon-button'
 import Carousel from './carousel'
 
 const SectionCenterFrame = styled(Container)`

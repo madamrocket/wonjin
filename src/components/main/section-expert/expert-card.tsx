@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Container from '../share/container'
-import Text from '../share/text'
+import Container from '../../share/container'
+import Text from '../../share/text'
 import { Card } from './types'
-import IconButton from '../share/icon-button'
+import IconButton from '../../share/icon-button'
 
 const CardFrame = styled(Container)`
   text-align: left;

@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Container from '../share/container'
-import Text from '../share/text'
+import Container from '../../share/container'
+import Text from '../../share/text'
 import { Center } from './types'
 
 const CardFrame = styled(Container)`

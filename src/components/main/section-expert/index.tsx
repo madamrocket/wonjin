@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import data from './data.json'
+import data from './data.json.js'
 import ExpertCard from './expert-card'
-import Container from '../share/container'
-import { media } from '../share/media'
-import Text from '../share/text'
+import Container from '../../share/container'
+import { media } from '../../share/media'
+import Text from '../../share/text'
 
 const SectionExpertFrame = styled(Container)`
   max-width: 81.25rem;

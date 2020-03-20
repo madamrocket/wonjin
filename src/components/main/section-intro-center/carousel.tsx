@@ -3,12 +3,12 @@ import styled from 'styled-components'
 import { useStaticQuery, graphql } from 'gatsby'
 import Flicking from '@egjs/react-flicking'
 
-import { CentersQueryQuery } from '../../__generated__/gatsby-types'
+import { CentersQueryQuery } from '../../../__generated__/gatsby-types'
 import { Center } from './types'
 import Card from './card'
-import Container from '../share/container'
-import getColor from '../share/color'
-import { media } from '../share/media'
+import Container from '../../share/container'
+import getColor from '../../share/color'
+import { media } from '../../share/media'
 
 const CarouselFrame = styled(Container)`
   overflow: visible;

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Heading from '../heading'
+import Heading from '../../heading'
 import History from './history'
 import Keyword from './keyword'
 

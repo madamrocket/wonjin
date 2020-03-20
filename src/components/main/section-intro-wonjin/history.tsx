@@ -1,7 +1,7 @@
 import React from 'react'
 
-import Container from '../share/container'
-import Text from '../share/text'
+import Container from '../../share/container'
+import Text from '../../share/text'
 
 function History() {
   return (

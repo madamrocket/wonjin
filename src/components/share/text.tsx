@@ -1,9 +1,9 @@
 import React, { PropsWithChildren } from 'react'
 import styled from 'styled-components'
 
-import margin, { Margin } from '../mixins/margin'
-import padding, { Padding } from '../mixins/padding'
-import fontWeight, { FontWeight } from '../mixins/font-weight'
+import margin, { Margin } from './mixins/margin'
+import padding, { Padding } from './mixins/padding'
+import fontWeight, { FontWeight } from './mixins/font-weight'
 import getColor, { Color } from './color'
 
 interface TextProps {

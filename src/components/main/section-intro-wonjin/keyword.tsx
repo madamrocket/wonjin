@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Containter from '../share/container'
-import Text from '../share/text'
+import Containter from '../../share/container'
+import Text from '../../share/text'
 import { KEY_WORD } from './constants'
-import getColor from '../share/color'
+import getColor from '../../share/color'
 
 const KeywordFrame = styled(Containter)`
   text-align: center;

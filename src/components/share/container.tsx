@@ -1,13 +1,13 @@
 import styled from 'styled-components'
 
-import margin, { Margin } from '../mixins/margin'
-import padding, { Padding } from '../mixins/padding'
-import maxWidth, { MaxWidth } from '../mixins/max-width'
-import overflow, { Overflow } from '../mixins/overflow'
-import float, { Float } from '../mixins/float'
-import position, { Position } from '../mixins/position'
-import height, { Height } from '../mixins/height'
-import width, { Width } from '../mixins/width'
+import margin, { Margin } from './mixins/margin'
+import padding, { Padding } from './mixins/padding'
+import maxWidth, { MaxWidth } from './mixins/max-width'
+import overflow, { Overflow } from './mixins/overflow'
+import float, { Float } from './mixins/float'
+import position, { Position } from './mixins/position'
+import height, { Height } from './mixins/height'
+import width, { Width } from './mixins/width'
 
 export default styled.div<{
   margin?: Margin
