@@ -18,32 +18,26 @@ const SectionExpertFrame = styled(Container)`
 `
 
 const ExpertCardContainer = styled(Container)`
-  display: flex;
-  justify-content: space-between;
-  margin-top: 3.5rem;
-
-  @media ${media.md} {
-    flex-direction: column;
-  }
+  max-width: 49.25rem;
+  overflow: hidden;
 `
 
 function SectionExpert() {
   return (
-    <SectionExpertFrame padding="6rem 3%">
+    <SectionExpertFrame padding="3.5rem 0">
       <Text
-        color="blue"
+        color="green"
         lignHeight={2}
         margin="0 0 1.5rem 0 "
-        fontSize={2.25}
+        fontSize={2}
         fontWeight="bold"
       >
         지금 원진만의 물류 전문가를 만나보세요
       </Text>
-      <Text lignHeight={1.67} fontSize={1.5} fontWeight={500}>
-        탄탄한 물류 전문인력으로 구성된 원진물류 팀은 고객사의 성장과 성공을
-        가장 가까이에서 지원합니다.
+      <Text lignHeight={2} fontWeight={500}>
+        {`탄탄한 물류 전문인력으로 구성된 원진물류 팀은 \n 고객사의 성장과 성공을가장 가까이에서 지원합니다.`}
       </Text>
-      <ExpertCardContainer>
+      <ExpertCardContainer margin="2rem auto 0 auto">
         {data.map((card, key) => (
           <ExpertCard key={key} card={card} />
         ))}

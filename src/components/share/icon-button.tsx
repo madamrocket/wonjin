@@ -5,9 +5,10 @@ export default styled.button<{
   width: string
   color: Color
   margin?: string
+  size?: string
 }>`
   position: relative;
-  font-size: 0.75rem;
+  font-size: ${({ size }) => size || '0.75rem'};
 
   ${({ color }) => `
     background: ${getColor(color === 'blue' ? 'blue' : 'white')};
