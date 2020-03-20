@@ -12,7 +12,7 @@ import { media } from '../share/media'
 
 const CarouselFrame = styled(Container)`
   overflow: visible;
-  width: 60%;
+  width: 100%;
 
   img {
     pointer-events: none;

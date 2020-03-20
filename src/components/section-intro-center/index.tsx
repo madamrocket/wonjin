@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Container from '../share/container'
-import { media } from '../share/media'
 import Text from '../share/text'
 import getColor from '../share/color'
 import IconButton from '../share/icon-button'
@@ -10,64 +9,50 @@ import Carousel from './carousel'
 
 const SectionCenterFrame = styled(Container)`
   background: ${getColor('lightGray')};
-  min-height: 30.25rem;
+  overflow: hidden;
 `
 
 const SectionCenterContainer = styled(Container)`
-  max-width: 81.25rem;
-  margin: 0 auto;
-  overflow: hidden;
-
-  @media ${media.md} {
-    max-width: 48rem;
-  }
+  width: 100%;
 `
 
 const TextContainer = styled(Container)`
-  max-width: 19.88rem;
-  display: inline-block;
+  position: relative;
 `
 
 const ButtonContainer = styled.div`
   position: absolute;
-  left: 3%;
-  top: 22rem;
-
-  @media ${media.md} {
-    top: 15.88rem;
-    left: auto;
-    right: 0;
-  }
+  right: 0;
+  bottom: 0;
 `
 
 function SectionIntroCenter() {
   return (
-    <SectionCenterFrame>
-      <SectionCenterContainer padding="6.5rem 0 4.5rem 3%" position="relative">
-        <TextContainer>
+    <SectionCenterFrame padding="3.5rem 0 6.375rem 0">
+      <SectionCenterContainer
+        maxWidth="49.25rem"
+        margin="0 auto"
+        position="relative"
+      >
+        <TextContainer margin="0 0 2rem 0">
           <Text
-            fontSize={2.25}
+            fontSize={2}
             color="blue"
             lignHeight={2}
             fontWeight="bold"
-            margin="0 0 1.5rem 0"
+            margin="0 auto"
           >
             Our Centers
           </Text>
-          <Text
-            fontSize={1.5}
-            fontWeight={500}
-            lignHeight={1.67}
-            margin="0 0 3.375rem 0"
-          >
-            원하시는 조건을 알려주세요. 원진물류가 최적의 창고를 찾아드립니다.
+          <Text fontWeight={500} lignHeight={2}>
+            {`원하시는 조건을 알려주세요. \n 원진물류가 최적의 창고를 찾아드립니다.`}
           </Text>
+          <ButtonContainer>
+            <IconButton width="10.19rem" color="blue">
+              원진물류센터 둘러보기
+            </IconButton>
+          </ButtonContainer>
         </TextContainer>
-        <ButtonContainer>
-          <IconButton width="19.88rem" color="blue">
-            원진물류센터 둘러보기
-          </IconButton>
-        </ButtonContainer>
         <Carousel />
       </SectionCenterContainer>
     </SectionCenterFrame>

@@ -7,28 +7,32 @@ export default styled.button<{
   margin?: string
 }>`
   position: relative;
-  font-size: 1.5rem;
+  font-size: 0.75rem;
+
   ${({ color }) => `
     background: ${getColor(color === 'blue' ? 'blue' : 'white')};
     color: ${getColor(color === 'blue' ? 'white' : color)};
     border: 1px solid ${getColor(color === 'blue' ? 'white' : color)};
   `};
+
   width: ${({ width }) => width};
-  height: 3.75rem;
-  padding-left: 1.5rem;
+  height: 2rem;
+  padding-left: 0.75rem;
   text-align: left;
+  line-height: 1.6;
+
   ${({ margin }) => margin && `margin: ${margin};`}
 
   &:before {
     content: '';
     background-image: url(/images/ic-arrow-right${({ color }) =>
         color === 'blue' ? '-w' : ''}@3x.png);
-    background-size: 2rem;
-    width: 2rem;
-    height: 2rem;
+    background-size: 1.125rem;
+    width: 1.125rem;
+    height: 1.125rem;
     display: block;
     position: absolute;
-    right: 1.5rem;
+    right: 0.75rem;
     top: 50%;
     transform: translateY(-50%);
   }

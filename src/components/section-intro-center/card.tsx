@@ -8,7 +8,7 @@ import { Center } from './types'
 const CardFrame = styled(Container)`
   left: -10000px;
   display: block;
-  width: calc(50% - 36px);
+  width: calc(33.3% - 36px);
 
   > img {
     width: 100%;
