@@ -4,46 +4,31 @@ import { Link } from 'gatsby'
 
 import Container from '../share/container'
 import Menu from './menu'
-import { media } from '../share/media'
 
 const GNBFrame = styled(Container)`
   vertical-align: top;
-  max-width: 1500px;
+  max-width: 64rem;
   width: 100%;
   margin: 0 auto;
 `
 
 const Logo = styled(Link)`
   display: inline-block;
-  width: 306px;
-  height: 80px;
-  background-image: url(/images/logo-gnb@3x.png);
+  width: 11.38rem;
+  height: 2.5rem;
+  background: url(/images/logo-gnb@3x.png) no-repeat;
   background-size: 100%;
-  margin: 0.5rem 0 0.5rem 3.5rem;
+  margin: 0.3rem 0 0.5rem 0;
   vertical-align: top;
-
-  @media ${media.md} {
-    display: block;
-    margin-left: 11.523%;
-  }
-`
-
-const HR = styled.div`
-  display: none;
-
-  @media ${media.md} {
-    display: block;
-    height: 1px;
-    border-top: 1px solid #d3d3d3;
-  }
 `
 
 function GNB({ pathname }: { pathname: string }) {
   return (
-    <GNBFrame overflow="hidden">
-      <Logo to="/" />
-      <HR />
-      <Menu pathname={pathname} />
+    <GNBFrame>
+      <Container overflow="hidden" maxWidth="49.25rem" margin="0 auto">
+        <Logo to="/" />
+        <Menu pathname={pathname} />
+      </Container>
     </GNBFrame>
   )
 }
