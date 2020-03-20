@@ -5,15 +5,15 @@ import getColor from '../share/color'
 export default styled.span<{ type: 'naver' | 'facebook' }>`
   background: ${({ type }) => `url(/images/logo-${type}-white@3x.png)`}
     no-repeat;
-  background-size: 2.25rem;
+  background-size: 1.625rem;
   display: inline-block;
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
   background-color: ${getColor('darkGray')};
   border-radius: 100%;
   background-position: center;
 
   &:not(:last-child) {
-    margin-right: 1rem;
+    margin-right: 0.75rem;
   }
 `

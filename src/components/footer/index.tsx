@@ -12,42 +12,28 @@ const FooterFrame = styled(Container)`
 `
 
 const FooterContainer = styled(Container)`
-  max-width: 81.25rem;
   margin: 0 auto;
-
-  @media ${media.md} {
-    max-width: 49.25rem;
-  }
 `
 
 const InfoContainer = styled.div`
-  width: 45.61%;
-  display: inline-block;
   vertical-align: top;
-
-  &:first-child {
-    margin-right: 1.875rem;
-  }
-
-  @media ${media.md} {
-    width: 100%;
-
-    &:first-child {
-      margin-right: 0;
-    }
-  }
 `
 
 const LogoContainer = styled.div`
   position: absolute;
   top: 2.563rem;
-  right: 3%;
+  right: 0;
 `
 
 function Footer() {
   return (
     <FooterFrame>
-      <FooterContainer position="relative" padding="2.563rem 3%">
+      <FooterContainer
+        maxWidth="49.25rem"
+        margin="0 auto"
+        position="relative"
+        padding="2.5rem 0"
+      >
         <InfoContainer>
           <Info label="본사" description="경기도 용인시 원삼면 죽양대로 1566" />
           <Info
@@ -55,8 +41,6 @@ function Footer() {
             description="경기도 성남시 수정구 창업로 54 221~223호"
           />
           <Info label="이메일" description="info@wonjinlogis.com" />
-        </InfoContainer>
-        <InfoContainer>
           <Info label="대표번호" description="1588-0714" />
           <Info label="팩스" description="02- 557- 3496" />
 

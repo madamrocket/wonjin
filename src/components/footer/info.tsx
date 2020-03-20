@@ -19,18 +19,28 @@ const Label = styled(Text)`
 const Description = styled(Text)<{ full?: boolean }>`
   display: inline-block;
 
-  ${({ full }) => full && `width: 100%;`}
+  ${({ full }) =>
+    full &&
+    `
+      width: 100%;
+      margin-top: 1rem;
+  `}
 `
 
 function Info({ label, description, full }: InfoProps) {
   return (
     <InfoFrame>
       {label && (
-        <Label lignHeight={1.8} fontSize={1.25}>
+        <Label lignHeight={2.57} fontSize={0.875} fontWeight={500}>
           {label}
         </Label>
       )}
-      <Description lignHeight={1.8} fontSize={1.25} full={full}>
+      <Description
+        lignHeight={2.2}
+        fontSize={0.875}
+        full={full}
+        color="lightBlack"
+      >
         {description}
       </Description>
     </InfoFrame>
