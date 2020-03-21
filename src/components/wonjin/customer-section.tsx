@@ -8,14 +8,23 @@ import getColor from '../share/color'
 const TABS = ['제조사 및 브랜드', '물류 및 유통사']
 
 const Logo = styled.div<{ name: string }>`
-  width: 25%;
+  display: inline-block;
+  width: 8.875rem;
   height: 3.875rem;
   background-size: 100%;
-  background: url(/images/${({ name }) => `logo-${name}-pc@3x.png`}) no-repeat;
+  background-image: url(/images/${({ name }) => `logo-${name}-pc@3x.png`});
+
+  &:not(:last-child) {
+    margin-right: 9.26%;
+  }
+
+  &:nth-child(4n + 4) {
+    margin-right: 0;
+  }
 `
 
 const CustomerSectionFrame = styled(Container)`
-  max-width: 40.94rem;
+  max-width: 49.25rem;
   margin: 0 auto;
 `
 
@@ -93,7 +102,7 @@ export default function CustomerSection() {
           </Tab>
         ))}
       </Container>
-      <Container>
+      <Container margin="2.5rem 0 4.063rem 0">
         {logos.map((logo, idx) => (
           <Logo name={logo} key={idx} />
         ))}
