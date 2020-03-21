@@ -11,7 +11,7 @@ const MenuFrame = styled.ul`
   box-sizing: border-box;
 
   @media ${media.md} {
-    display: none;
+    transform: translate(100%);
     width: 53.33%;
     padding: 0 0.75rem;
     z-index: 9999;
@@ -110,14 +110,37 @@ const HamburgerCloseIcon = styled.img`
   vertical-align: top;
 `
 
+const HamburgerButton = styled.img`
+  width: 1.313rem;
+  display: none;
+
+  @media ${media.md} {
+    display: block;
+    font-size: 0.875rem;
+    height: 1.25rem;
+    line-height: 1.25rem;
+    float: right;
+    margin: 0.95rem;
+
+    &:before {
+      width: auto;
+    }
+  }
+`
+
 function Menu({ pathname }: { pathname: string }) {
   const parsedPathname = useMemo(() => pathname.replace('/', ''), [pathname])
+
   return (
     <>
+      <HamburgerButton src="/images/btn-menu@3x.png" alt="mo_gnb_open_button" />
       <MenuFrame>
         <HamburgerMenuBarContainer>
-          <HamburgerLogo src="/images/logo-lnb@3x.png" />
-          <HamburgerCloseIcon src="/images/btn-x@3x.png" />
+          <HamburgerLogo src="/images/logo-lnb@3x.png" alt="mo_gnb_logo" />
+          <HamburgerCloseIcon
+            src="/images/btn-x@3x.png"
+            alt="mo_gnb_close_btn"
+          />
         </HamburgerMenuBarContainer>
         {MENUS.map(({ id, label }) => (
           <A to={`/${id}`}>
