@@ -31,24 +31,26 @@ const MenuFrame = styled.ul<{ open: boolean }>`
 `
 
 const Dimmed = styled.div<{ open: boolean }>`
-  visibility: hidden;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  opacity: 0;
-  background-color: #000000;
-  z-index: 3;
-  transition: visibility 0s, opacity 0.3s;
+  @media ${media.md} {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.1;
+    background-color: #000000;
+    z-index: 3;
+    transition: visibility 0s, opacity 0.3s;
 
-  ${({ open }) =>
-    open &&
-    `
+    ${({ open }) =>
+      open &&
+      `
     display: block;
     visibility: visible;
     opacity: 0.3;
   `}
+  }
 `
 
 const A = styled(Link)`
@@ -128,11 +130,13 @@ const HamburgerCloseIcon = styled.img`
   right: 0;
   transform: translateY(-50%);
   vertical-align: top;
+  cursor: pointer;
 `
 
 const HamburgerButton = styled.img`
   width: 1.313rem;
   display: none;
+  cursor: pointer;
 
   @media ${media.md} {
     display: block;
@@ -164,7 +168,9 @@ function Menu({ pathname }: { pathname: string }) {
       />
       <MenuFrame open={open}>
         <HamburgerMenuBarContainer>
-          <HamburgerLogo src="/images/logo-lnb@3x.png" alt="mo_gnb_logo" />
+          <Link to="/" onClick={handleClose}>
+            <HamburgerLogo src="/images/logo-lnb@3x.png" alt="mo_gnb_logo" />
+          </Link>
           <HamburgerCloseIcon
             src="/images/btn-x@3x.png"
             alt="mo_gnb_close_btn"
