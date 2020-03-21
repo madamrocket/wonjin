@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react'
+import React, { useMemo, useState } from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 
@@ -6,7 +6,7 @@ import { MENUS } from './constants'
 import getColor from '../share/color'
 import media from '../share/media'
 
-const MenuFrame = styled.ul`
+const MenuFrame = styled.ul<{ open: boolean }>`
   float: right;
   box-sizing: border-box;
 
@@ -20,19 +20,35 @@ const MenuFrame = styled.ul`
     background: #fff;
     top: 0;
     bottom: 0;
+    transition: transform 0.3s;
+
+    ${({ open }) =>
+      open &&
+      `
+      transform: translate(0);
+    `}
   }
 `
 
-const Dimmed = styled.div`
-  display: none;
+const Dimmed = styled.div<{ open: boolean }>`
+  visibility: hidden;
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  opacity: 0.3;
+  opacity: 0;
   background-color: #000000;
   z-index: 3;
+  transition: visibility 0s, opacity 0.3s;
+
+  ${({ open }) =>
+    open &&
+    `
+    display: block;
+    visibility: visible;
+    opacity: 0.3;
+  `}
 `
 
 const A = styled(Link)`
@@ -94,6 +110,10 @@ const HamburgerMenuBarContainer = styled.div`
   padding: 1rem 0.5rem;
   position: relative;
   display: none;
+
+  @media ${media.md} {
+    display: block;
+  }
 `
 
 const HamburgerLogo = styled.img`
@@ -120,7 +140,7 @@ const HamburgerButton = styled.img`
     height: 1.25rem;
     line-height: 1.25rem;
     float: right;
-    margin: 0.95rem;
+    padding: 0.95rem;
 
     &:before {
       width: auto;
@@ -130,27 +150,36 @@ const HamburgerButton = styled.img`
 
 function Menu({ pathname }: { pathname: string }) {
   const parsedPathname = useMemo(() => pathname.replace('/', ''), [pathname])
+  const [open, setOpen] = useState(false)
+
+  const handleOpen = () => setOpen(true)
+  const handleClose = () => setOpen(false)
 
   return (
     <>
-      <HamburgerButton src="/images/btn-menu@3x.png" alt="mo_gnb_open_button" />
-      <MenuFrame>
+      <HamburgerButton
+        src="/images/btn-menu@3x.png"
+        alt="mo_gnb_open_button"
+        onClick={handleOpen}
+      />
+      <MenuFrame open={open}>
         <HamburgerMenuBarContainer>
           <HamburgerLogo src="/images/logo-lnb@3x.png" alt="mo_gnb_logo" />
           <HamburgerCloseIcon
             src="/images/btn-x@3x.png"
             alt="mo_gnb_close_btn"
+            onClick={handleClose}
           />
         </HamburgerMenuBarContainer>
         {MENUS.map(({ id, label }) => (
-          <A to={`/${id}`}>
+          <A to={`/${id}`} onClick={handleClose}>
             <Label key={id} active={parsedPathname === id}>
               {label}
             </Label>
           </A>
         ))}
       </MenuFrame>
-      <Dimmed />
+      <Dimmed open={open} onClick={handleClose} />
     </>
   )
 }
