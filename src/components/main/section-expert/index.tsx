@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import data from './data.json'
 import ExpertCard from './expert-card'
 import Container from '../../share/container'
-import { media } from '../../share/media'
+import media from '../../share/media'
 import Text from '../../share/text'
 
 const SectionExpertFrame = styled(Container)`

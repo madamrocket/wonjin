@@ -8,7 +8,7 @@ import { Center } from './types'
 import Card from './card'
 import Container from '../../share/container'
 import getColor from '../../share/color'
-import { media } from '../../share/media'
+import media from '../../share/media'
 
 const CarouselFrame = styled(Container)`
   overflow: visible;
