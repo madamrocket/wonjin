@@ -5,9 +5,20 @@ import Container from '../share/container'
 import Text from '../share/text'
 import Heading from '../heading'
 
+const HeadingText = styled(Text)`
+  position: absolute;
+  top: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+`
+
 export default function HeadingSection() {
   return (
-    <>
+    <Container position="relative">
+      <HeadingText fontWeight="bold" fontSize={2} color="white">
+        서비스 소개
+      </HeadingText>
       <Heading
         image="/images/service-cover.png"
         topSpancing="11.31rem"
@@ -52,6 +63,6 @@ export default function HeadingSection() {
           </Container>
         </Container>
       </Heading>
-    </>
+    </Container>
   )
 }
