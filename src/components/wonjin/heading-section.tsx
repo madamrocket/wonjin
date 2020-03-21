@@ -14,15 +14,19 @@ export default function HeadingSection() {
   return (
     <>
       <Heading
-        title="물류의 새로운 길,"
-        subTitle="지금 원진물류를 만나보세요."
-        Linebreak
-        emphasisSubTitle
         image="/images/wonjin-intro-cover.png"
-        textAlign="left"
         topSpancing="11.31rem"
         imageHeight={20}
-      />
+      >
+        <Container textAlign="left" padding="0 0 0 4.188rem">
+          <Text color="blue" fontSize={2.25} margin="0 0.625rem 0 0">
+            물류의 새로운 길,
+          </Text>
+          <Text color="blue" fontSize={2.25} fontWeight="bold">
+            지금 원진물류를 만나보세요.
+          </Text>
+        </Container>
+      </Heading>
       <TextFrame margin="4.313rem auto 0 auto">
         <Text
           fontSize={2}
