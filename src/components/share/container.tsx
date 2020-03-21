@@ -8,6 +8,7 @@ import float, { Float } from './mixins/float'
 import position, { Position } from './mixins/position'
 import height, { Height } from './mixins/height'
 import width, { Width } from './mixins/width'
+import textAlign, { TextAlign } from './mixins/text-align'
 
 export default styled.div<{
   margin?: Margin
@@ -18,6 +19,7 @@ export default styled.div<{
   position?: Position
   height?: Height
   width?: Width
+  textAlign?: TextAlign
 }>`
   box-sizing: border-box;
   ${margin}
@@ -28,4 +30,5 @@ export default styled.div<{
   ${position}
   ${height}
   ${width}
+  ${textAlign}
 `
