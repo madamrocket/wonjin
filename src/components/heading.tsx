@@ -8,10 +8,11 @@ import CoverImage from './share/cover-image'
 
 const MessageBox = styled(Container)<{
   textAlign: string
+  topSpancing?: string
 }>`
   background: ${getColor('white')};
   position: absolute;
-  top: 10.81rem;
+  top: ${({ topSpancing }) => topSpancing || '10.81rem'};
   left: 50%;
   transform: translateX(-50%);
   max-width: 49.25rem;
@@ -29,34 +30,51 @@ const MessageBox = styled(Container)<{
 
 interface HeadingType {
   title: string
-  emphasis: string
   Linebreak?: boolean
   textAlign?: string
   image: string
+  subTitle: string
+  emphasisTitle?: boolean
+  emphasisSubTitle?: boolean
+  topSpancing?: string
+  imageHeight?: number
 }
 
 function Heading({
   title,
-  emphasis,
+  subTitle,
+  emphasisTitle,
+  emphasisSubTitle,
   Linebreak,
   image,
   textAlign,
+  topSpancing,
+  imageHeight = 15,
 }: HeadingType) {
   return (
     <Container position="relative">
-      <CoverImage src={image} height={15} />
-      <MessageBox padding="2.5rem  0" textAlign={textAlign}>
+      <CoverImage src={image} height={imageHeight} />
+      <MessageBox
+        topSpancing={topSpancing}
+        padding="2.5rem  0"
+        textAlign={textAlign || 'center'}
+      >
         <Text
           color="blue"
           fontSize={2.25}
-          fontWeight="bold"
+          fontWeight={emphasisTitle ? 'bold' : 'normal'}
           inlineBlock={!Linebreak}
           margin="0 0.625rem 0 0"
         >
           {title}
         </Text>
-        <Text color="blue" fontSize={2.25} inlineBlock={!Linebreak}>
-          {emphasis}
+        <Text
+          color="blue"
+          fontSize={2.25}
+          fontWeight={emphasisSubTitle ? 'bold' : 'normal'}
+          inlineBlock={!Linebreak}
+        >
+          {subTitle}
         </Text>
       </MessageBox>
     </Container>

@@ -16,7 +16,8 @@ function SectionIntroWonjin() {
     <>
       <Heading
         title="프리미엄 물류센터,"
-        emphasis="그 이상의 가치."
+        subTitle="그 이상의 가치."
+        emphasisTitle
         image="/images/main-cover.png"
       />
       <ContentFrame>
