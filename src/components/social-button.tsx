@@ -1,8 +1,9 @@
+import React from 'react'
 import styled from 'styled-components'
 
-import getColor from '../share/color'
+import getColor from './share/color'
 
-export default styled.span<{ type: 'naver' | 'facebook' }>`
+const Icon = styled.span<{ type: 'naver' | 'facebook' }>`
   background: ${({ type }) => `url(/images/logo-${type}-white@3x.png)`}
     no-repeat;
   background-size: 1.625rem;
@@ -17,3 +18,12 @@ export default styled.span<{ type: 'naver' | 'facebook' }>`
     margin-right: 0.75rem;
   }
 `
+
+export default function SocialButton() {
+  return (
+    <>
+      <Icon type="naver" />
+      <Icon type="facebook" />
+    </>
+  )
+}

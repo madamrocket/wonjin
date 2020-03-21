@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 
-import getColor from '../share/color'
 import Container from '../share/container'
 import Text from '../share/text'
 import Tabs from '../tabs'
@@ -16,6 +15,13 @@ const MAPS = [
     value: 1,
   },
 ]
+
+const Empty = styled.div`
+  width: 100%;
+  height: 320px;
+  background: #efefef;
+  margin: 1.25rem 0 1.5rem 0;
+`
 
 export default function Map() {
   const [currentTab, setCurrentTab] = useState(0)
@@ -36,6 +42,7 @@ export default function Map() {
         options={MAPS}
         onChange={(value) => setCurrentTab(value as number)}
       />
+      <Empty />
     </Container>
   )
 }

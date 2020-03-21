@@ -2,10 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Container from '../share/container'
-import { media } from '../share/media'
 import getColor from '../share/color'
 import Info from './info'
-import Logo from './logo'
+import SocialButton from '../social-button'
 
 const FooterFrame = styled(Container)`
   background: ${getColor('lightGray')};
@@ -50,8 +49,7 @@ function Footer() {
           />
         </InfoContainer>
         <LogoContainer>
-          <Logo type="naver" />
-          <Logo type="facebook" />
+          <SocialButton />
         </LogoContainer>
       </FooterContainer>
     </FooterFrame>
