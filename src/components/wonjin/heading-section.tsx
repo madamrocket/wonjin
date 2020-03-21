@@ -28,7 +28,11 @@ export default function HeadingSection() {
           fontSize={2}
           fontWeight="bold"
         >{`이제 물류가 곧, \n 귀사의 경쟁력이 됩니다.`}</Text>
-        <Text color="lightBlack" margin="1.5rem 0 3.25rem 0" lignHeight={1.75}>
+        <Text
+          color="lightBlack"
+          margin="1.5rem 0  5.563rem 0"
+          lignHeight={1.75}
+        >
           원진물류는 1993년부터 국내 유수 기업에 물류 시설을 제공하며 성장해 온
           최장수 물류센터 전문 기 업 입니다. 최첨단 물류센터를 직접 운영하며,
           고객사 공급망에 대한 치밀한 분석과 현장 중심의 풍부 한 물류 경험을

@@ -5,6 +5,7 @@ import margin, { Margin } from './mixins/margin'
 import padding, { Padding } from './mixins/padding'
 import fontWeight, { FontWeight } from './mixins/font-weight'
 import getColor, { Color } from './color'
+import textAlign, { TextAlign } from './mixins/text-align'
 
 interface TextProps {
   margin?: Margin
@@ -14,12 +15,14 @@ interface TextProps {
   inlineBlock?: boolean
   lignHeight?: number | string
   color?: Color
+  textAlign?: TextAlign
 }
 
 const BaseText = styled.div<TextProps>`
   ${margin}
   ${padding}
   ${fontWeight}
+  ${textAlign}
   ${({ fontSize }) => `font-size: ${fontSize || 1}rem;`}
   ${({ inlineBlock }) => inlineBlock && `display: inline-block;`}
   ${({ lignHeight }) => `line-height: ${lignHeight || 1.5};`}
