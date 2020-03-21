@@ -24,6 +24,7 @@ interface HeadingType {
   topSpancing?: string
   imageHeight?: number
   children?: React.ReactNode
+  padding?: string
 }
 
 function Heading({
@@ -31,11 +32,12 @@ function Heading({
   topSpancing,
   imageHeight = 15,
   children,
+  padding = '2.5rem  0',
 }: HeadingType) {
   return (
     <Container position="relative">
       <CoverImage src={image} height={imageHeight} />
-      <MessageBox topSpancing={topSpancing} padding="2.5rem  0">
+      <MessageBox topSpancing={topSpancing} padding={padding}>
         {children}
       </MessageBox>
     </Container>

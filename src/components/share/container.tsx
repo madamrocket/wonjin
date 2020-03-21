@@ -22,6 +22,7 @@ export default styled.div<{
   textAlign?: TextAlign
 }>`
   box-sizing: border-box;
+  vertical-align: top;
   ${margin}
   ${padding}
   ${maxWidth}
