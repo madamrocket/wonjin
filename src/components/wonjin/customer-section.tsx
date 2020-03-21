@@ -4,8 +4,18 @@ import styled from 'styled-components'
 import Container from '../share/container'
 import Text from '../share/text'
 import getColor from '../share/color'
+import Tabs from '../tabs'
 
-const TABS = ['제조사 및 브랜드', '물류 및 유통사']
+const TABS = [
+  {
+    value: 0,
+    label: '제조사 및 브랜드',
+  },
+  {
+    value: 1,
+    label: '물류 및 유통사',
+  },
+]
 
 const Logo = styled.div<{ name: string }>`
   display: inline-block;
@@ -96,11 +106,11 @@ export default function CustomerSection() {
         주요 고객사
       </Text>
       <Container textAlign="center">
-        {TABS.map((tab, idx) => (
-          <Tab active={idx === currentTab} onClick={() => setCurrentTab(idx)}>
-            {tab}
-          </Tab>
-        ))}
+        <Tabs
+          options={TABS}
+          value={currentTab}
+          onChange={(value) => setCurrentTab(value as number)}
+        />
       </Container>
       <Container margin="2.5rem 0 4.063rem 0">
         {logos.map((logo, idx) => (
