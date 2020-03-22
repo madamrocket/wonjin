@@ -24,7 +24,7 @@ function Contents() {
   return (
     <Container>
       {posts.map(({ title, subTitle, image, content }, idx) => (
-        <Container>
+        <Container key={idx}>
           <Image src={image} />
           <Text color="green" fontSize={2} lignHeight={2.25} fontWeight="bold">
             {title}

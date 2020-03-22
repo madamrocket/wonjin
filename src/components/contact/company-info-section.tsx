@@ -13,8 +13,8 @@ const Label = styled(Text)`
 function CompanyInfoSection() {
   return (
     <Container maxWidth="40.88rem" margin="0 auto">
-      {INFO.map(({ label, value }) => (
-        <Container>
+      {INFO.map(({ label, value }, idx) => (
+        <Container key={idx}>
           <Label inlineBlock lignHeight={2.25} fontWeight={500}>
             {label}
           </Label>

@@ -177,8 +177,8 @@ function Menu({ pathname }: { pathname: string }) {
             onClick={handleClose}
           />
         </HamburgerMenuBarContainer>
-        {MENUS.map(({ id, label }) => (
-          <A to={`/${id}`} onClick={handleClose}>
+        {MENUS.map(({ id, label }, idx) => (
+          <A to={`/${id}`} onClick={handleClose} key={idx}>
             <Label key={id} active={parsedPathname === id}>
               {label}
             </Label>
