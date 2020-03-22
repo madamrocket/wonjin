@@ -3,22 +3,29 @@ import styled from 'styled-components'
 
 import Container from '../share/container'
 import Text from '../share/text'
-import { solutions } from './data.json'
+import { services } from './data.json'
 
-const SolutaionFrame = styled(Container)`
+const ServiceFrame = styled(Container)`
   max-width: 40.5rem;
   width: 100%;
   margin: 8rem auto 4rem auto;
 `
 
-function SolutaionSection() {
+const Image = styled.img`
+  width: 19.94rem;
+  vertical-align: top;
+  margin-bottom: 1rem;
+`
+
+function ServiceSeciton() {
   return (
-    <SolutaionFrame>
+    <ServiceFrame>
       <Text fontSize={2} color="green" fontWeight="bold" margin="0 0 1.5rem 0">
         임대 솔루션
       </Text>
-      {solutions.map(({ title, content }, idx) => (
+      {services.map(({ image, title, content }, idx) => (
         <Container key={idx}>
+          <Image src={image} />
           <Text
             color="blue"
             fontSize={1.25}
@@ -33,8 +40,8 @@ function SolutaionSection() {
           </Text>
         </Container>
       ))}
-    </SolutaionFrame>
+    </ServiceFrame>
   )
 }
 
-export default SolutaionSection
+export default ServiceSeciton
