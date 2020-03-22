@@ -6,7 +6,7 @@ import getColor from './share/color'
 
 const Tab = styled.div<{
   active: boolean
-  bottomSpancing?: string
+  bottomSpancing?: number
 }>`
   position: relative;
   display: inline-block;
@@ -54,7 +54,7 @@ export default function Tabs<T>({
     label: string
   }[]
   onChange: (value: T) => void
-  bottomSpancing?: string
+  bottomSpancing?: number
 }) {
   return (
     <Container>

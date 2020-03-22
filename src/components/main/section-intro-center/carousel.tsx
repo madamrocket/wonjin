@@ -29,22 +29,21 @@ const ControllButton = styled.span<{ type: 'prev' | 'next' }>`
       ? `
     background: ${getColor('green')} url(/images/ic-arrow-left-w@3x.png)
     no-repeat;
-    left: -1.5rem;
+    left: -1rem;
 `
       : `
     background: ${getColor('green')} url(/images/ic-arrow-right-w@3x.png)
       no-repeat;
-    right: 0.7rem;
+    right: -1rem;
   `}
 
-  width: 2rem;
-  height: 2rem;
+  width: 1.125rem;
+  height: 1.125rem;
   position: absolute;
-  top: 5.875rem;
-  transform: translateY(-50%);
+  top: 3.5rem;
   background-position: center;
-  padding: 0.625rem;
-  background-size: 2rem;
+  padding: 0.4375rem;
+  background-size: 1.125rem;
   z-index: 2;
 `
 
@@ -91,7 +90,7 @@ function Carousel() {
         horizontal={true}
         bound={true}
         duration={100}
-        gap={36}
+        gap={16}
         onMoveStart={handleResizeFlicking}
         onMoveEnd={handleMoveEnd}
       >
