@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import Container from './share/container'
 import getColor from './share/color'
 
 const Tab = styled.div<{
@@ -47,7 +48,7 @@ export default function Tabs({
   onChange: (value: string | number) => void
 }) {
   return (
-    <>
+    <Container>
       {options.map(({ value: optionValue, label }, idx) => (
         <Tab
           key={idx}
@@ -57,6 +58,6 @@ export default function Tabs({
           {label}
         </Tab>
       ))}
-    </>
+    </Container>
   )
 }

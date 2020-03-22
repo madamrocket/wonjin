@@ -2757,13 +2757,6 @@ export type Unnamed_1_QueryVariables = {};
 
 export type Unnamed_1_Query = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title' | 'description'>> }> };
 
-export type DataQueryQueryVariables = {
-  slug: Scalars['String'];
-};
-
-
-export type DataQueryQuery = { readonly dataJson: Maybe<Pick<DataJson, 'id' | 'address' | 'dock' | 'equipment' | 'ev_count' | 'eyepiece' | 'food_storage'>> };
-
 export type SiteTitleQueryQueryVariables = {};
 
 
@@ -2773,6 +2766,13 @@ export type CentersQueryQueryVariables = {};
 
 
 export type CentersQueryQuery = { readonly allDataJson: { readonly edges: ReadonlyArray<{ readonly node: Pick<DataJson, 'id' | 'image' | 'name' | 'address'> }> } };
+
+export type DataQueryQueryVariables = {
+  slug: Scalars['String'];
+};
+
+
+export type DataQueryQuery = { readonly dataJson: Maybe<Pick<DataJson, 'id' | 'address' | 'dock' | 'equipment' | 'ev_count' | 'eyepiece' | 'food_storage'>> };
 
 export type GatsbyImageSharpFixedFragment = Pick<ImageSharpFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet'>;
 
