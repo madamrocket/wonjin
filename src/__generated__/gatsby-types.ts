@@ -2752,27 +2752,25 @@ export type StringQueryOperatorInput = {
   readonly glob: Maybe<Scalars['String']>;
 };
 
-export type Unnamed_1_QueryVariables = {};
+export type CentersQueryQueryVariables = {};
 
 
-export type Unnamed_1_Query = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title' | 'description'>> }> };
+export type CentersQueryQuery = { readonly allDataJson: { readonly edges: ReadonlyArray<{ readonly node: Pick<DataJson, 'id' | 'image' | 'name' | 'address'> }> } };
 
 export type SiteTitleQueryQueryVariables = {};
 
 
 export type SiteTitleQueryQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title'>> }> };
 
-export type CentersQueryQueryVariables = {};
+export type Unnamed_1_QueryVariables = {};
 
 
-export type CentersQueryQuery = { readonly allDataJson: { readonly edges: ReadonlyArray<{ readonly node: Pick<DataJson, 'id' | 'image' | 'name' | 'address'> }> } };
+export type Unnamed_1_Query = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title' | 'description'>> }> };
 
-export type DataQueryQueryVariables = {
-  slug: Scalars['String'];
-};
+export type CenterAllContentsQueryVariables = {};
 
 
-export type DataQueryQuery = { readonly dataJson: Maybe<Pick<DataJson, 'id' | 'address' | 'dock' | 'equipment' | 'ev_count' | 'eyepiece' | 'food_storage'>> };
+export type CenterAllContentsQuery = { readonly allDataJson: { readonly edges: ReadonlyArray<{ readonly node: Pick<DataJson, 'id' | 'image' | 'name' | 'address'> }> } };
 
 export type GatsbyImageSharpFixedFragment = Pick<ImageSharpFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet'>;
 
@@ -2821,6 +2819,13 @@ export type GatsbyImageSharpSizes_withWebp_tracedSVGFragment = Pick<ImageSharpSi
 export type GatsbyImageSharpSizes_noBase64Fragment = Pick<ImageSharpSizes, 'aspectRatio' | 'src' | 'srcSet' | 'sizes'>;
 
 export type GatsbyImageSharpSizes_withWebp_noBase64Fragment = Pick<ImageSharpSizes, 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
+
+export type DataQueryQueryVariables = {
+  slug: Scalars['String'];
+};
+
+
+export type DataQueryQuery = { readonly dataJson: Maybe<Pick<DataJson, 'id' | 'address' | 'dock' | 'equipment' | 'ev_count' | 'eyepiece' | 'food_storage'>> };
 
 export type PagesQueryQueryVariables = {};
 

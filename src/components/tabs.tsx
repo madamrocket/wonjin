@@ -6,7 +6,9 @@ import getColor from './share/color'
 
 const Tab = styled.div<{
   active: boolean
+  bottomSpancing?: string
 }>`
+  position: relative;
   display: inline-block;
   font-size: 1.125rem;
   font-weight: 500;
@@ -16,6 +18,12 @@ const Tab = styled.div<{
     margin-right: 2rem;
   }
 
+  ${({ bottomSpancing }) =>
+    bottomSpancing &&
+    `
+    margin-bottom: ${bottomSpancing}rem;
+  `}
+
   ${({ active }) =>
     active &&
     `
@@ -23,6 +31,7 @@ const Tab = styled.div<{
         color: ${getColor('green')};
   
         &:after {
+            position: absolute;
             content: '';
             display: block;
             width: 100%;
@@ -33,19 +42,19 @@ const Tab = styled.div<{
       `}
 `
 
-interface Option {
-  value: string | number
-  label: string
-}
-
-export default function Tabs({
+export default function Tabs<T>({
   options,
   onChange,
   value,
+  bottomSpancing,
 }: {
-  value: string | number
-  options: Option[]
-  onChange: (value: string | number) => void
+  value: T
+  options: {
+    value: T
+    label: string
+  }[]
+  onChange: (value: T) => void
+  bottomSpancing?: string
 }) {
   return (
     <Container>
@@ -54,6 +63,7 @@ export default function Tabs({
           key={idx}
           active={optionValue === value}
           onClick={() => onChange(optionValue)}
+          bottomSpancing={bottomSpancing}
         >
           {label}
         </Tab>
