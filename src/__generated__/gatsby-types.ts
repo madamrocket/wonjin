@@ -38,20 +38,9 @@ export type DataJson = Node & {
   readonly image: Maybe<Scalars['String']>;
   readonly name: Maybe<Scalars['String']>;
   readonly address: Maybe<Scalars['String']>;
-  readonly year: Maybe<Scalars['String']>;
-  readonly land_area: Maybe<Scalars['String']>;
-  readonly total_area: Maybe<Scalars['String']>;
-  readonly number_of_floors: Maybe<Scalars['String']>;
-  readonly ev_count: Maybe<Scalars['String']>;
-  readonly eyepiece: Maybe<Scalars['String']>;
-  readonly dock: Maybe<Scalars['String']>;
-  readonly height: Maybe<Scalars['String']>;
-  readonly road: Maybe<Scalars['String']>;
-  readonly equipment: Maybe<Scalars['String']>;
-  readonly security: Maybe<Scalars['String']>;
-  readonly overhead_door: Maybe<Scalars['Boolean']>;
-  readonly food_storage: Maybe<Scalars['Boolean']>;
   readonly description: Maybe<Scalars['String']>;
+  readonly info: Maybe<DataJsonInfo>;
+  readonly adress: Maybe<Scalars['String']>;
 };
 
 export type DataJsonConnection = {
@@ -172,20 +161,17 @@ export enum DataJsonFieldsEnum {
   image = 'image',
   name = 'name',
   address = 'address',
-  year = 'year',
-  land_area = 'land_area',
-  total_area = 'total_area',
-  number_of_floors = 'number_of_floors',
-  ev_count = 'ev_count',
-  eyepiece = 'eyepiece',
-  dock = 'dock',
-  height = 'height',
-  road = 'road',
-  equipment = 'equipment',
-  security = 'security',
-  overhead_door = 'overhead_door',
-  food_storage = 'food_storage',
-  description = 'description'
+  description = 'description',
+  info____x = 'info._x',
+  info____xxx = 'info._xxx',
+  info____xx = 'info._xx',
+  info___E_V________ = 'info.E_V________',
+  info____xxxxxxxxxxxx = 'info._xxxxxxxxxxxx',
+  info____xxxxxx = 'info._xxxxxx',
+  info____xxxxIC = 'info._xxxxIC',
+  info____xxxx = 'info._xxxx',
+  info____xxxxx = 'info._xxxxx',
+  adress = 'adress'
 }
 
 export type DataJsonFilterInput = {
@@ -197,20 +183,9 @@ export type DataJsonFilterInput = {
   readonly image: Maybe<StringQueryOperatorInput>;
   readonly name: Maybe<StringQueryOperatorInput>;
   readonly address: Maybe<StringQueryOperatorInput>;
-  readonly year: Maybe<StringQueryOperatorInput>;
-  readonly land_area: Maybe<StringQueryOperatorInput>;
-  readonly total_area: Maybe<StringQueryOperatorInput>;
-  readonly number_of_floors: Maybe<StringQueryOperatorInput>;
-  readonly ev_count: Maybe<StringQueryOperatorInput>;
-  readonly eyepiece: Maybe<StringQueryOperatorInput>;
-  readonly dock: Maybe<StringQueryOperatorInput>;
-  readonly height: Maybe<StringQueryOperatorInput>;
-  readonly road: Maybe<StringQueryOperatorInput>;
-  readonly equipment: Maybe<StringQueryOperatorInput>;
-  readonly security: Maybe<StringQueryOperatorInput>;
-  readonly overhead_door: Maybe<BooleanQueryOperatorInput>;
-  readonly food_storage: Maybe<BooleanQueryOperatorInput>;
   readonly description: Maybe<StringQueryOperatorInput>;
+  readonly info: Maybe<DataJsonInfoFilterInput>;
+  readonly adress: Maybe<StringQueryOperatorInput>;
 };
 
 export type DataJsonGroupConnection = {
@@ -220,6 +195,30 @@ export type DataJsonGroupConnection = {
   readonly pageInfo: PageInfo;
   readonly field: Scalars['String'];
   readonly fieldValue: Maybe<Scalars['String']>;
+};
+
+export type DataJsonInfo = {
+  readonly _x: Maybe<Scalars['String']>;
+  readonly _xxx: Maybe<Scalars['String']>;
+  readonly _xx: Maybe<Scalars['String']>;
+  readonly E_V________: Maybe<Scalars['String']>;
+  readonly _xxxxxxxxxxxx: Maybe<Scalars['String']>;
+  readonly _xxxxxx: Maybe<Scalars['String']>;
+  readonly _xxxxIC: Maybe<Scalars['String']>;
+  readonly _xxxx: Maybe<Scalars['String']>;
+  readonly _xxxxx: Maybe<Scalars['String']>;
+};
+
+export type DataJsonInfoFilterInput = {
+  readonly _x: Maybe<StringQueryOperatorInput>;
+  readonly _xxx: Maybe<StringQueryOperatorInput>;
+  readonly _xx: Maybe<StringQueryOperatorInput>;
+  readonly E_V________: Maybe<StringQueryOperatorInput>;
+  readonly _xxxxxxxxxxxx: Maybe<StringQueryOperatorInput>;
+  readonly _xxxxxx: Maybe<StringQueryOperatorInput>;
+  readonly _xxxxIC: Maybe<StringQueryOperatorInput>;
+  readonly _xxxx: Maybe<StringQueryOperatorInput>;
+  readonly _xxxxx: Maybe<StringQueryOperatorInput>;
 };
 
 export type DataJsonSortInput = {
@@ -925,20 +924,17 @@ export enum FileFieldsEnum {
   childDataJson___image = 'childDataJson.image',
   childDataJson___name = 'childDataJson.name',
   childDataJson___address = 'childDataJson.address',
-  childDataJson___year = 'childDataJson.year',
-  childDataJson___land_area = 'childDataJson.land_area',
-  childDataJson___total_area = 'childDataJson.total_area',
-  childDataJson___number_of_floors = 'childDataJson.number_of_floors',
-  childDataJson___ev_count = 'childDataJson.ev_count',
-  childDataJson___eyepiece = 'childDataJson.eyepiece',
-  childDataJson___dock = 'childDataJson.dock',
-  childDataJson___height = 'childDataJson.height',
-  childDataJson___road = 'childDataJson.road',
-  childDataJson___equipment = 'childDataJson.equipment',
-  childDataJson___security = 'childDataJson.security',
-  childDataJson___overhead_door = 'childDataJson.overhead_door',
-  childDataJson___food_storage = 'childDataJson.food_storage',
-  childDataJson___description = 'childDataJson.description'
+  childDataJson___description = 'childDataJson.description',
+  childDataJson___info____x = 'childDataJson.info._x',
+  childDataJson___info____xxx = 'childDataJson.info._xxx',
+  childDataJson___info____xx = 'childDataJson.info._xx',
+  childDataJson___info___E_V________ = 'childDataJson.info.E_V________',
+  childDataJson___info____xxxxxxxxxxxx = 'childDataJson.info._xxxxxxxxxxxx',
+  childDataJson___info____xxxxxx = 'childDataJson.info._xxxxxx',
+  childDataJson___info____xxxxIC = 'childDataJson.info._xxxxIC',
+  childDataJson___info____xxxx = 'childDataJson.info._xxxx',
+  childDataJson___info____xxxxx = 'childDataJson.info._xxxxx',
+  childDataJson___adress = 'childDataJson.adress'
 }
 
 export type FileFilterInput = {
@@ -1723,7 +1719,6 @@ export type Query_sitePageArgs = {
   children: Maybe<NodeFilterListInput>;
   internal: Maybe<InternalFilterInput>;
   isCreatedByStatefulCreatePages: Maybe<BooleanQueryOperatorInput>;
-  context: Maybe<SitePageContextFilterInput>;
   pluginCreator: Maybe<SitePluginFilterInput>;
   pluginCreatorId: Maybe<StringQueryOperatorInput>;
   componentPath: Maybe<StringQueryOperatorInput>;
@@ -1791,20 +1786,9 @@ export type Query_dataJsonArgs = {
   image: Maybe<StringQueryOperatorInput>;
   name: Maybe<StringQueryOperatorInput>;
   address: Maybe<StringQueryOperatorInput>;
-  year: Maybe<StringQueryOperatorInput>;
-  land_area: Maybe<StringQueryOperatorInput>;
-  total_area: Maybe<StringQueryOperatorInput>;
-  number_of_floors: Maybe<StringQueryOperatorInput>;
-  ev_count: Maybe<StringQueryOperatorInput>;
-  eyepiece: Maybe<StringQueryOperatorInput>;
-  dock: Maybe<StringQueryOperatorInput>;
-  height: Maybe<StringQueryOperatorInput>;
-  road: Maybe<StringQueryOperatorInput>;
-  equipment: Maybe<StringQueryOperatorInput>;
-  security: Maybe<StringQueryOperatorInput>;
-  overhead_door: Maybe<BooleanQueryOperatorInput>;
-  food_storage: Maybe<BooleanQueryOperatorInput>;
   description: Maybe<StringQueryOperatorInput>;
+  info: Maybe<DataJsonInfoFilterInput>;
+  adress: Maybe<StringQueryOperatorInput>;
 };
 
 
@@ -2189,7 +2173,6 @@ export type SitePage = Node & {
   readonly children: ReadonlyArray<Node>;
   readonly internal: Internal;
   readonly isCreatedByStatefulCreatePages: Maybe<Scalars['Boolean']>;
-  readonly context: Maybe<SitePageContext>;
   readonly pluginCreator: Maybe<SitePlugin>;
   readonly pluginCreatorId: Maybe<Scalars['String']>;
   readonly componentPath: Maybe<Scalars['String']>;
@@ -2214,14 +2197,6 @@ export type SitePageConnection_groupArgs = {
   skip: Maybe<Scalars['Int']>;
   limit: Maybe<Scalars['Int']>;
   field: SitePageFieldsEnum;
-};
-
-export type SitePageContext = {
-  readonly slug: Maybe<Scalars['String']>;
-};
-
-export type SitePageContextFilterInput = {
-  readonly slug: Maybe<StringQueryOperatorInput>;
 };
 
 export type SitePageEdge = {
@@ -2323,7 +2298,6 @@ export enum SitePageFieldsEnum {
   internal___owner = 'internal.owner',
   internal___type = 'internal.type',
   isCreatedByStatefulCreatePages = 'isCreatedByStatefulCreatePages',
-  context___slug = 'context.slug',
   pluginCreator___id = 'pluginCreator.id',
   pluginCreator___parent___id = 'pluginCreator.parent.id',
   pluginCreator___parent___parent___id = 'pluginCreator.parent.parent.id',
@@ -2411,7 +2385,6 @@ export type SitePageFilterInput = {
   readonly children: Maybe<NodeFilterListInput>;
   readonly internal: Maybe<InternalFilterInput>;
   readonly isCreatedByStatefulCreatePages: Maybe<BooleanQueryOperatorInput>;
-  readonly context: Maybe<SitePageContextFilterInput>;
   readonly pluginCreator: Maybe<SitePluginFilterInput>;
   readonly pluginCreatorId: Maybe<StringQueryOperatorInput>;
   readonly componentPath: Maybe<StringQueryOperatorInput>;
@@ -2772,16 +2745,6 @@ export type Unnamed_1_QueryVariables = {};
 
 export type Unnamed_1_Query = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title' | 'description'>> }> };
 
-export type CenterAllContentsQueryVariables = {};
-
-
-export type CenterAllContentsQuery = { readonly allDataJson: { readonly edges: ReadonlyArray<{ readonly node: Pick<DataJson, 'id' | 'image' | 'name' | 'address' | 'description'> }> } };
-
-export type SiteTitleQueryQueryVariables = {};
-
-
-export type SiteTitleQueryQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title'>> }> };
-
 export type GatsbyImageSharpFixedFragment = Pick<ImageSharpFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet'>;
 
 export type GatsbyImageSharpFixed_tracedSVGFragment = Pick<ImageSharpFixed, 'tracedSVG' | 'width' | 'height' | 'src' | 'srcSet'>;
@@ -2829,6 +2792,16 @@ export type GatsbyImageSharpSizes_withWebp_tracedSVGFragment = Pick<ImageSharpSi
 export type GatsbyImageSharpSizes_noBase64Fragment = Pick<ImageSharpSizes, 'aspectRatio' | 'src' | 'srcSet' | 'sizes'>;
 
 export type GatsbyImageSharpSizes_withWebp_noBase64Fragment = Pick<ImageSharpSizes, 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
+
+export type SiteTitleQueryQueryVariables = {};
+
+
+export type SiteTitleQueryQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title'>> }> };
+
+export type CenterAllContentsQueryVariables = {};
+
+
+export type CenterAllContentsQuery = { readonly allDataJson: { readonly edges: ReadonlyArray<{ readonly node: Pick<DataJson, 'id' | 'image' | 'name' | 'address' | 'description'> }> } };
 
 export type PagesQueryQueryVariables = {};
 
