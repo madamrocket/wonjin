@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import data from '../components/center/data.json'
 
 import Layout from '../components/share/layout'
@@ -12,17 +12,31 @@ interface CenterIntroPageProps {
 
 function CenterIntroPage({ location }: CenterIntroPageProps) {
   const centers = data as Center[]
-  const [center, setCenter] = useState<Center>(centers[0])
+  const [center, setCenter] = useState<Center | null>(null)
+
+  useEffect(() => {
+    const match = location.search.match(/id=([^&]*)/)
+
+    setCenter(
+      match
+        ? (centers.find(({ id }) => id === Number(match[1])) as Center)
+        : centers[0],
+    )
+  }, [])
 
   const handleSelectedCenter = (selectedId: number) => {
     setCenter(centers.find(({ id }) => id === selectedId) as Center)
+  }
+
+  if (!center) {
+    return null
   }
 
   return (
     <Layout location={location}>
       <HeadingSection
         centers={data}
-        selectedId={center ? center.id : ''}
+        selectedId={center ? center.id : 0}
         onClick={handleSelectedCenter}
       />
       <DetailSection center={center} />

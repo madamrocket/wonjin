@@ -7,8 +7,8 @@ import { Center } from './types'
 
 interface HeadingSectionProps {
   centers: Center[]
-  selectedId: string
-  onClick: (id: string) => void
+  selectedId: number
+  onClick: (id: number) => void
 }
 
 export default function HeadingSection({

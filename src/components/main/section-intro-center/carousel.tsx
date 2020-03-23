@@ -47,15 +47,6 @@ const ControllButton = styled.span<{ type: 'prev' | 'next' }>`
   z-index: 2;
 `
 
-const EmptyArea = styled.div`
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 2;
-`
-
 function Carousel() {
   const centers = data as Center[]
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -70,6 +61,7 @@ function Carousel() {
     const flicking = flickingRef.current
 
     flicking.resize()
+    flicking.disableInput()
   }, [flickingRef])
 
   const handleMove = (index: number) => {
@@ -88,7 +80,6 @@ function Carousel() {
 
   return (
     <CarouselFrame float="right" position="relative">
-      <EmptyArea />
       <Flicking
         ref={flickingRef}
         collectStatistics={false}

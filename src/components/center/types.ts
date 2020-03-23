@@ -1,5 +1,5 @@
 export interface Center {
-  id: string
+  id: number
   image: string
   name: string
   address: string
