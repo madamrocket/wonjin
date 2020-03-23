@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
+import data from '../components/center/data.json'
 
 import Layout from '../components/share/layout'
-import { CenterAllContentsQuery } from '../__generated__/gatsby-types'
 import HeadingSection from '../components/center/heading-section'
 import DetailSection from '../components/center/detail-section'
 import { Center } from '../components/center/types'
@@ -12,10 +11,7 @@ interface CenterIntroPageProps {
 }
 
 function CenterIntroPage({ location }: CenterIntroPageProps) {
-  const {
-    allDataJson: { edges },
-  } = useStaticQuery<CenterAllContentsQuery>(query)
-  const [centers] = useState<Center[]>(edges.map(({ node }) => node as Center))
+  const centers = data as Center[]
   const [center, setCenter] = useState<Center>(centers[0])
 
   const handleSelectedCenter = (selectedId: string) => {
@@ -27,7 +23,7 @@ function CenterIntroPage({ location }: CenterIntroPageProps) {
   return (
     <Layout location={location}>
       <HeadingSection
-        centers={centers}
+        centers={data}
         selectedId={center ? center.id : ''}
         onClick={handleSelectedCenter}
       />
@@ -35,21 +31,5 @@ function CenterIntroPage({ location }: CenterIntroPageProps) {
     </Layout>
   )
 }
-
-export const query = graphql`
-  query CenterAllContents {
-    allDataJson(sort: { fields: order }) {
-      edges {
-        node {
-          id
-          image
-          name
-          address
-          description
-        }
-      }
-    }
-  }
-`
 
 export default CenterIntroPage

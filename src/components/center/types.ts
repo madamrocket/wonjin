@@ -4,4 +4,7 @@ export interface Center {
   name: string
   address: string
   description?: string
+  info: {
+    [key: string]: string
+  }
 }

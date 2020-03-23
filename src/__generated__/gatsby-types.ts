@@ -29,203 +29,6 @@ export type BooleanQueryOperatorInput = {
   readonly nin: Maybe<ReadonlyArray<Maybe<Scalars['Boolean']>>>;
 };
 
-export type DataJson = Node & {
-  readonly id: Scalars['ID'];
-  readonly parent: Maybe<Node>;
-  readonly children: ReadonlyArray<Node>;
-  readonly internal: Internal;
-  readonly order: Maybe<Scalars['Int']>;
-  readonly image: Maybe<Scalars['String']>;
-  readonly name: Maybe<Scalars['String']>;
-  readonly address: Maybe<Scalars['String']>;
-  readonly description: Maybe<Scalars['String']>;
-  readonly info: Maybe<DataJsonInfo>;
-  readonly adress: Maybe<Scalars['String']>;
-};
-
-export type DataJsonConnection = {
-  readonly totalCount: Scalars['Int'];
-  readonly edges: ReadonlyArray<DataJsonEdge>;
-  readonly nodes: ReadonlyArray<DataJson>;
-  readonly pageInfo: PageInfo;
-  readonly distinct: ReadonlyArray<Scalars['String']>;
-  readonly group: ReadonlyArray<DataJsonGroupConnection>;
-};
-
-
-export type DataJsonConnection_distinctArgs = {
-  field: DataJsonFieldsEnum;
-};
-
-
-export type DataJsonConnection_groupArgs = {
-  skip: Maybe<Scalars['Int']>;
-  limit: Maybe<Scalars['Int']>;
-  field: DataJsonFieldsEnum;
-};
-
-export type DataJsonEdge = {
-  readonly next: Maybe<DataJson>;
-  readonly node: DataJson;
-  readonly previous: Maybe<DataJson>;
-};
-
-export enum DataJsonFieldsEnum {
-  id = 'id',
-  parent___id = 'parent.id',
-  parent___parent___id = 'parent.parent.id',
-  parent___parent___parent___id = 'parent.parent.parent.id',
-  parent___parent___parent___children = 'parent.parent.parent.children',
-  parent___parent___children = 'parent.parent.children',
-  parent___parent___children___id = 'parent.parent.children.id',
-  parent___parent___children___children = 'parent.parent.children.children',
-  parent___parent___internal___content = 'parent.parent.internal.content',
-  parent___parent___internal___contentDigest = 'parent.parent.internal.contentDigest',
-  parent___parent___internal___description = 'parent.parent.internal.description',
-  parent___parent___internal___fieldOwners = 'parent.parent.internal.fieldOwners',
-  parent___parent___internal___ignoreType = 'parent.parent.internal.ignoreType',
-  parent___parent___internal___mediaType = 'parent.parent.internal.mediaType',
-  parent___parent___internal___owner = 'parent.parent.internal.owner',
-  parent___parent___internal___type = 'parent.parent.internal.type',
-  parent___children = 'parent.children',
-  parent___children___id = 'parent.children.id',
-  parent___children___parent___id = 'parent.children.parent.id',
-  parent___children___parent___children = 'parent.children.parent.children',
-  parent___children___children = 'parent.children.children',
-  parent___children___children___id = 'parent.children.children.id',
-  parent___children___children___children = 'parent.children.children.children',
-  parent___children___internal___content = 'parent.children.internal.content',
-  parent___children___internal___contentDigest = 'parent.children.internal.contentDigest',
-  parent___children___internal___description = 'parent.children.internal.description',
-  parent___children___internal___fieldOwners = 'parent.children.internal.fieldOwners',
-  parent___children___internal___ignoreType = 'parent.children.internal.ignoreType',
-  parent___children___internal___mediaType = 'parent.children.internal.mediaType',
-  parent___children___internal___owner = 'parent.children.internal.owner',
-  parent___children___internal___type = 'parent.children.internal.type',
-  parent___internal___content = 'parent.internal.content',
-  parent___internal___contentDigest = 'parent.internal.contentDigest',
-  parent___internal___description = 'parent.internal.description',
-  parent___internal___fieldOwners = 'parent.internal.fieldOwners',
-  parent___internal___ignoreType = 'parent.internal.ignoreType',
-  parent___internal___mediaType = 'parent.internal.mediaType',
-  parent___internal___owner = 'parent.internal.owner',
-  parent___internal___type = 'parent.internal.type',
-  children = 'children',
-  children___id = 'children.id',
-  children___parent___id = 'children.parent.id',
-  children___parent___parent___id = 'children.parent.parent.id',
-  children___parent___parent___children = 'children.parent.parent.children',
-  children___parent___children = 'children.parent.children',
-  children___parent___children___id = 'children.parent.children.id',
-  children___parent___children___children = 'children.parent.children.children',
-  children___parent___internal___content = 'children.parent.internal.content',
-  children___parent___internal___contentDigest = 'children.parent.internal.contentDigest',
-  children___parent___internal___description = 'children.parent.internal.description',
-  children___parent___internal___fieldOwners = 'children.parent.internal.fieldOwners',
-  children___parent___internal___ignoreType = 'children.parent.internal.ignoreType',
-  children___parent___internal___mediaType = 'children.parent.internal.mediaType',
-  children___parent___internal___owner = 'children.parent.internal.owner',
-  children___parent___internal___type = 'children.parent.internal.type',
-  children___children = 'children.children',
-  children___children___id = 'children.children.id',
-  children___children___parent___id = 'children.children.parent.id',
-  children___children___parent___children = 'children.children.parent.children',
-  children___children___children = 'children.children.children',
-  children___children___children___id = 'children.children.children.id',
-  children___children___children___children = 'children.children.children.children',
-  children___children___internal___content = 'children.children.internal.content',
-  children___children___internal___contentDigest = 'children.children.internal.contentDigest',
-  children___children___internal___description = 'children.children.internal.description',
-  children___children___internal___fieldOwners = 'children.children.internal.fieldOwners',
-  children___children___internal___ignoreType = 'children.children.internal.ignoreType',
-  children___children___internal___mediaType = 'children.children.internal.mediaType',
-  children___children___internal___owner = 'children.children.internal.owner',
-  children___children___internal___type = 'children.children.internal.type',
-  children___internal___content = 'children.internal.content',
-  children___internal___contentDigest = 'children.internal.contentDigest',
-  children___internal___description = 'children.internal.description',
-  children___internal___fieldOwners = 'children.internal.fieldOwners',
-  children___internal___ignoreType = 'children.internal.ignoreType',
-  children___internal___mediaType = 'children.internal.mediaType',
-  children___internal___owner = 'children.internal.owner',
-  children___internal___type = 'children.internal.type',
-  internal___content = 'internal.content',
-  internal___contentDigest = 'internal.contentDigest',
-  internal___description = 'internal.description',
-  internal___fieldOwners = 'internal.fieldOwners',
-  internal___ignoreType = 'internal.ignoreType',
-  internal___mediaType = 'internal.mediaType',
-  internal___owner = 'internal.owner',
-  internal___type = 'internal.type',
-  order = 'order',
-  image = 'image',
-  name = 'name',
-  address = 'address',
-  description = 'description',
-  info____x = 'info._x',
-  info____xxx = 'info._xxx',
-  info____xx = 'info._xx',
-  info___E_V________ = 'info.E_V________',
-  info____xxxxxxxxxxxx = 'info._xxxxxxxxxxxx',
-  info____xxxxxx = 'info._xxxxxx',
-  info____xxxxIC = 'info._xxxxIC',
-  info____xxxx = 'info._xxxx',
-  info____xxxxx = 'info._xxxxx',
-  adress = 'adress'
-}
-
-export type DataJsonFilterInput = {
-  readonly id: Maybe<StringQueryOperatorInput>;
-  readonly parent: Maybe<NodeFilterInput>;
-  readonly children: Maybe<NodeFilterListInput>;
-  readonly internal: Maybe<InternalFilterInput>;
-  readonly order: Maybe<IntQueryOperatorInput>;
-  readonly image: Maybe<StringQueryOperatorInput>;
-  readonly name: Maybe<StringQueryOperatorInput>;
-  readonly address: Maybe<StringQueryOperatorInput>;
-  readonly description: Maybe<StringQueryOperatorInput>;
-  readonly info: Maybe<DataJsonInfoFilterInput>;
-  readonly adress: Maybe<StringQueryOperatorInput>;
-};
-
-export type DataJsonGroupConnection = {
-  readonly totalCount: Scalars['Int'];
-  readonly edges: ReadonlyArray<DataJsonEdge>;
-  readonly nodes: ReadonlyArray<DataJson>;
-  readonly pageInfo: PageInfo;
-  readonly field: Scalars['String'];
-  readonly fieldValue: Maybe<Scalars['String']>;
-};
-
-export type DataJsonInfo = {
-  readonly _x: Maybe<Scalars['String']>;
-  readonly _xxx: Maybe<Scalars['String']>;
-  readonly _xx: Maybe<Scalars['String']>;
-  readonly E_V________: Maybe<Scalars['String']>;
-  readonly _xxxxxxxxxxxx: Maybe<Scalars['String']>;
-  readonly _xxxxxx: Maybe<Scalars['String']>;
-  readonly _xxxxIC: Maybe<Scalars['String']>;
-  readonly _xxxx: Maybe<Scalars['String']>;
-  readonly _xxxxx: Maybe<Scalars['String']>;
-};
-
-export type DataJsonInfoFilterInput = {
-  readonly _x: Maybe<StringQueryOperatorInput>;
-  readonly _xxx: Maybe<StringQueryOperatorInput>;
-  readonly _xx: Maybe<StringQueryOperatorInput>;
-  readonly E_V________: Maybe<StringQueryOperatorInput>;
-  readonly _xxxxxxxxxxxx: Maybe<StringQueryOperatorInput>;
-  readonly _xxxxxx: Maybe<StringQueryOperatorInput>;
-  readonly _xxxxIC: Maybe<StringQueryOperatorInput>;
-  readonly _xxxx: Maybe<StringQueryOperatorInput>;
-  readonly _xxxxx: Maybe<StringQueryOperatorInput>;
-};
-
-export type DataJsonSortInput = {
-  readonly fields: Maybe<ReadonlyArray<Maybe<DataJsonFieldsEnum>>>;
-  readonly order: Maybe<ReadonlyArray<Maybe<SortOrderEnum>>>;
-};
-
 
 export type DateQueryOperatorInput = {
   readonly eq: Maybe<Scalars['Date']>;
@@ -584,7 +387,6 @@ export type File = Node & {
   readonly parent: Maybe<Node>;
   readonly children: ReadonlyArray<Node>;
   readonly internal: Internal;
-  readonly childDataJson: Maybe<DataJson>;
 };
 
 
@@ -881,60 +683,7 @@ export enum FileFieldsEnum {
   internal___ignoreType = 'internal.ignoreType',
   internal___mediaType = 'internal.mediaType',
   internal___owner = 'internal.owner',
-  internal___type = 'internal.type',
-  childDataJson___id = 'childDataJson.id',
-  childDataJson___parent___id = 'childDataJson.parent.id',
-  childDataJson___parent___parent___id = 'childDataJson.parent.parent.id',
-  childDataJson___parent___parent___children = 'childDataJson.parent.parent.children',
-  childDataJson___parent___children = 'childDataJson.parent.children',
-  childDataJson___parent___children___id = 'childDataJson.parent.children.id',
-  childDataJson___parent___children___children = 'childDataJson.parent.children.children',
-  childDataJson___parent___internal___content = 'childDataJson.parent.internal.content',
-  childDataJson___parent___internal___contentDigest = 'childDataJson.parent.internal.contentDigest',
-  childDataJson___parent___internal___description = 'childDataJson.parent.internal.description',
-  childDataJson___parent___internal___fieldOwners = 'childDataJson.parent.internal.fieldOwners',
-  childDataJson___parent___internal___ignoreType = 'childDataJson.parent.internal.ignoreType',
-  childDataJson___parent___internal___mediaType = 'childDataJson.parent.internal.mediaType',
-  childDataJson___parent___internal___owner = 'childDataJson.parent.internal.owner',
-  childDataJson___parent___internal___type = 'childDataJson.parent.internal.type',
-  childDataJson___children = 'childDataJson.children',
-  childDataJson___children___id = 'childDataJson.children.id',
-  childDataJson___children___parent___id = 'childDataJson.children.parent.id',
-  childDataJson___children___parent___children = 'childDataJson.children.parent.children',
-  childDataJson___children___children = 'childDataJson.children.children',
-  childDataJson___children___children___id = 'childDataJson.children.children.id',
-  childDataJson___children___children___children = 'childDataJson.children.children.children',
-  childDataJson___children___internal___content = 'childDataJson.children.internal.content',
-  childDataJson___children___internal___contentDigest = 'childDataJson.children.internal.contentDigest',
-  childDataJson___children___internal___description = 'childDataJson.children.internal.description',
-  childDataJson___children___internal___fieldOwners = 'childDataJson.children.internal.fieldOwners',
-  childDataJson___children___internal___ignoreType = 'childDataJson.children.internal.ignoreType',
-  childDataJson___children___internal___mediaType = 'childDataJson.children.internal.mediaType',
-  childDataJson___children___internal___owner = 'childDataJson.children.internal.owner',
-  childDataJson___children___internal___type = 'childDataJson.children.internal.type',
-  childDataJson___internal___content = 'childDataJson.internal.content',
-  childDataJson___internal___contentDigest = 'childDataJson.internal.contentDigest',
-  childDataJson___internal___description = 'childDataJson.internal.description',
-  childDataJson___internal___fieldOwners = 'childDataJson.internal.fieldOwners',
-  childDataJson___internal___ignoreType = 'childDataJson.internal.ignoreType',
-  childDataJson___internal___mediaType = 'childDataJson.internal.mediaType',
-  childDataJson___internal___owner = 'childDataJson.internal.owner',
-  childDataJson___internal___type = 'childDataJson.internal.type',
-  childDataJson___order = 'childDataJson.order',
-  childDataJson___image = 'childDataJson.image',
-  childDataJson___name = 'childDataJson.name',
-  childDataJson___address = 'childDataJson.address',
-  childDataJson___description = 'childDataJson.description',
-  childDataJson___info____x = 'childDataJson.info._x',
-  childDataJson___info____xxx = 'childDataJson.info._xxx',
-  childDataJson___info____xx = 'childDataJson.info._xx',
-  childDataJson___info___E_V________ = 'childDataJson.info.E_V________',
-  childDataJson___info____xxxxxxxxxxxx = 'childDataJson.info._xxxxxxxxxxxx',
-  childDataJson___info____xxxxxx = 'childDataJson.info._xxxxxx',
-  childDataJson___info____xxxxIC = 'childDataJson.info._xxxxIC',
-  childDataJson___info____xxxx = 'childDataJson.info._xxxx',
-  childDataJson___info____xxxxx = 'childDataJson.info._xxxxx',
-  childDataJson___adress = 'childDataJson.adress'
+  internal___type = 'internal.type'
 }
 
 export type FileFilterInput = {
@@ -977,7 +726,6 @@ export type FileFilterInput = {
   readonly parent: Maybe<NodeFilterInput>;
   readonly children: Maybe<NodeFilterListInput>;
   readonly internal: Maybe<InternalFilterInput>;
-  readonly childDataJson: Maybe<DataJsonFilterInput>;
 };
 
 export type FileGroupConnection = {
@@ -1598,8 +1346,6 @@ export type Query = {
   readonly allSite: SiteConnection;
   readonly imageSharp: Maybe<ImageSharp>;
   readonly allImageSharp: ImageSharpConnection;
-  readonly dataJson: Maybe<DataJson>;
-  readonly allDataJson: DataJsonConnection;
   readonly siteBuildMetadata: Maybe<SiteBuildMetadata>;
   readonly allSiteBuildMetadata: SiteBuildMetadataConnection;
   readonly sitePlugin: Maybe<SitePlugin>;
@@ -1647,7 +1393,6 @@ export type Query_fileArgs = {
   parent: Maybe<NodeFilterInput>;
   children: Maybe<NodeFilterListInput>;
   internal: Maybe<InternalFilterInput>;
-  childDataJson: Maybe<DataJsonFilterInput>;
 };
 
 
@@ -1772,29 +1517,6 @@ export type Query_imageSharpArgs = {
 export type Query_allImageSharpArgs = {
   filter: Maybe<ImageSharpFilterInput>;
   sort: Maybe<ImageSharpSortInput>;
-  skip: Maybe<Scalars['Int']>;
-  limit: Maybe<Scalars['Int']>;
-};
-
-
-export type Query_dataJsonArgs = {
-  id: Maybe<StringQueryOperatorInput>;
-  parent: Maybe<NodeFilterInput>;
-  children: Maybe<NodeFilterListInput>;
-  internal: Maybe<InternalFilterInput>;
-  order: Maybe<IntQueryOperatorInput>;
-  image: Maybe<StringQueryOperatorInput>;
-  name: Maybe<StringQueryOperatorInput>;
-  address: Maybe<StringQueryOperatorInput>;
-  description: Maybe<StringQueryOperatorInput>;
-  info: Maybe<DataJsonInfoFilterInput>;
-  adress: Maybe<StringQueryOperatorInput>;
-};
-
-
-export type Query_allDataJsonArgs = {
-  filter: Maybe<DataJsonFilterInput>;
-  sort: Maybe<DataJsonSortInput>;
   skip: Maybe<Scalars['Int']>;
   limit: Maybe<Scalars['Int']>;
 };
@@ -2735,15 +2457,15 @@ export type StringQueryOperatorInput = {
   readonly glob: Maybe<Scalars['String']>;
 };
 
-export type CentersQueryQueryVariables = {};
-
-
-export type CentersQueryQuery = { readonly allDataJson: { readonly edges: ReadonlyArray<{ readonly node: Pick<DataJson, 'id' | 'image' | 'name' | 'address'> }> } };
-
 export type Unnamed_1_QueryVariables = {};
 
 
 export type Unnamed_1_Query = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title' | 'description'>> }> };
+
+export type SiteTitleQueryQueryVariables = {};
+
+
+export type SiteTitleQueryQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title'>> }> };
 
 export type GatsbyImageSharpFixedFragment = Pick<ImageSharpFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet'>;
 
@@ -2792,16 +2514,6 @@ export type GatsbyImageSharpSizes_withWebp_tracedSVGFragment = Pick<ImageSharpSi
 export type GatsbyImageSharpSizes_noBase64Fragment = Pick<ImageSharpSizes, 'aspectRatio' | 'src' | 'srcSet' | 'sizes'>;
 
 export type GatsbyImageSharpSizes_withWebp_noBase64Fragment = Pick<ImageSharpSizes, 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
-
-export type SiteTitleQueryQueryVariables = {};
-
-
-export type SiteTitleQueryQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title'>> }> };
-
-export type CenterAllContentsQueryVariables = {};
-
-
-export type CenterAllContentsQuery = { readonly allDataJson: { readonly edges: ReadonlyArray<{ readonly node: Pick<DataJson, 'id' | 'image' | 'name' | 'address' | 'description'> }> } };
 
 export type PagesQueryQueryVariables = {};
 

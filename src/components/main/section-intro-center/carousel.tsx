@@ -1,9 +1,8 @@
 import React, { useCallback, useRef, RefObject, useState } from 'react'
 import styled from 'styled-components'
-import { useStaticQuery, graphql } from 'gatsby'
 import Flicking from '@egjs/react-flicking'
+import data from '../../center/data.json'
 
-import { CentersQueryQuery } from '../../../__generated__/gatsby-types'
 import { Center } from './types'
 import Card from './card'
 import Container from '../../share/container'
@@ -48,9 +47,7 @@ const ControllButton = styled.span<{ type: 'prev' | 'next' }>`
 `
 
 function Carousel() {
-  const {
-    allDataJson: { edges },
-  } = useStaticQuery<CentersQueryQuery>(query)
+  const centers = data as Center[]
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const flickingRef = useRef() as RefObject<Flicking>
@@ -75,7 +72,7 @@ function Carousel() {
     setCurrentIndex(Math.floor(flicking.getIndex() / 2))
   }
   const hasPrevPage = currentIndex > 1
-  const hasNextPage = currentIndex + 1 < edges.length / 2
+  const hasNextPage = currentIndex + 1 < centers.length / 2
 
   return (
     <CarouselFrame float="right" position="relative">
@@ -94,12 +91,8 @@ function Carousel() {
         onMoveStart={handleResizeFlicking}
         onMoveEnd={handleMoveEnd}
       >
-        {edges.map(({ node }, idx) => (
-          <Card
-            source={node as Center}
-            key={idx}
-            imageOnload={handleResizeFlicking}
-          />
+        {centers.map((center, idx) => (
+          <Card source={center} key={idx} imageOnload={handleResizeFlicking} />
         ))}
       </Flicking>
       {hasPrevPage && <ControllButton type="prev" />}
@@ -107,20 +100,5 @@ function Carousel() {
     </CarouselFrame>
   )
 }
-
-export const query = graphql`
-  query CentersQuery {
-    allDataJson {
-      edges {
-        node {
-          id
-          image
-          name
-          address
-        }
-      }
-    }
-  }
-`
 
 export default Carousel
