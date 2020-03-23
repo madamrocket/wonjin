@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Container from '../share/container'
+import InfoTable from './info-table'
 import Text from '../share/text'
 import { Center } from './types'
 
@@ -17,7 +18,7 @@ const Image = styled.img`
 `
 
 function DetailSection({ center }: { center: Center }) {
-  const { image, description } = center
+  const { image, description, info, name } = center
 
   return (
     <DetailFrame>
@@ -27,6 +28,15 @@ function DetailSection({ center }: { center: Center }) {
           {description}
         </Text>
       )}
+      <Text
+        fontSize={1.25}
+        margin="2.5rem 0 0.5rem 1.5rem"
+        fontWeight="bold"
+        lignHeight={1.2}
+      >
+        {name}
+      </Text>
+      <InfoTable info={info} />
     </DetailFrame>
   )
 }
