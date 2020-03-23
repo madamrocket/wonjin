@@ -14,12 +14,6 @@ const TableFrame = styled(Container)`
   border-bottom: 1px solid #333;
 `
 
-const TableContainer = styled(Container)`
-  &:not(:last-child) {
-    border-bottom: 1px solid ${getColor('darkGray')};
-  }
-`
-
 const Label = styled(Text)`
   display: inline-block;
   width: 30%;
@@ -35,14 +29,14 @@ export default function InfoTable({ info }: { info: Center['info'] }) {
     <TableFrame>
       {Object.keys(info).map((key: string, idx) => {
         return (
-          <TableContainer key={idx}>
+          <Container key={idx}>
             <Label fontWeight="bold" color="lightBlack" lignHeight={2.25}>
               {key}
             </Label>
             <Description key={idx} lignHeight={2.25}>
               {info[key]}
             </Description>
-          </TableContainer>
+          </Container>
         )
       })}
     </TableFrame>
