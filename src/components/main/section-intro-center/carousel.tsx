@@ -36,6 +36,7 @@ const ControllButton = styled.span<{ type: 'prev' | 'next' }>`
     right: -1rem;
   `}
 
+  z-index: 3;
   width: 1.125rem;
   height: 1.125rem;
   position: absolute;
@@ -43,6 +44,15 @@ const ControllButton = styled.span<{ type: 'prev' | 'next' }>`
   background-position: center;
   padding: 0.4375rem;
   background-size: 1.125rem;
+  z-index: 2;
+`
+
+const EmptyArea = styled.div`
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   z-index: 2;
 `
 
@@ -62,20 +72,23 @@ function Carousel() {
     flicking.resize()
   }, [flickingRef])
 
-  const handleMoveEnd = () => {
+  const handleMove = (index: number) => {
     if (!flickingRef || !flickingRef.current) {
       return
     }
 
     const flicking = flickingRef.current
 
-    setCurrentIndex(Math.floor(flicking.getIndex() / 2))
+    setCurrentIndex(index)
+    flicking.moveTo(index * 3)
   }
-  const hasPrevPage = currentIndex > 1
-  const hasNextPage = currentIndex + 1 < centers.length / 2
+
+  const hasPrevPage = currentIndex >= 1
+  const hasNextPage = currentIndex + 1 < centers.length / 3
 
   return (
     <CarouselFrame float="right" position="relative">
+      <EmptyArea />
       <Flicking
         ref={flickingRef}
         collectStatistics={false}
@@ -89,14 +102,23 @@ function Carousel() {
         duration={100}
         gap={16}
         onMoveStart={handleResizeFlicking}
-        onMoveEnd={handleMoveEnd}
       >
         {centers.map((center, idx) => (
           <Card source={center} key={idx} imageOnload={handleResizeFlicking} />
         ))}
       </Flicking>
-      {hasPrevPage && <ControllButton type="prev" />}
-      {hasNextPage && <ControllButton type="next" />}
+      {hasPrevPage && (
+        <ControllButton
+          type="prev"
+          onClick={() => handleMove(currentIndex - 1)}
+        />
+      )}
+      {hasNextPage && (
+        <ControllButton
+          type="next"
+          onClick={() => handleMove(currentIndex + 1)}
+        />
+      )}
     </CarouselFrame>
   )
 }

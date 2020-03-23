@@ -14,11 +14,9 @@ function CenterIntroPage({ location }: CenterIntroPageProps) {
   const centers = data as Center[]
   const [center, setCenter] = useState<Center>(centers[0])
 
-  const handleSelectedCenter = (selectedId: string) => {
+  const handleSelectedCenter = (selectedId: number) => {
     setCenter(centers.find(({ id }) => id === selectedId) as Center)
   }
-
-  console.log('centers', centers)
 
   return (
     <Layout location={location}>
