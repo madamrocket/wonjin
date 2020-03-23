@@ -1,4 +1,5 @@
 {
+  "order": 4,
   "image": "/images/yongin-a.png",
   "name": "용인4센터",
   "address": "경기도 용인시 원삼면 맹리",
@@ -14,5 +15,6 @@
   "equipment": "4단렉 시설",
   "security": "CAPS",
   "overhead_door": true,
-  "food_storage": true
+  "food_storage": true,
+  "description": "양지IC 인접하며, 영동고속도로와 17번국도에서 접근하기 쉬움"
 }

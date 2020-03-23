@@ -1,4 +1,5 @@
 {
+  "order": 9,
   "image": "/images/yongin-a.png",
   "name": "평택센터",
   "address": "경기도 용인시 원삼면 맹리",
@@ -14,5 +15,6 @@
   "equipment": "4단렉 시설",
   "security": "CAPS",
   "overhead_door": true,
-  "food_storage": true
+  "food_storage": true,
+  "description": "넓은 야드로 컨테이너, 트레일러 접안 가능하며 야드적재 가능 평택항, 서해안 고속도로 인접"
 }

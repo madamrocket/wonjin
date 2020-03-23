@@ -1,4 +1,5 @@
 {
+  "order": 11,
   "image": "/images/yongin-a.png",
   "name": "백암Fresh센터",
   "address": "경기도 용인시 원삼면 맹리",
@@ -14,5 +15,6 @@
   "equipment": "4단렉 시설",
   "security": "CAPS",
   "overhead_door": true,
-  "food_storage": true
+  "food_storage": true,
+  "description": "양지IC, 일죽IC, 17번 국도 인접하여 접근성 용이함"
 }

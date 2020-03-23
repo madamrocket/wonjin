@@ -1,5 +1,4 @@
 import React, { useMemo } from 'react'
-import styled from 'styled-components'
 
 import Container from '../share/container'
 import Text from '../share/text'

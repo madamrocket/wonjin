@@ -3,4 +3,5 @@ export interface Center {
   image: string
   name: string
   address: string
+  description?: string
 }
