@@ -9,6 +9,24 @@ import Container from '../../share/container'
 import getColor from '../../share/color'
 import media from '../../share/media'
 
+const Dot = styled.div<{ active?: boolean }>`
+  width: 0.75rem;
+  height: 0.75rem;
+  background: ${getColor('darkGray')};
+  display: inline-block;
+  border-radius: 100%;
+
+  &:not(:last-child) {
+    margin-right: 0.75rem;
+  }
+
+  ${({ active }) =>
+    active &&
+    `
+    background: ${getColor('blue')};
+  `}
+`
+
 const CarouselFrame = styled(Container)`
   overflow: visible;
   width: 100%;
@@ -50,6 +68,7 @@ const ControllButton = styled.span<{ type: 'prev' | 'next' }>`
 function Carousel() {
   const centers = data as Center[]
   const [currentIndex, setCurrentIndex] = useState(0)
+  const pageCount = centers.length / 3
 
   const flickingRef = useRef() as RefObject<Flicking>
 
@@ -76,7 +95,7 @@ function Carousel() {
   }
 
   const hasPrevPage = currentIndex >= 1
-  const hasNextPage = currentIndex + 1 < centers.length / 3
+  const hasNextPage = currentIndex + 1 < pageCount
 
   return (
     <CarouselFrame float="right" position="relative">
@@ -110,6 +129,11 @@ function Carousel() {
           onClick={() => handleMove(currentIndex + 1)}
         />
       )}
+      <Container textAlign="center" margin="2.125rem 0 0 0">
+        {[...new Array(pageCount)].map((_, idx) => (
+          <Dot active={idx === currentIndex} onClick={() => handleMove(idx)} />
+        ))}
+      </Container>
     </CarouselFrame>
   )
 }
