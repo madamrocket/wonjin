@@ -20,6 +20,8 @@ const SectionExpertFrame = styled(Container)`
 const ExpertCardContainer = styled(Container)`
   max-width: 49.25rem;
   overflow: hidden;
+  column-gap: 52px;
+  column-width: 368px;
 `
 
 function SectionExpert() {

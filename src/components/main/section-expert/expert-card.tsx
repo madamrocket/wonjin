@@ -8,12 +8,8 @@ import IconButton from '../../share/icon-button'
 
 const CardFrame = styled(Container)`
   text-align: left;
-  width: 47%;
-  float: left;
-
-  &:nth-child(2n) {
-    margin-left: 6%;
-  }
+  display: inline-block;
+  margin-bottom: 3.5rem;
 `
 
 const Image = styled.img`
