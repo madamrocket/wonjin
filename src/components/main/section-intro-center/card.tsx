@@ -5,16 +5,21 @@ import { Link as BaseLink } from 'gatsby'
 import Container from '../../share/container'
 import Text from '../../share/text'
 import { Center } from './types'
+import media from '../../share/media'
 
 const CardFrame = styled(Container)`
   left: -10000px;
   display: block;
-  width: 15.75rem;
+  width: 33.3%;
   z-index: 3;
 
   > img {
     width: 100%;
     height: 100%;
+  }
+
+  @media ${media.md} {
+    width: 50%;
   }
 `
 
@@ -45,11 +50,17 @@ function Card({
           lignHeight={1.8}
           fontSize={1.25}
           fontWeight={500}
+          mobileFontSize={0.9375}
           margin="1rem 0 0 0"
         >
           {name}
         </Text>
-        <Text color="gray" fontSize={0.875} lignHeight={2}>
+        <Text
+          color="gray"
+          fontSize={0.875}
+          lignHeight={2}
+          mobileFontSize={0.75}
+        >
           {address}
         </Text>
       </Link>

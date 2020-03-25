@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Container from '../share/container'
+import media from '../share/media'
 import getColor from '../share/color'
 import Info from './info'
 import SocialButton from '../social-button'
@@ -12,6 +13,10 @@ const FooterFrame = styled(Container)`
 
 const FooterContainer = styled(Container)`
   margin: 0 auto;
+
+  @media ${media.md} {
+    width: 89.33%;
+  }
 `
 
 const InfoContainer = styled.div`

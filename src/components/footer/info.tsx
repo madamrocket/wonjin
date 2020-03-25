@@ -31,13 +31,20 @@ function Info({ label, description, full }: InfoProps) {
   return (
     <InfoFrame>
       {label && (
-        <Label lignHeight={2.57} fontSize={0.875} fontWeight={500}>
+        <Label
+          lignHeight={2.57}
+          fontSize={0.875}
+          fontWeight={500}
+          mobileFontSize={0.625}
+        >
           {label}
         </Label>
       )}
       <Description
         lignHeight={2.2}
         fontSize={0.875}
+        mobileFontSize={0.625}
+        mobileineHeight={2}
         full={full}
         color="lightBlack"
       >

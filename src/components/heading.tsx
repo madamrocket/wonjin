@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Container from './share/container'
+import media from './share/media'
 import getColor from './share/color'
 import CoverImage from './share/cover-image'
 
@@ -16,6 +17,12 @@ const MessageBox = styled(Container)<{
   max-width: 49.25rem;
   width: 100%;
   text-align: ${({ textAlign }) => textAlign || 'center'};
+
+  @media ${media.md} {
+    top: 6.813rem;
+    width: 78%;
+    padding: 4.74% 12.54%;
+  }
 `
 
 interface HeadingType {

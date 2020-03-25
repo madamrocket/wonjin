@@ -1,4 +1,10 @@
-import React, { useCallback, useRef, RefObject, useState } from 'react'
+import React, {
+  useCallback,
+  useRef,
+  RefObject,
+  useState,
+  useEffect,
+} from 'react'
 import styled from 'styled-components'
 import Flicking from '@egjs/react-flicking'
 import data from '../../center/data.json'
@@ -8,6 +14,15 @@ import Card from './card'
 import Container from '../../share/container'
 import getColor from '../../share/color'
 import media from '../../share/media'
+
+const DotContainer = styled(Container)`
+  @media ${media.md} {
+    margin: 5.8% 0 0 0;
+  }
+  @media ${media.sm} {
+    margin: 0;
+  }
+`
 
 const Dot = styled.div<{ active?: boolean }>`
   width: 0.75rem;
@@ -25,6 +40,11 @@ const Dot = styled.div<{ active?: boolean }>`
     `
     background: ${getColor('blue')};
   `}
+
+  @media ${media.md} {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
 `
 
 const CarouselFrame = styled(Container)`
@@ -63,6 +83,28 @@ const ControllButton = styled.span<{ type: 'prev' | 'next' }>`
   padding: 0.4375rem;
   background-size: 1.125rem;
   z-index: 2;
+
+  @media ${media.md} {
+    width: 0.63rem;
+    height: 0.63rem;
+    background-size: 0.875rem;
+    top: 23%;
+    transform: translateY(-23%);
+
+    ${({ type }) =>
+      type === 'prev'
+        ? `
+    left: -0.63rem;
+`
+        : `
+    right: -0.63rem;
+  `}
+  }
+
+  @media (max-width: 410px) {
+    top: 21%;
+    transform: translateY(-21%);
+  }
 `
 
 function Carousel() {
@@ -129,11 +171,11 @@ function Carousel() {
           onClick={() => handleMove(currentIndex + 1)}
         />
       )}
-      <Container textAlign="center" margin="2.125rem 0 0 0">
+      <DotContainer textAlign="center" margin="2.125rem 0 0 0">
         {[...new Array(pageCount)].map((_, idx) => (
           <Dot active={idx === currentIndex} onClick={() => handleMove(idx)} />
         ))}
-      </Container>
+      </DotContainer>
     </CarouselFrame>
   )
 }

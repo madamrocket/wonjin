@@ -2,6 +2,13 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Container from '../share/container'
+import media from './media'
+
+const ImageFrame = styled(Container)`
+  @media ${media.md} {
+    height: 9.75rem;
+  }
+`
 
 const Image = styled.img`
   position: absolute;
@@ -14,9 +21,9 @@ const Image = styled.img`
 
 function CoverImage({ src, height }: { src: string; height: number }) {
   return (
-    <Container position="relative" overflow="hidden" height={height}>
+    <ImageFrame position="relative" overflow="hidden" height={height}>
       <Image src={src} />
-    </Container>
+    </ImageFrame>
   )
 }
 
