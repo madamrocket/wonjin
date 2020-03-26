@@ -44,7 +44,7 @@ function SectionIntroCenter() {
   return (
     <SectionCenterFrame padding="3.5rem 0 6.375rem 0">
       <SectionCenterContainer
-        maxWidth="49.25rem"
+        maxWidth="59rem"
         margin="0 auto"
         position="relative"
       >

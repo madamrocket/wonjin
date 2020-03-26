@@ -18,34 +18,23 @@ const ContentFrame = styled.div`
   }
 `
 
-const TextContainer = styled(Container)`
-  @media ${media.md} {
-    & > div {
-      display: block;
-      text-align: left;
-    }
-  }
-`
-
 function SectionIntroWonjin() {
   return (
     <>
-      <Heading image="/images/main-cover.png">
-        <TextContainer textAlign="center">
+      <Heading image="/images/main-cover.png" imageHeight={24.69}>
+        <Container>
           <Text
-            color="blue"
-            fontSize={2.25}
-            mobileFontSize={1.25}
+            fontSize={2}
+            color="white"
             fontWeight="bold"
-            margin="0 0.625rem 0 0"
-            inlineBlock
+            margin="0 0 0.5625rem 0"
           >
             프리미엄 물류센터,
           </Text>
-          <Text inlineBlock color="blue" fontSize={2.25} mobileFontSize={1.25}>
+          <Text fontSize={2} color="white">
             그 이상의 가치.
           </Text>
-        </TextContainer>
+        </Container>
       </Heading>
       <ContentFrame>
         <Keyword />

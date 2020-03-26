@@ -8,7 +8,7 @@ import media from '../../share/media'
 import Text from '../../share/text'
 
 const SectionExpertFrame = styled(Container)`
-  max-width: 81.25rem;
+  max-width: 59rem;
   text-align: center;
   margin: 0 auto;
 
@@ -20,7 +20,6 @@ const SectionExpertFrame = styled(Container)`
 `
 
 const ExpertCardContainer = styled(Container)`
-  max-width: 49.25rem;
   overflow: hidden;
   column-gap: 52px;
   column-width: 368px;

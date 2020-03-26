@@ -33,7 +33,7 @@ function Footer() {
   return (
     <FooterFrame>
       <FooterContainer
-        maxWidth="49.25rem"
+        maxWidth="59rem"
         margin="0 auto"
         position="relative"
         padding="2.5rem 0"

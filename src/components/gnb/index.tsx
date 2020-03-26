@@ -34,7 +34,7 @@ const Logo = styled(Link)`
 function GNB({ pathname }: { pathname: string }) {
   return (
     <GNBFrame>
-      <Container overflow="hidden" maxWidth="49.25rem" margin="0 auto">
+      <Container overflow="hidden" margin="0 auto" padding="0 2.5rem">
         <Logo to="/" />
         <Menu pathname={pathname} />
       </Container>

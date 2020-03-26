@@ -6,8 +6,11 @@ import Text from '../../share/text'
 import media from '../../share/media'
 
 const HistoryFrame = styled(Container)`
+  display: none;
+
   @media ${media.md} {
     width: 89.33%;
+    display: block;
   }
 `
 
