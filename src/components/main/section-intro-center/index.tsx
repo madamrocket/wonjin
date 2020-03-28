@@ -19,7 +19,6 @@ const SectionCenterFrame = styled(Container)`
 `
 
 const SectionCenterContainer = styled(Container)`
-  width: 100%;
   width: 92.09%;
   max-width: 64rem;
 
@@ -30,17 +29,6 @@ const SectionCenterContainer = styled(Container)`
 
 const TextContainer = styled(Container)`
   position: relative;
-`
-
-const ButtonContainer = styled.div`
-  position: absolute;
-  right: 0;
-  bottom: 0;
-
-  @media ${media.md} {
-    position: relative;
-    margin-top: 1rem;
-  }
 `
 
 function SectionIntroCenter() {

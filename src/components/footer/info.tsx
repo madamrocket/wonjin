@@ -9,11 +9,14 @@ interface InfoProps {
   full?: boolean
 }
 
-const InfoFrame = styled.div``
+const InfoFrame = styled.div`
+  display: inline-block;
+  margin-right: 2.5rem;
+`
 
 const Label = styled(Text)`
-  width: 7.5rem;
   display: inline-block;
+  margin-right: 0.5rem;
 `
 
 const Description = styled(Text)<{ full?: boolean }>`
@@ -33,20 +36,21 @@ function Info({ label, description, full }: InfoProps) {
       {label && (
         <Label
           lignHeight={2.57}
-          fontSize={0.875}
+          fontSize={0.75}
           fontWeight={500}
           mobileFontSize={0.625}
+          color="white"
         >
           {label}
         </Label>
       )}
       <Description
         lignHeight={2.2}
-        fontSize={0.875}
+        fontSize={0.75}
         mobileFontSize={0.625}
         mobileineHeight={2}
         full={full}
-        color="lightBlack"
+        color="darkGray"
       >
         {description}
       </Description>
