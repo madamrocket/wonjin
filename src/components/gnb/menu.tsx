@@ -142,7 +142,7 @@ const HamburgerButton = styled.img`
     height: 1.25rem;
     line-height: 1.25rem;
     float: right;
-    padding: 0.95rem;
+    padding: 0.95rem 0;
 
     &:before {
       width: auto;

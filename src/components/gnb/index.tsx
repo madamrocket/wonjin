@@ -16,6 +16,11 @@ const GNBFrame = styled(Container)`
   max-width: 64rem;
   margin: 0 auto;
   padding: 1.563rem 0 1.75rem 0;
+
+  @media ${media.md} {
+    width: 100%;
+    padding: 0 1.25rem;
+  }
 `
 
 const Logo = styled(Link)`
@@ -38,7 +43,7 @@ const Logo = styled(Link)`
   }
 `
 
-const Label = styled(Text)`
+const Title = styled(Text)`
   display: none;
 
   @media ${media.md} {
@@ -58,7 +63,11 @@ function GNB({ pathname }: { pathname: string }) {
         <Logo to="/" />
       </Responsive>
       <Responsive target="mo">
-        {seletedMenu ? <Label>{seletedMenu.label}</Label> : <Logo to="/" />}
+        {seletedMenu ? (
+          <Title fontWeight={500}>{seletedMenu.label}</Title>
+        ) : (
+          <Logo to="/" />
+        )}
       </Responsive>
       <Menu pathname={parsedPathname} />
     </GNBFrame>
