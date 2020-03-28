@@ -27,6 +27,7 @@ const HistoryTableFrame = styled(Container)`
   }
 
   @media ${media.md} {
+    width: 100%;
     max-height: 52.5rem;
     overflow-y: auto;
   }

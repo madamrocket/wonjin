@@ -41,20 +41,31 @@ export default function HistoryTable({ data }: { data: History[] }) {
           <HistoryContainer key={idx}>
             {histories.map(({ month, contents }, idx) => (
               <React.Fragment key={idx}>
-                <Year lignHeight={2.57} fontWeight="bold" fontSize={0.875}>
+                <Year
+                  lignHeight={2.57}
+                  fontWeight="bold"
+                  fontSize={0.875}
+                  mobileineHeight={2.17}
+                >
                   {idx === 0 ? year : ''}
                 </Year>
                 <Month
                   fontWeight={500}
                   color="lightBlack"
                   lignHeight={2.57}
+                  mobileineHeight={2.17}
                   fontSize={0.875}
                 >
                   {month}
                 </Month>
                 <TextContainer width="50%">
                   {contents.map((text, idx) => (
-                    <Text key={idx} lignHeight={2.57} fontSize={0.875}>
+                    <Text
+                      key={idx}
+                      lignHeight={2.57}
+                      mobileineHeight={2.17}
+                      fontSize={0.875}
+                    >
                       {text}
                     </Text>
                   ))}
