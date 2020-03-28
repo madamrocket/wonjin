@@ -22,6 +22,8 @@ interface CoreCompetencyPageProps {
 }
 
 const Title = styled(Text)`
+  margin: 2.25rem 0;
+
   @media ${media.md} {
     display: none;
   }
@@ -31,13 +33,7 @@ function CoreCompetencyPage({ location }: CoreCompetencyPageProps) {
   return (
     <Layout location={location}>
       <CoreCompetencyFrame position="relative">
-        <Title
-          margin="2.25rem 0"
-          color="blue"
-          fontSize={2}
-          fontWeight="bold"
-          textAlign="center"
-        >
+        <Title color="blue" fontSize={2} fontWeight="bold" textAlign="center">
           핵심 역량
         </Title>
         <Contents />

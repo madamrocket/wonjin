@@ -55,13 +55,8 @@ function Contents() {
     <Container>
       {posts.map(({ title, subTitle, image, content }, idx) => (
         <ContentsContainer key={idx}>
-          <Responsive target="pc">
-            <Text
-              color="green"
-              fontSize={1.5}
-              fontWeight="bold"
-              margin="0 0 1.25rem 0"
-            >
+          <Responsive target="pc" margin="0 0 1.25rem 0">
+            <Text color="green" fontSize={1.5} fontWeight="bold">
               {title}
             </Text>
           </Responsive>
