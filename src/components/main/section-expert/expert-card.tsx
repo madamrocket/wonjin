@@ -8,17 +8,22 @@ import { Card } from './types'
 import IconButton from '../../share/icon-button'
 
 const CardFrame = styled(Container)`
-  text-align: left;
-  display: inline-block;
+  width: 48%;
   margin-bottom: 3.5rem;
+  display: inline-block;
+  text-align: left;
 
   @media ${media.md} {
     margin-bottom: 8.53%;
   }
+
+  &:nth-child(2n - 1) {
+    margin-right: 2%;
+  }
 `
 
 const Image = styled.img`
-  margin-bottom: 24px;
+  margin-bottom: 1rem;
   width: 100%;
 `
 
@@ -44,7 +49,7 @@ function CompetencyCard({ card }: { card: Card }) {
       <Text
         fontSize={0.875}
         lignHeight={1.71}
-        margin="0.75rem 0 1rem 0"
+        margin="0.5rem 0 0.75rem 0"
         mobileFontSize={0.8125}
       >
         {description}
