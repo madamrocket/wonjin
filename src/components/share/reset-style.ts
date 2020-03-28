@@ -2,6 +2,40 @@ import { css, createGlobalStyle } from 'styled-components'
 
 // prettier-ignore
 export const reset = css`
+@font-face { 
+  font-family: 'SansKR'; 
+  src:url('/fonts/NotoSansKR-Regular.otf');
+  src: url('/fonts/NotoSansKR-Regular.woff') format(‘woff’), 
+    url('/fonts/NotoSansKR-Regular.woff2') format(‘woff’), 
+    url('/fonts/NotoSansKR-Regular.ttf') format('truetype');
+
+  font-weight: normal;  
+  font-style: normal;
+}
+
+@font-face { 
+  font-family: 'SansKR'; 
+  src:url('/fonts/NotoSansKR-Medium.otf');
+  src: url('/fonts/NotoSansKR-Medium.woff') format(‘woff’), 
+    url('/fonts/NotoSansKR-Medium.woff2') format(‘woff’), 
+    url('/fonts/NotoSansKR-Medium.ttf') format('truetype');;
+
+  font-weight: 500; 
+  font-style: normal;  
+}
+
+@font-face { 
+  font-family: 'SansKR'; 
+  src:url('/fonts/NotoSansKR-Bold.otf');
+  src: url('/fonts/NotoSansKR-Bold.woff') format(‘woff’), 
+    url('/fonts/NotoSansKR-Bold.woff2') format(‘woff’), 
+    url('/fonts/NotoSansKR-Bold.ttf') format('truetype');
+
+  font-weight: bold;   
+  font-style: normal;
+}
+
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -33,6 +67,7 @@ footer, header, hgroup, main, menu, nav, section {
 }
 body {
   line-height: 1;
+  font-family: 'SansKR'; 
 }
 ol, ul {
   list-style: none;
