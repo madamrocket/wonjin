@@ -19,7 +19,6 @@ const HistoryTableFrame = styled(Container)`
   border-bottom: 2px solid #333;
   width: 47.5%;
   display: inline-block;
-  margin: 0 0 5.813rem 0;
   padding: 0.75rem 1.5rem;
 
   &:first-child {

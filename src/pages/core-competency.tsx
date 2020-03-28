@@ -6,7 +6,11 @@ import Container from '../components/share/container'
 import Text from '../components/share/text'
 import Contents from '../components/core-competency/contents'
 
-const CoreCompetencyFrame = styled(Container)``
+const CoreCompetencyFrame = styled(Container)`
+  max-width: 64rem;
+  width: 92.09%;
+  margin: 0 auto;
+`
 
 interface CoreCompetencyPageProps {
   location: Location
@@ -15,12 +19,7 @@ interface CoreCompetencyPageProps {
 function CoreCompetencyPage({ location }: CoreCompetencyPageProps) {
   return (
     <Layout location={location}>
-      <CoreCompetencyFrame
-        maxWidth="40.88rem"
-        position="relative"
-        width="100%"
-        margin="0 auto"
-      >
+      <CoreCompetencyFrame position="relative">
         <Text
           margin="2.25rem 0"
           color="blue"

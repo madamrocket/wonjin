@@ -1,0 +1,22 @@
+export const LOGOS = [
+  [
+    'amore',
+    'cocacola',
+    'winia',
+    'carrier',
+    'daesang',
+    'pulmuone',
+    'cj-jedang',
+    'dongseo',
+  ],
+  [
+    'hd-glovis',
+    'lotte-logis',
+    'lotte-super',
+    'dongwon',
+    'coupang',
+    'cj-logis',
+    'musinsa',
+    'hantouch',
+  ],
+]

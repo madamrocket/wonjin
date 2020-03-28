@@ -15,7 +15,16 @@ interface Post {
 const Image = styled.img`
   width: 100%;
   vertical-align: top;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+`
+
+const ContentsContainer = styled(Container)`
+  width: 48%;
+  display: inline-block;
+
+  &:nth-child(2n - 1) {
+    margin-right: 4%;
+  }
 `
 
 function Contents() {
@@ -24,18 +33,25 @@ function Contents() {
   return (
     <Container>
       {posts.map(({ title, subTitle, image, content }, idx) => (
-        <Container key={idx}>
-          <Image src={image} />
-          <Text color="green" fontSize={2} lignHeight={2.25} fontWeight="bold">
+        <ContentsContainer key={idx}>
+          <Text
+            color="green"
+            fontSize={1.5}
+            fontWeight="bold"
+            margin="0 0 1.25rem 0"
+          >
             {title}
           </Text>
+          <Image src={image} />
           {subTitle && (
             <Text fontWeight="bold" fontSize={1.25}>
               {subTitle}
             </Text>
           )}
-          <Text margin="0.75rem 0 2.5rem 0">{content}</Text>
-        </Container>
+          <Container margin="0.75rem 3.375rem 2.5rem 0">
+            <Text lignHeight={1.73}>{content}</Text>
+          </Container>
+        </ContentsContainer>
       ))}
     </Container>
   )
