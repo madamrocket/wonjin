@@ -75,25 +75,23 @@ const Label = styled.li<{
 }>`
   position: relative;
   float: left;
-  height: 4rem;
   font-size: 1.125rem;
   font-weight: 500;
-  line-height: 4rem;
 
   ${({ active }) =>
     active &&
     `
-    color: ${getColor('blue')};
+    color: ${getColor('green')};
     font-weight: bold;
 
     &:before {
       content: '';
       width: 100%;
-      height: 6px;
-      background: ${getColor('blue')};
+      height: 2px;
+      background: ${getColor('green')};
       display: block;
       position: absolute;
-      bottom: 0;
+      bottom: -4px;
     }
   `}
 

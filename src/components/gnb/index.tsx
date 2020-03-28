@@ -9,21 +9,25 @@ import media from '../share/media'
 import { MENUS } from './constants'
 
 const GNBFrame = styled(Container)`
+  position: relative;
   vertical-align: top;
   width: 92.09%;
   max-width: 64rem;
   margin: 0 auto;
+  padding: 1.563rem 0 1.75rem 0;
 `
 
 const Logo = styled(Link)`
   display: inline-block;
   width: 11.38rem;
-  height: 2.5rem;
+  height: 3.5rem;
   background-image: url(/images/logo-gnb@3x.png);
   background-size: 100%;
-  margin: 0.3rem 0 0.5rem 0;
   vertical-align: top;
   background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 
   @media ${media.md} {
     width: 6.875rem;
@@ -68,16 +72,14 @@ function GNB({ pathname }: { pathname: string }) {
   const seletedMenu = MENUS.find(({ id }) => id === parsedPathname)
 
   return (
-    <GNBFrame>
-      <Container overflow="hidden" margin="0 auto">
-        <ResponsiveContainer target="pc">
-          <Logo to="/" />
-        </ResponsiveContainer>
-        <ResponsiveContainer target="mo">
-          {seletedMenu ? <Label>{seletedMenu.label}</Label> : <Logo to="/" />}
-        </ResponsiveContainer>
-        <Menu pathname={parsedPathname} />
-      </Container>
+    <GNBFrame overflow="hidden">
+      <ResponsiveContainer target="pc">
+        <Logo to="/" />
+      </ResponsiveContainer>
+      <ResponsiveContainer target="mo">
+        {seletedMenu ? <Label>{seletedMenu.label}</Label> : <Logo to="/" />}
+      </ResponsiveContainer>
+      <Menu pathname={parsedPathname} />
     </GNBFrame>
   )
 }
