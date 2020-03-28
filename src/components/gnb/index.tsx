@@ -10,8 +10,8 @@ import { MENUS } from './constants'
 
 const GNBFrame = styled(Container)`
   vertical-align: top;
+  width: 92.09%;
   max-width: 64rem;
-  width: 100%;
   margin: 0 auto;
 `
 
@@ -69,7 +69,7 @@ function GNB({ pathname }: { pathname: string }) {
 
   return (
     <GNBFrame>
-      <Container overflow="hidden" margin="0 auto" padding="0 2.5rem">
+      <Container overflow="hidden" margin="0 auto">
         <ResponsiveContainer target="pc">
           <Logo to="/" />
         </ResponsiveContainer>
