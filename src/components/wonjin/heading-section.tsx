@@ -8,7 +8,6 @@ import Text from '../share/text'
 const ContentContainer = styled(Container)`
   max-width: 64rem;
   width: 92.09%;
-  width: 100%;
   padding: 0 2rem;
   margin: 0.5rem auto 0 auto;
 `

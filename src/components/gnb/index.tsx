@@ -7,6 +7,7 @@ import Text from '../share/text'
 import Menu from './menu'
 import media from '../share/media'
 import { MENUS } from './constants'
+import Responsive from '../share/responsive'
 
 const GNBFrame = styled(Container)`
   position: relative;
@@ -46,26 +47,6 @@ const Label = styled(Text)`
   }
 `
 
-const ResponsiveContainer = styled(Container)<{ target: 'pc' | 'mo' }>`
-  display: inline-block;
-
-  ${({ target }) =>
-    target === 'pc'
-      ? `
-      display: inline-block;
-      @media ${media.md} {
-        display: none; 
-      }
-  
-  `
-      : `
-      
-      display: none;
-      @media ${media.md} {
-        display: inline-block; 
-      }`}
-`
-
 function GNB({ pathname }: { pathname: string }) {
   const parsedPathname = useMemo(() => pathname.replace(/\//gi, ''), [pathname])
 
@@ -73,12 +54,12 @@ function GNB({ pathname }: { pathname: string }) {
 
   return (
     <GNBFrame overflow="hidden">
-      <ResponsiveContainer target="pc">
+      <Responsive target="pc">
         <Logo to="/" />
-      </ResponsiveContainer>
-      <ResponsiveContainer target="mo">
+      </Responsive>
+      <Responsive target="mo">
         {seletedMenu ? <Label>{seletedMenu.label}</Label> : <Logo to="/" />}
-      </ResponsiveContainer>
+      </Responsive>
       <Menu pathname={parsedPathname} />
     </GNBFrame>
   )

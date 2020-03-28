@@ -4,7 +4,6 @@ import styled from 'styled-components'
 import Container from '../share/container'
 import Text from '../share/text'
 import getColor from '../share/color'
-import data from './data.json'
 
 interface History {
   year: string
@@ -34,23 +33,28 @@ const TextContainer = styled(Container)`
   display: inline-block;
 `
 
-export default function HistoryTable() {
+export default function HistoryTable({ data }: { data: History[] }) {
   return (
     <>
-      {(data as History[]).map(({ year, histories }, idx) => {
+      {data.map(({ year, histories }, idx) => {
         return (
           <HistoryContainer key={idx}>
             {histories.map(({ month, contents }, idx) => (
               <React.Fragment key={idx}>
-                <Year lignHeight={2.25} fontWeight="bold">
+                <Year lignHeight={2.57} fontWeight="bold" fontSize={0.875}>
                   {idx === 0 ? year : ''}
                 </Year>
-                <Month fontWeight={500} color="lightBlack" lignHeight={2.25}>
+                <Month
+                  fontWeight={500}
+                  color="lightBlack"
+                  lignHeight={2.57}
+                  fontSize={0.875}
+                >
                   {month}
                 </Month>
                 <TextContainer width="50%">
                   {contents.map((text, idx) => (
-                    <Text key={idx} lignHeight={2.25}>
+                    <Text key={idx} lignHeight={2.57} fontSize={0.875}>
                       {text}
                     </Text>
                   ))}
