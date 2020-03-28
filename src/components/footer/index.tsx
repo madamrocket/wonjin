@@ -24,12 +24,20 @@ const FooterContainer = styled(Container)`
 const InfoContainer = styled.div`
   vertical-align: top;
   width: 70%;
+
+  @media ${media.md} {
+    width: 100%;
+  }
 `
 
 const LogoContainer = styled.div`
   position: absolute;
   top: 2.563rem;
   right: 0;
+
+  @media ${media.md} {
+    top: 1.313rem;
+  }
 `
 
 function Footer() {

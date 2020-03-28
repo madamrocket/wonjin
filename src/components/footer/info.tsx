@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Text from '../share/text'
+import media from '../share/media'
 
 interface InfoProps {
   label?: string
@@ -12,6 +13,10 @@ interface InfoProps {
 const InfoFrame = styled.div`
   display: inline-block;
   margin-right: 2.5rem;
+
+  @media ${media.md} {
+    display: block;
+  }
 `
 
 const Label = styled(Text)`

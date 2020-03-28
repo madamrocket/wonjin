@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import getColor from './share/color'
+import media from './share/media'
 
 const Icon = styled.span<{ type: 'naver' | 'facebook' }>`
   background: ${({ type }) => `url(/images/logo-${type}-gray@2x.png)`} no-repeat;
@@ -15,6 +16,12 @@ const Icon = styled.span<{ type: 'naver' | 'facebook' }>`
 
   &:not(:last-child) {
     margin-right: 0.75rem;
+  }
+
+  @media ${media.md} {
+    width: 1.313rem;
+    height: 1.313rem;
+    background-size: 0.8125rem;
   }
 `
 
