@@ -2665,6 +2665,11 @@ export type StringQueryOperatorInput = {
   readonly glob: Maybe<Scalars['String']>;
 };
 
+export type Unnamed_1_QueryVariables = {};
+
+
+export type Unnamed_1_Query = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title' | 'description'>> }> };
+
 export type SiteTitleQueryQueryVariables = {};
 
 
@@ -2717,11 +2722,6 @@ export type GatsbyImageSharpSizes_withWebp_tracedSVGFragment = Pick<ImageSharpSi
 export type GatsbyImageSharpSizes_noBase64Fragment = Pick<ImageSharpSizes, 'aspectRatio' | 'src' | 'srcSet' | 'sizes'>;
 
 export type GatsbyImageSharpSizes_withWebp_noBase64Fragment = Pick<ImageSharpSizes, 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
-
-export type Unnamed_1_QueryVariables = {};
-
-
-export type Unnamed_1_Query = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title' | 'description'>> }> };
 
 export type PagesQueryQueryVariables = {};
 

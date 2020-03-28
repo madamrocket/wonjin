@@ -10,14 +10,17 @@ export const INFO = [
   {
     label: '대표번호',
     value: '1588-0714',
+    link: 'tel:1588-0714',
   },
   {
     label: '팩스',
-    value: '02- 557- 3496',
+    value: '02-557-3496',
+    link: 'tel:02-557-3496',
   },
   {
     label: '이메일',
     value: 'info@wonjinlogis.com',
+    link: 'mailto:info@wonjinlogis.com',
   },
   {
     label: '문의방법',
