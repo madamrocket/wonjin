@@ -171,7 +171,7 @@ function Carousel() {
           onClick={() => handleMove(currentIndex + 1)}
         />
       )}
-      <DotContainer textAlign="center" margin="2.125rem 0 0 0">
+      <DotContainer textAlign="center" margin="2.25rem 0 0 0">
         {[...new Array(pageCount)].map((_, idx) => (
           <Dot active={idx === currentIndex} onClick={() => handleMove(idx)} />
         ))}

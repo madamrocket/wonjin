@@ -47,11 +47,11 @@ function Card({
       <Link to={`/center?id=${id}`}>
         <Image src={image} alt={name} onLoad={imageOnload} />
         <Text
-          lignHeight={1.8}
+          lignHeight={2}
           fontSize={1.25}
           fontWeight={500}
           mobileFontSize={0.9375}
-          margin="1rem 0 0 0"
+          margin="0.75rem 0 0 0"
         >
           {name}
         </Text>

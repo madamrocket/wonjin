@@ -9,6 +9,7 @@ import Carousel from './carousel'
 import media from '../../share/media'
 
 const SectionCenterFrame = styled(Container)`
+  padding: 3.25rem 0 2.5rem 0;
   background: ${getColor('lightGray')};
   overflow: hidden;
 
@@ -19,6 +20,8 @@ const SectionCenterFrame = styled(Container)`
 
 const SectionCenterContainer = styled(Container)`
   width: 100%;
+  width: 92.09%;
+  max-width: 64rem;
 
   @media ${media.md} {
     width: 89.33%;
@@ -42,31 +45,34 @@ const ButtonContainer = styled.div`
 
 function SectionIntroCenter() {
   return (
-    <SectionCenterFrame padding="3.5rem 0 6.375rem 0">
+    <SectionCenterFrame>
       <SectionCenterContainer
         maxWidth="59rem"
         margin="0 auto"
         position="relative"
       >
-        <TextContainer margin="0 0 2rem 0">
+        <TextContainer margin="0 0 1.438rem 0" textAlign="center">
           <Text
-            fontSize={2}
+            fontSize={1.75}
             color="blue"
-            lignHeight={2}
             fontWeight="bold"
             mobileFontSize={1.125}
-            margin="0 auto 0.9375rem 0"
+            textAlign="center"
+            margin="0 0 1.5rem 0"
           >
             Our Centers
           </Text>
-          <Text fontWeight={500} lignHeight={2} mobileineHeight={1.69}>
-            {`원하시는 조건을 알려주세요. \n 원진물류가 최적의 창고를 찾아드립니다.`}
+          <Text
+            fontWeight={500}
+            mobileineHeight={1.69}
+            textAlign="center"
+            margin="0 0 1.5rem 0"
+          >
+            원하시는 조건을 알려주세요. 원진물류가 최적의 창고를 찾아드립니다.
           </Text>
-          <ButtonContainer>
-            <IconButton width="10.19rem" color="blue">
-              원진물류센터 둘러보기
-            </IconButton>
-          </ButtonContainer>
+          <IconButton width="10.19rem" color="blue">
+            원진물류센터 둘러보기
+          </IconButton>
         </TextContainer>
         <Carousel />
       </SectionCenterContainer>
