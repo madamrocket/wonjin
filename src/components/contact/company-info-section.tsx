@@ -26,10 +26,10 @@ function CompanyInfoSection() {
           onClick={link ? () => handleLink(link) : undefined}
           focusing={!!link}
         >
-          <Label inlineBlock lignHeight={2.25} fontWeight={500}>
+          <Label inlineBlock lignHeight={2.25}>
             {label}
           </Label>
-          <Text inlineBlock lignHeight={2.25} fontWeight={500}>
+          <Text inlineBlock lignHeight={2.25}>
             {value}
           </Text>
         </InfoContainer>
