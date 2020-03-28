@@ -4,6 +4,8 @@ import styled from 'styled-components'
 import data from './data.json'
 import Container from '../share/container'
 import Text from '../share/text'
+import Responsive from '../share/responsive'
+import media from '../share/media'
 
 interface Post {
   title: string
@@ -25,6 +27,25 @@ const ContentsContainer = styled(Container)`
   &:nth-child(2n - 1) {
     margin-right: 4%;
   }
+
+  @media ${media.md} {
+    width: 100%;
+    margin: 0;
+  }
+`
+
+const ContentBodyContainer = styled(Container)`
+  @media ${media.md} {
+    padding: 0 1.25rem;
+  }
+`
+
+const BodyContainer = styled(Container)`
+  margin: 0.75rem 3.375rem 2.5rem 0;
+
+  @media ${media.md} {
+    margin: 0.75rem 0 2.25rem 0;
+  }
 `
 
 function Contents() {
@@ -34,23 +55,34 @@ function Contents() {
     <Container>
       {posts.map(({ title, subTitle, image, content }, idx) => (
         <ContentsContainer key={idx}>
-          <Text
-            color="green"
-            fontSize={1.5}
-            fontWeight="bold"
-            margin="0 0 1.25rem 0"
-          >
-            {title}
-          </Text>
-          <Image src={image} />
-          {subTitle && (
-            <Text fontWeight="bold" fontSize={1.25}>
-              {subTitle}
+          <Responsive target="pc">
+            <Text
+              color="green"
+              fontSize={1.5}
+              fontWeight="bold"
+              margin="0 0 1.25rem 0"
+            >
+              {title}
             </Text>
-          )}
-          <Container margin="0.75rem 3.375rem 2.5rem 0">
-            <Text lignHeight={1.73}>{content}</Text>
-          </Container>
+          </Responsive>
+          <Image src={image} />
+          <ContentBodyContainer>
+            <Responsive target="mo" margin="0 0 0.5rem 0">
+              <Text color="green" fontSize={1.25} fontWeight="bold">
+                {title}
+              </Text>
+            </Responsive>
+            {subTitle && (
+              <Text fontWeight="bold" fontSize={1.25} mobileFontSize={1}>
+                {subTitle}
+              </Text>
+            )}
+            <BodyContainer>
+              <Text lignHeight={1.73} mobileFontSize={0.8125}>
+                {content}
+              </Text>
+            </BodyContainer>
+          </ContentBodyContainer>
         </ContentsContainer>
       ))}
     </Container>
