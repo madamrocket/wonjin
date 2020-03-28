@@ -32,13 +32,19 @@ const HistoryTableFrame = styled(Container)`
   }
 `
 
+const Title = styled(Text)`
+  @media ${media.md} {
+    margin: 2.25rem 0 1.5rem 0;
+  }
+`
+
 export default function HistorySection() {
   const leftTableData = [...data].slice(0, 8)
   const rightTableData = [...data].slice(8, data.length)
 
   return (
     <HistoryFrame>
-      <Text
+      <Title
         color="blue"
         fontWeight="bold"
         fontSize={2}
@@ -46,7 +52,7 @@ export default function HistorySection() {
         margin="4.813rem 0 2.25rem 0"
       >
         연혁
-      </Text>
+      </Title>
       <Responsive target="pc">
         <HistoryTableFrame>
           <HistoryTable data={leftTableData} />

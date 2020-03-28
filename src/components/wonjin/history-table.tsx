@@ -46,6 +46,7 @@ export default function HistoryTable({ data }: { data: History[] }) {
                   fontWeight="bold"
                   fontSize={0.875}
                   mobileineHeight={2.17}
+                  mobileFontSize={0.75}
                 >
                   {idx === 0 ? year : ''}
                 </Year>
@@ -55,6 +56,7 @@ export default function HistoryTable({ data }: { data: History[] }) {
                   lignHeight={2.57}
                   mobileineHeight={2.17}
                   fontSize={0.875}
+                  mobileFontSize={0.75}
                 >
                   {month}
                 </Month>
@@ -65,6 +67,7 @@ export default function HistoryTable({ data }: { data: History[] }) {
                       lignHeight={2.57}
                       mobileineHeight={2.17}
                       fontSize={0.875}
+                      mobileFontSize={0.75}
                     >
                       {text}
                     </Text>

@@ -39,7 +39,7 @@ const Logo = styled(Link)`
     width: 6.875rem;
     height: 1rem;
     background-image: url(/images/logo-gnb-mo@3x.png);
-    margin: 1rem 0 1rem 5.333%;
+    margin: 0;
   }
 `
 
@@ -64,7 +64,9 @@ function GNB({ pathname }: { pathname: string }) {
       </Responsive>
       <Responsive target="mo">
         {seletedMenu ? (
-          <Title fontWeight={500}>{seletedMenu.label}</Title>
+          <Title fontWeight={500} mobileineHeight={3.125}>
+            {seletedMenu.label}
+          </Title>
         ) : (
           <Logo to="/" />
         )}

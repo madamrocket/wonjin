@@ -4,11 +4,7 @@ import styled from 'styled-components'
 import Container from '../share/container'
 import media from './media'
 
-const ImageFrame = styled(Container)`
-  @media ${media.md} {
-    height: 9.75rem;
-  }
-
+const ImageFrame = styled(Container)<{ mobileHeight?: number }>`
   &:before {
     content: '';
     position: absolute;
@@ -19,6 +15,14 @@ const ImageFrame = styled(Container)`
     background: #000;
     opacity: 0.4;
     z-index: 1;
+  }
+
+  @media ${media.md} {
+    ${({ mobileHeight }) =>
+      mobileHeight &&
+      `
+      height: ${mobileHeight}rem;
+    `}
   }
 `
 
@@ -31,9 +35,22 @@ const Image = styled.img`
   max-width: 100%;
 `
 
-function CoverImage({ src, height }: { src: string; height: number }) {
+function CoverImage({
+  src,
+  height,
+  mobileHeight,
+}: {
+  src: string
+  height: number
+  mobileHeight: number
+}) {
   return (
-    <ImageFrame position="relative" overflow="hidden" height={height}>
+    <ImageFrame
+      position="relative"
+      overflow="hidden"
+      height={height}
+      mobileHeight={mobileHeight}
+    >
       <Image src={src} />
     </ImageFrame>
   )
