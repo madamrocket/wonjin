@@ -153,7 +153,6 @@ const HamburgerButton = styled.img`
 `
 
 function Menu({ pathname }: { pathname: string }) {
-  const parsedPathname = useMemo(() => pathname.replace('/', ''), [pathname])
   const [open, setOpen] = useState(false)
 
   const handleOpen = () => setOpen(true)
@@ -179,7 +178,7 @@ function Menu({ pathname }: { pathname: string }) {
         </HamburgerMenuBarContainer>
         {MENUS.map(({ id, label }, idx) => (
           <A to={`/${id}`} onClick={handleClose} key={idx}>
-            <Label key={id} active={parsedPathname === id}>
+            <Label key={id} active={pathname === id}>
               {label}
             </Label>
           </A>

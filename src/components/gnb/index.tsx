@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 
 import Container from '../share/container'
+import Text from '../share/text'
 import Menu from './menu'
 import media from '../share/media'
+import { MENUS } from './constants'
 
 const GNBFrame = styled(Container)`
   vertical-align: top;
@@ -31,12 +33,50 @@ const Logo = styled(Link)`
   }
 `
 
+const Label = styled(Text)`
+  display: none;
+
+  @media ${media.md} {
+    display: block;
+    margin: 1rem 0 1rem 5.333%;
+  }
+`
+
+const ResponsiveContainer = styled(Container)<{ target: 'pc' | 'mo' }>`
+  display: inline-block;
+
+  ${({ target }) =>
+    target === 'pc'
+      ? `
+      display: inline-block;
+      @media ${media.md} {
+        display: none; 
+      }
+  
+  `
+      : `
+      
+      display: none;
+      @media ${media.md} {
+        display: inline-block; 
+      }`}
+`
+
 function GNB({ pathname }: { pathname: string }) {
+  const parsedPathname = useMemo(() => pathname.replace(/\//gi, ''), [pathname])
+
+  const seletedMenu = MENUS.find(({ id }) => id === parsedPathname)
+
   return (
     <GNBFrame>
       <Container overflow="hidden" margin="0 auto" padding="0 2.5rem">
-        <Logo to="/" />
-        <Menu pathname={pathname} />
+        <ResponsiveContainer target="pc">
+          <Logo to="/" />
+        </ResponsiveContainer>
+        <ResponsiveContainer target="mo">
+          {seletedMenu ? <Label>{seletedMenu.label}</Label> : <Logo to="/" />}
+        </ResponsiveContainer>
+        <Menu pathname={parsedPathname} />
       </Container>
     </GNBFrame>
   )
