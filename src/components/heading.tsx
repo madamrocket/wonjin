@@ -51,13 +51,7 @@ function Heading({
   return (
     <Container position="relative" height={imageHeight}>
       <CoverImage src={image} height={imageHeight} />
-      <Content
-        textAlign="left"
-        topSpancing={topSpancing}
-        padding="1.438rem 2.063rem 0.5625rem 2.063rem"
-      >
-        {children}
-      </Content>
+      <Content textAlign="left">{children}</Content>
     </Container>
   )
 }

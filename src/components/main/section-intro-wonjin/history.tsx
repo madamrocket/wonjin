@@ -1,11 +1,16 @@
 import React from 'react'
+import styled from 'styled-components'
 
 import Container from '../../share/container'
 import Text from '../../share/text'
 
+const HistoryFrame = styled(Container)`
+  padding: 1.438rem 2.063rem 0.5625rem 2.063rem;
+`
+
 function History() {
   return (
-    <Container>
+    <HistoryFrame>
       <Text
         margin="0 0 0.875rem 0"
         fontWeight="bold"
@@ -21,7 +26,7 @@ function History() {
         공급망에 대한 치밀한 분석과 현장 중심의 풍부한 물 류 경험을 바탕으로
         고객사 맞춤형의 물류 센터 솔루션을 제공합니다.
       </Text>
-    </Container>
+    </HistoryFrame>
   )
 }
 
