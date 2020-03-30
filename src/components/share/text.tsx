@@ -37,24 +37,43 @@ const BaseText = styled.div<TextProps>`
     ${({ mobileineHeight }) => `line-height: ${mobileineHeight || 1.5};`}
     ${({ mobileineMargin }) => mobileineMargin && `margin: ${mobileineMargin};`}
   }
-
-  &:last-child {
-    margin: 0;
-  }
 `
+
+function Line({ children }: React.PropsWithChildren<{}>) {
+  return (
+    <>
+      {children}
+      <br />
+    </>
+  )
+}
+
+export function LineBreak({ children }: { children?: string }) {
+  const texts = (children || '').split('\n')
+
+  return (
+    <>
+      {texts.map((text: string, i: number) =>
+        i === texts.length - 1 ? text : <Line key={i}>{text}</Line>,
+      )}
+    </>
+  )
+}
 
 export default function Text({
   children,
   ...props
 }: PropsWithChildren<TextProps>) {
-  const texts = ((children as string) || '').split('\n')
-  return (
-    <>
-      {texts.map((text: string, i: number) => (
-        <BaseText key={i} {...props}>
-          {text}
-        </BaseText>
-      ))}
-    </>
+  return <BaseText {...props}>{ChildrenWithLineBreaks(children)}</BaseText>
+}
+
+function ChildrenWithLineBreaks(children: React.ReactNode) {
+  return React.Children.toArray(children).map((child, i) =>
+    typeof child === 'string' ? <LineBreak key={i}>{child}</LineBreak> : child,
   )
 }
+
+export const Emphasis = styled(Text)`
+  display: inline-block;
+  font-weight: bold;
+`
