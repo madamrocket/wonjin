@@ -10,12 +10,15 @@ import { MENUS } from './constants'
 import Responsive from '../share/responsive'
 
 const GNBFrame = styled(Container)`
+  border-bottom: 1px solid #e6e6e6;
+`
+
+const GNBContainer = styled(Container)`
   vertical-align: top;
   width: 92.09%;
   max-width: 64rem;
   margin: 0 auto;
   height: 5rem;
-  border-bottom: 1px solid #e6e6e6;
 
   @media ${media.md} {
     width: 100%;
@@ -50,20 +53,22 @@ function GNB({ pathname }: { pathname: string }) {
   const seletedMenu = MENUS.find(({ id }) => id === parsedPathname)
 
   return (
-    <GNBFrame overflow="hidden" position="relative">
-      <Responsive target="pc" float="left">
-        <Logo to="/" />
-      </Responsive>
-      <Responsive target="mo">
-        {seletedMenu ? (
-          <Text fontWeight={500} mobileineHeight={3}>
-            {seletedMenu.label}
-          </Text>
-        ) : (
+    <GNBFrame>
+      <GNBContainer overflow="hidden" position="relative">
+        <Responsive target="pc" float="left">
           <Logo to="/" />
-        )}
-      </Responsive>
-      <Menu pathname={parsedPathname} />
+        </Responsive>
+        <Responsive target="mo">
+          {seletedMenu ? (
+            <Text fontWeight={500} mobileineHeight={3}>
+              {seletedMenu.label}
+            </Text>
+          ) : (
+            <Logo to="/" />
+          )}
+        </Responsive>
+        <Menu pathname={parsedPathname} />
+      </GNBContainer>
     </GNBFrame>
   )
 }
