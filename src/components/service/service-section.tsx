@@ -6,9 +6,8 @@ import Text from '../share/text'
 import { services } from './data.json'
 
 const ServiceFrame = styled(Container)`
-  max-width: 40.5rem;
-  width: 100%;
-  margin: 8rem auto 4rem auto;
+  max-width: 64rem;
+  width: 92.09%;
 `
 
 const Image = styled.img`
