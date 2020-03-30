@@ -48,6 +48,8 @@ export default function HeadingSection({
         value={selectedId}
         onChange={onClick}
         bottomSpancing={1.25}
+        mobileSideSpancing={0.5}
+        mobileBottomSpancing={1.25}
       />
     </HeadingSectionFrame>
   )
