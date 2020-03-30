@@ -13,12 +13,21 @@ const CardFrame = styled(Container)`
   display: inline-block;
   text-align: left;
 
-  @media ${media.md} {
-    margin-bottom: 8.53%;
-  }
-
   &:nth-child(2n - 1) {
     margin-right: 2%;
+  }
+
+  @media ${media.md} {
+    width: 100%;
+    margin-bottom: 0;
+
+    &:nth-child(2n - 1) {
+      margin-right: 0;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
   }
 `
 

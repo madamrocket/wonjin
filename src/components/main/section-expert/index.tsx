@@ -16,7 +16,7 @@ const SectionExpertFrame = styled(Container)`
   @media ${media.md} {
     width: 89.33%;
     text-align: left;
-    padding: 8.53% 0 0 0;
+    padding: 2.25rem 0;
   }
 `
 
@@ -39,6 +39,13 @@ const HeadingTextContainer = styled(Container)`
   }
 `
 
+const ContentTitle = styled(Text)`
+  @media ${media.md} {
+    width: 17.81rem;
+    word-break: keep-all;
+  }
+`
+
 function SectionExpert() {
   return (
     <SectionExpertFrame padding="3.75rem 0 0 0">
@@ -47,17 +54,22 @@ function SectionExpert() {
           color="green"
           fontSize={2}
           fontWeight="bold"
-          margin="0 5px 0 0"
-          mobileFontSize={1.125}
+          mobileFontSize={1.25}
+          margin="0 0.5rem 0 0"
           inlineBlock
         >
-          지금 원진만의 물류 전문가를 만나보세요
+          {`지금 원진만의 \n 물류 전문가를 만나보세요`}
         </Text>
       </HeadingTextContainer>
-      <Text fontWeight={500}>
+      <ContentTitle
+        fontWeight={500}
+        lignHeight={1.69}
+        mobileFontSize={0.8125}
+        mobileineMargin="0 0 1.5rem 0"
+      >
         탄탄한 물류 전문인력으로 구성된 원진물류 팀은 고객사의 성장과 성공을가장
         가까이에서 지원합니다.
-      </Text>
+      </ContentTitle>
       <ExpertCardContainer margin="2rem auto 0 auto">
         {data.map((card, key) => (
           <ExpertCard key={key} card={card} />
