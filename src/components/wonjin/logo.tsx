@@ -34,7 +34,6 @@ const Image = styled.div<{ name: string }>`
 const Label = styled(Text)`
   font-size: 1.125rem;
   text-align: center;
-  border-bottom: 1px solid;
   padding-bottom: 8px;
 `
 
@@ -45,7 +44,6 @@ interface LogosProps {
 
 const LogoContainer = styled(Container)`
   @media ${media.md} {
-    max-width: 19rem;
     margin: 0 auto;
     padding: 0.5625rem 0 2.25rem 0;
   }

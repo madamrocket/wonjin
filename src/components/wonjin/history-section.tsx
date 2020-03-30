@@ -17,9 +17,11 @@ const HistoryFrame = styled(Container)`
 const HistoryTableFrame = styled(Container)`
   border-top: 2px solid #333;
   border-bottom: 2px solid #333;
-  width: 47.5%;
-  display: inline-block;
+  max-width: 40.44rem;
+  max-height: 52.5rem;
   padding: 0.75rem 1.5rem;
+  overflow-y: auto;
+  margin: 0 auto;
 
   &:first-child {
     margin-right: 4.5%;
@@ -27,8 +29,6 @@ const HistoryTableFrame = styled(Container)`
 
   @media ${media.md} {
     width: 100%;
-    max-height: 52.5rem;
-    overflow-y: auto;
   }
 `
 
@@ -39,9 +39,6 @@ const Title = styled(Text)`
 `
 
 export default function HistorySection() {
-  const leftTableData = [...data].slice(0, 8)
-  const rightTableData = [...data].slice(8, data.length)
-
   return (
     <HistoryFrame>
       <Title
@@ -53,19 +50,9 @@ export default function HistorySection() {
       >
         연혁
       </Title>
-      <Responsive target="pc">
-        <HistoryTableFrame>
-          <HistoryTable data={leftTableData} />
-        </HistoryTableFrame>
-        <HistoryTableFrame>
-          <HistoryTable data={rightTableData} />
-        </HistoryTableFrame>
-      </Responsive>
-      <Responsive target="mo">
-        <HistoryTableFrame>
-          <HistoryTable data={data} />
-        </HistoryTableFrame>
-      </Responsive>
+      <HistoryTableFrame>
+        <HistoryTable data={data} />
+      </HistoryTableFrame>
     </HistoryFrame>
   )
 }
