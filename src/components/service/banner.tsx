@@ -11,13 +11,15 @@ const BannerFrame = styled.div`
   background-size: 100%;
 
   @media ${media.md} {
-    padding: 1.25rem;
+    padding: 1.15rem;
+    background: url(/images/service-banner-mo.png);
+    background-size: 100% 6.875rem;
   }
 `
 
 const BannerContentContainer = styled(Container)`
   @media ${media.md} {
-    max-width: 70.666%;
+    max-width: 14.69rem;
     margin: 0;
   }
 `
