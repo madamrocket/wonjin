@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import Container from '../share/container'
 import Text from '../share/text'
-import getColor from '../share/color'
+import media from '../share/media'
 import { Center } from './types'
 
 const TableFrame = styled(Container)`
@@ -12,6 +12,12 @@ const TableFrame = styled(Container)`
   padding: 0.75rem 1.5rem;
   border-top: 1px solid #333;
   border-bottom: 1px solid #333;
+
+  @media ${media.md} {
+    border-bottom: 2px solid #333;
+    padding: 0.5rem;
+    margin: 0 0 1.5rem 0;
+  }
 `
 
 const Label = styled(Text)`
@@ -26,7 +32,7 @@ const Description = styled(Text)`
 
 export default function InfoTable({ info }: { info: Center['info'] }) {
   return (
-    <TableFrame margin="0 0  1.5rem 0">
+    <TableFrame margin="0 0 1.5rem 0">
       {Object.keys(info).map((key: string, idx) => {
         return (
           <Container key={idx}>
@@ -35,10 +41,16 @@ export default function InfoTable({ info }: { info: Center['info'] }) {
               fontWeight="bold"
               color="lightBlack"
               lignHeight={2.25}
+              mobileFontSize={0.75}
             >
               {key}
             </Label>
-            <Description key={idx} fontSize={0.875} lignHeight={2.25}>
+            <Description
+              key={idx}
+              fontSize={0.875}
+              mobileFontSize={0.75}
+              lignHeight={2.25}
+            >
               {info[key]}
             </Description>
           </Container>

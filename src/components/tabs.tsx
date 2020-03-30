@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Container from './share/container'
+import media from './share/media'
 import getColor from './share/color'
 
 const Tab = styled.div<{
@@ -40,6 +41,14 @@ const Tab = styled.div<{
             margin-top: 5px;
         }
       `}
+
+   @media ${media.md} {
+     font-size: 0.8125rem;
+     
+     &:not(:last-child) {
+      margin-right: 1rem;
+    }
+   }   
 `
 
 export default function Tabs<T>({

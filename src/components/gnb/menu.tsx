@@ -57,13 +57,14 @@ const A = styled(Link)`
   display: inline-block;
   vertical-align: top;
   box-sizing: border-box;
+  line-height: 5rem;
 
   &:not(:last-child) {
     margin-right: 2.125rem;
   }
 
   @media ${media.md} {
-    font-size: 0.875rem;
+    font-size: 0.8125rem;
     width: 100%;
     border-bottom: 1px solid #e2e2e2;
     padding: 0.875rem 0.5rem;

@@ -14,11 +14,12 @@ const GNBFrame = styled(Container)`
   width: 92.09%;
   max-width: 64rem;
   margin: 0 auto;
-  padding: 1.563rem 0 1.75rem 0;
+  height: 5rem;
 
   @media ${media.md} {
     width: 100%;
-    padding: 1rem 1.25rem;
+    padding: 0 1.25rem;
+    height: 48px;
   }
 `
 
@@ -42,15 +43,6 @@ const Logo = styled(Link)`
   }
 `
 
-const Title = styled(Text)`
-  display: none;
-
-  @media ${media.md} {
-    display: block;
-    margin: 1rem 0 1rem 5.333%;
-  }
-`
-
 function GNB({ pathname }: { pathname: string }) {
   const parsedPathname = useMemo(() => pathname.replace(/\//gi, ''), [pathname])
 
@@ -58,14 +50,14 @@ function GNB({ pathname }: { pathname: string }) {
 
   return (
     <GNBFrame overflow="hidden" position="relative">
-      <Responsive target="pc">
+      <Responsive target="pc" float="left">
         <Logo to="/" />
       </Responsive>
       <Responsive target="mo">
         {seletedMenu ? (
-          <Title fontWeight={500} mobileineHeight={3.125}>
+          <Text fontWeight={500} mobileineHeight={3}>
             {seletedMenu.label}
-          </Title>
+          </Text>
         ) : (
           <Logo to="/" />
         )}

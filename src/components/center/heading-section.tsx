@@ -35,6 +35,7 @@ export default function HeadingSection({
     <HeadingSectionFrame position="relative" textAlign="center">
       <Text
         margin="2.25rem 0"
+        mobileineMargin="1.5rem 0"
         color="blue"
         fontSize={2}
         fontWeight="bold"
