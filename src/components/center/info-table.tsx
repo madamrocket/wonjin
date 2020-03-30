@@ -42,6 +42,7 @@ export default function InfoTable({ info }: { info: Center['info'] }) {
               color="lightBlack"
               lignHeight={2.25}
               mobileFontSize={0.75}
+              mobileineHeight={2.17}
             >
               {key}
             </Label>
@@ -49,6 +50,7 @@ export default function InfoTable({ info }: { info: Center['info'] }) {
               key={idx}
               fontSize={0.875}
               mobileFontSize={0.75}
+              mobileineHeight={2.17}
               lignHeight={2.25}
             >
               {info[key]}

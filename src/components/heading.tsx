@@ -8,6 +8,7 @@ import CoverImage from './share/cover-image'
 
 const Content = styled(Container)<{
   topSpancing?: number
+  mobileTopSpancing?: number
 }>`
   z-index: 1;
   background: ${getColor('white')};
@@ -19,14 +20,20 @@ const Content = styled(Container)<{
   text-align: ${({ textAlign }) => textAlign || 'center'};
   bottom: 0;
 
-  @media ${media.md} {
-    ${({ topSpancing }) =>
-      topSpancing &&
-      `
+  ${({ topSpancing }) =>
+    topSpancing &&
+    `  
     top: ${topSpancing}rem;
-    bottom: auto;
-  `}
-  }
+    bottom: auto;`}
+
+  @media ${media.md} {
+    ${({ mobileTopSpancing }) =>
+      mobileTopSpancing &&
+      `
+      top: ${mobileTopSpancing}rem;
+      bottom: auto;
+    `}
+  }  
 `
 
 const HeadingFrame = styled(Container)<{ mobileHeight?: number }>`
@@ -47,6 +54,7 @@ interface HeadingProps {
   children?: React.ReactNode
   padding?: string
   topSpancing?: number
+  mobileTopSpancing?: number
 }
 
 function Heading({
@@ -54,6 +62,7 @@ function Heading({
   mobileHeight = 5,
   imageHeight = 15,
   topSpancing,
+  mobileTopSpancing,
   children,
 }: HeadingProps) {
   return (
@@ -67,7 +76,11 @@ function Heading({
         height={imageHeight}
         mobileHeight={mobileHeight}
       />
-      <Content textAlign="left" topSpancing={topSpancing}>
+      <Content
+        textAlign="left"
+        topSpancing={topSpancing}
+        mobileTopSpancing={mobileTopSpancing}
+      >
         {children}
       </Content>
     </HeadingFrame>

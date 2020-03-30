@@ -31,6 +31,10 @@ const ContentsContainer = styled(Container)`
   @media ${media.md} {
     width: 100%;
     margin: 0;
+
+    &:nth-child(2n - 1) {
+      margin-right: 0;
+    }
   }
 `
 

@@ -33,7 +33,7 @@ export default function HeadingSection() {
       <Heading
         image="/images/wonjin-intro-cover.png"
         imageHeight={20}
-        topSpancing={2}
+        mobileTopSpancing={2}
         mobileHeight={5}
       >
         <MessageContainer textAlign="left" padding="2rem 2rem 3.438rem 2rem">
