@@ -13,7 +13,12 @@ const BannerFrame = styled.div`
 function Banner() {
   return (
     <BannerFrame>
-      <Container maxWidth="40.5rem" textAlign="left" margin="0 auto">
+      <Container
+        maxWidth="64rem"
+        width="92.09%"
+        textAlign="left"
+        margin="0 auto"
+      >
         <Container margin="0 0 0.125rem 0">
           <Text
             color="white"
