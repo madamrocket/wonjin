@@ -19,6 +19,7 @@ interface TextProps {
   color?: Color
   textAlign?: TextAlign
   mobileineHeight?: number
+  mobileineMargin?: string
 }
 
 const BaseText = styled.div<TextProps>`
@@ -34,6 +35,7 @@ const BaseText = styled.div<TextProps>`
   @media ${media.md} {
     ${({ mobileFontSize }) => `font-size: ${mobileFontSize || 1}rem;`}
     ${({ mobileineHeight }) => `line-height: ${mobileineHeight || 1.5};`}
+    ${({ mobileineMargin }) => mobileineMargin && `margin: ${mobileineMargin};`}
   }
 
   &:last-child {

@@ -5,6 +5,7 @@ import media from './media'
 
 export default styled(Container)<{ target: 'pc' | 'mo' }>`
   display: inline-block;
+  width: 100%;
 
   ${({ target }) =>
     target === 'pc'

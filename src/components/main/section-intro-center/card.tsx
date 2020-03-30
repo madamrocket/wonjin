@@ -19,7 +19,20 @@ const CardFrame = styled(Container)`
   }
 
   @media ${media.md} {
-    width: 50%;
+    display: inline-block;
+    width: 18.44rem;
+
+    &:first-child {
+      margin-left: 1.25rem;
+    }
+
+    &:last-child {
+      margin-right: 1.25rem;
+    }
+
+    &:not(:last-child) {
+      margin-right: 1.25rem;
+    }
   }
 `
 

@@ -1,10 +1,4 @@
-import React, {
-  useCallback,
-  useRef,
-  RefObject,
-  useState,
-  useEffect,
-} from 'react'
+import React, { useCallback, useRef, RefObject, useState } from 'react'
 import styled from 'styled-components'
 import Flicking from '@egjs/react-flicking'
 import data from '../../center/data.json'
