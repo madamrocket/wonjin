@@ -4,7 +4,10 @@ import styled from 'styled-components'
 import Container from '../share/container'
 import media from './media'
 
-const ImageFrame = styled(Container)<{ mobileHeight?: number }>`
+const ImageFrame = styled(Container)<{
+  mobileHeight?: number
+  opacity?: number
+}>`
   &:before {
     content: '';
     position: absolute;
@@ -13,7 +16,7 @@ const ImageFrame = styled(Container)<{ mobileHeight?: number }>`
     bottom: 0;
     left: 0;
     background: #000;
-    opacity: 0.4;
+    opacity: ${({ opacity }) => (opacity !== undefined ? opacity : 0.4)};
     z-index: 1;
   }
 
@@ -39,16 +42,19 @@ function CoverImage({
   src,
   height,
   mobileHeight,
+  opacity,
 }: {
   src: string
   height: number
   mobileHeight: number
+  opacity?: number
 }) {
   return (
     <ImageFrame
       position="relative"
       overflow="hidden"
       height={height}
+      opacity={opacity}
       mobileHeight={mobileHeight}
     >
       <Image src={src} />

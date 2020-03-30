@@ -92,7 +92,7 @@ const Label = styled.li<{
       background: ${getColor('green')};
       display: block;
       position: absolute;
-      bottom: -4px;
+      bottom: 24px;
     }
   `}
 

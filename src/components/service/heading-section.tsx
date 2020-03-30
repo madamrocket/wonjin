@@ -27,6 +27,7 @@ export default function HeadingSection() {
         imageHeight={20}
         mobileHeight={8.5}
         mobileTopSpancing={5.438}
+        opacity={0}
         padding="2.25rem 0"
       >
         <ContentContainer textAlign="left" padding="2rem">

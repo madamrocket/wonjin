@@ -14,10 +14,7 @@ const Tab = styled.div<{
   font-size: 1.125rem;
   font-weight: 400;
   cursor: pointer;
-
-  &:not(:last-child) {
-    margin-right: 2rem;
-  }
+  margin: 0 1rem;
 
   ${({ bottomSpancing }) =>
     bottomSpancing &&
@@ -43,11 +40,7 @@ const Tab = styled.div<{
       `}
 
    @media ${media.md} {
-     font-size: 0.8125rem;
-     
-     &:not(:last-child) {
-      margin-right: 1rem;
-    }
+     font-size: 0.8125rem;     
    }   
 `
 

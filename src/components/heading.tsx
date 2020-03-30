@@ -55,6 +55,7 @@ interface HeadingProps {
   padding?: string
   topSpancing?: number
   mobileTopSpancing?: number
+  opacity?: number
 }
 
 function Heading({
@@ -63,6 +64,7 @@ function Heading({
   imageHeight = 15,
   topSpancing,
   mobileTopSpancing,
+  opacity,
   children,
 }: HeadingProps) {
   return (
@@ -73,6 +75,7 @@ function Heading({
     >
       <CoverImage
         src={image}
+        opacity={opacity}
         height={imageHeight}
         mobileHeight={mobileHeight}
       />

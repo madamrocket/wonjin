@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import Heading from '../heading'
 import Container from '../share/container'
 import media from '../share/media'
-import Text from '../share/text'
+import Text, { Emphasis } from '../share/text'
 
 const ContentContainer = styled(Container)`
   max-width: 64rem;
@@ -35,19 +35,21 @@ export default function HeadingSection() {
         imageHeight={20}
         mobileTopSpancing={2}
         mobileHeight={5}
+        opacity={0}
       >
-        <MessageContainer textAlign="left" padding="2rem 2rem 3.438rem 2rem">
+        <MessageContainer textAlign="left" padding="2rem 1rem 3.438rem 2rem">
           <Text color="blue" fontSize={2.25} mobileFontSize={1.25} inlineBlock>
             물류의 새로운 길,
-          </Text>
-          <Text
-            color="blue"
-            fontSize={2.25}
-            mobileFontSize={1.25}
-            fontWeight="bold"
-            inlineBlock
-          >
-            지금 원진물류를 만나보세요.
+            <Emphasis
+              color="blue"
+              fontSize={2.25}
+              mobileFontSize={1.25}
+              margin="0 0 0 0.3125rem"
+              fontWeight="bold"
+              inlineBlock
+            >
+              지금 원진물류를 만나보세요.
+            </Emphasis>
           </Text>
         </MessageContainer>
       </Heading>
