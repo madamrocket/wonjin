@@ -21,7 +21,7 @@ const KeywordFrame = styled(Containter)`
   margin: 0 auto;
 
   @media ${media.md} {
-    padding: 13.06% 0 9.6% 0;
+    padding: 1.25rem 0 2.25rem 0;
   }
 `
 
@@ -29,6 +29,17 @@ const KeyWrodBox = styled(Containter)`
   width: 33.3%;
   display: inline-block;
   text-align: left;
+
+  @media ${media.md} {
+    display: block;
+    margin: 0 auto;
+    width: 17.19rem;
+    padding-left: 4.25rem;
+
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
 `
 
 const Icon = styled.span<{ src: string }>`
@@ -44,22 +55,34 @@ const Icon = styled.span<{ src: string }>`
     background-repeat: no-repeat;
     background-position: center;
   `}
-`
 
-const Content = styled(Text)``
+  @media ${media.md} {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+  }
+`
 
 function Keyword() {
   return (
     <KeywordFrame>
       {(data as Keyword[]).map(({ title, body, image }, idx) => (
-        <KeyWrodBox key={idx}>
+        <KeyWrodBox key={idx} position="relative">
           <Icon src={image} />
-          <Text fontSize={1.25} fontWeight="bold" margin="0.5rem 0 0.25rem 0">
-            {title}
-          </Text>
-          <Content lignHeight={1.43} fontSize={0.875}>
-            {body}
-          </Content>
+          <Containter>
+            <Text
+              fontSize={1.25}
+              mobileFontSize={0.9375}
+              fontWeight="bold"
+              margin="0.5rem 0 0.25rem 0"
+            >
+              {title}
+            </Text>
+            <Text lignHeight={1.43} mobileFontSize={0.75} fontSize={0.875}>
+              {body}
+            </Text>
+          </Containter>
         </KeyWrodBox>
       ))}
     </KeywordFrame>

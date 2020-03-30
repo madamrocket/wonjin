@@ -3,9 +3,14 @@ import styled from 'styled-components'
 
 import Container from '../../share/container'
 import Text from '../../share/text'
+import media from '../../share/media'
 
 const HistoryFrame = styled(Container)`
   padding: 1.438rem 2.063rem 0.5625rem 2.063rem;
+
+  @media ${media.md} {
+    padding: 1rem 1.25rem;
+  }
 `
 
 function History() {
