@@ -22,6 +22,10 @@ const Icon = styled.span<{ type: 'naver' | 'facebook' }>`
     width: 1.313rem;
     height: 1.313rem;
     background-size: 0.8125rem;
+
+    &:not(:last-child) {
+      margin-right: 0.3125rem;
+    }
   }
 `
 

@@ -24,6 +24,7 @@ const Dot = styled.div<{ active?: boolean }>`
   background: ${getColor('darkGray')};
   display: inline-block;
   border-radius: 100%;
+  cursor: pointer;
 
   &:not(:last-child) {
     margin-right: 0.75rem;
@@ -68,37 +69,15 @@ const ControllButton = styled.span<{ type: 'prev' | 'next' }>`
     right: -1rem;
   `}
 
-  z-index: 3;
   width: 1.125rem;
   height: 1.125rem;
   position: absolute;
-  top: 3.5rem;
+  top: 50%;
+  transform: translateY(-50%) translateY(-67px);
   background-position: center;
   padding: 0.4375rem;
   background-size: 1.125rem;
   z-index: 2;
-
-  @media ${media.md} {
-    width: 0.63rem;
-    height: 0.63rem;
-    background-size: 0.875rem;
-    top: 23%;
-    transform: translateY(-23%);
-
-    ${({ type }) =>
-      type === 'prev'
-        ? `
-    left: -0.63rem;
-`
-        : `
-    right: -0.63rem;
-  `}
-  }
-
-  @media (max-width: 410px) {
-    top: 21%;
-    transform: translateY(-21%);
-  }
 `
 
 function Carousel() {

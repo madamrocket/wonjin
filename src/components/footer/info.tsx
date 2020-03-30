@@ -31,7 +31,7 @@ const Description = styled(Text)<{ full?: boolean }>`
     full &&
     `
       width: 100%;
-      margin-top: 1rem;
+
   `}
 `
 
