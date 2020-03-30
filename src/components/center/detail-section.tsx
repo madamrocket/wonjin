@@ -9,12 +9,11 @@ import { Center } from './types'
 const DetailFrame = styled(Container)`
   max-width: 40.5rem;
   margin: 0 auto;
-  padding: 2.5rem 0 4rem 0;
+  padding: 1rem 0 4rem 0;
 `
 
 const Image = styled.img`
   width: 100%;
-  margin-bottom: 1.5rem;
 `
 
 function DetailSection({ center }: { center: Center }) {
@@ -23,20 +22,20 @@ function DetailSection({ center }: { center: Center }) {
   return (
     <DetailFrame>
       <Image src={image} />
-      {description && (
-        <Text color="lightBlack" lignHeight={1.75}>
-          {description}
-        </Text>
-      )}
       <Text
         fontSize={1.25}
-        margin="2.5rem 0 0.5rem 1.5rem"
+        margin="2.625rem 0 0.5rem 1.5rem"
         fontWeight="bold"
         lignHeight={1.2}
       >
         {name}
       </Text>
       <InfoTable info={info} />
+      {description && (
+        <Text fontSize={0.9375} color="lightBlack" lignHeight={1.75}>
+          {description}
+        </Text>
+      )}
     </DetailFrame>
   )
 }

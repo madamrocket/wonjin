@@ -11,7 +11,7 @@ const Tab = styled.div<{
   position: relative;
   display: inline-block;
   font-size: 1.125rem;
-  font-weight: 500;
+  font-weight: 400;
   cursor: pointer;
 
   &:not(:last-child) {
@@ -35,9 +35,9 @@ const Tab = styled.div<{
             content: '';
             display: block;
             width: 100%;
-            height: 3px;
+            height: 2px;
             background-color: ${getColor('green')};
-            margin-top: 4px;
+            margin-top: 5px;
         }
       `}
 `

@@ -16,24 +16,29 @@ const TableFrame = styled(Container)`
 
 const Label = styled(Text)`
   display: inline-block;
-  width: 30%;
+  width: 40%;
 `
 
 const Description = styled(Text)`
   display: inline-block;
-  width: 70%%;
+  width: 60%%;
 `
 
 export default function InfoTable({ info }: { info: Center['info'] }) {
   return (
-    <TableFrame>
+    <TableFrame margin="0 0  1.5rem 0">
       {Object.keys(info).map((key: string, idx) => {
         return (
           <Container key={idx}>
-            <Label fontWeight="bold" color="lightBlack" lignHeight={2.25}>
+            <Label
+              fontSize={0.875}
+              fontWeight="bold"
+              color="lightBlack"
+              lignHeight={2.25}
+            >
               {key}
             </Label>
-            <Description key={idx} lignHeight={2.25}>
+            <Description key={idx} fontSize={0.875} lignHeight={2.25}>
               {info[key]}
             </Description>
           </Container>
