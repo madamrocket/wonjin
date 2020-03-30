@@ -137,12 +137,15 @@ const HamburgerButton = styled.img`
   cursor: pointer;
 
   @media ${media.md} {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1rem;
     display: block;
     font-size: 0.875rem;
     height: 1.25rem;
     line-height: 1.25rem;
     float: right;
-    padding: 0.95rem 0;
 
     &:before {
       width: auto;
