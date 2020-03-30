@@ -5,7 +5,6 @@ import Container from '../share/container'
 import Text from '../share/text'
 import media from '../share/media'
 import HistoryTable from './history-table'
-import Responsive from '../share/responsive'
 import data from './data.json'
 
 const HistoryFrame = styled(Container)`

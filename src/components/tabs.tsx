@@ -8,19 +8,16 @@ import getColor from './share/color'
 const Tab = styled.div<{
   active: boolean
   bottomSpancing?: number
+  sideSpancing?: number
+  mobileSideSpancing?: number
+  mobileBottomSpancing?: number
 }>`
   position: relative;
   display: inline-block;
   font-size: 1.125rem;
   font-weight: 400;
   cursor: pointer;
-  margin: 0 1rem;
-
-  ${({ bottomSpancing }) =>
-    bottomSpancing &&
-    `
-    margin-bottom: ${bottomSpancing}rem;
-  `}
+  margin: 0 ${({ sideSpancing }) => sideSpancing || 1}rem;
 
   ${({ active }) =>
     active &&
@@ -39,9 +36,24 @@ const Tab = styled.div<{
         }
       `}
 
+   ${({ bottomSpancing }) =>
+     bottomSpancing &&
+     `
+    margin-bottom: ${bottomSpancing}rem;
+  `}   
+
    @media ${media.md} {
      font-size: 0.8125rem;     
+     margin: 0 ${({ mobileSideSpancing }) => mobileSideSpancing || 1}rem;
+
+     ${({ mobileBottomSpancing }) =>
+       mobileBottomSpancing &&
+       `
+    margin-bottom: ${mobileBottomSpancing}rem;
+  `}  
    }   
+
+ 
 `
 
 export default function Tabs<T>({
@@ -49,6 +61,9 @@ export default function Tabs<T>({
   onChange,
   value,
   bottomSpancing,
+  sideSpancing,
+  mobileSideSpancing,
+  mobileBottomSpancing,
 }: {
   value: T
   options: {
@@ -56,7 +71,10 @@ export default function Tabs<T>({
     label: string
   }[]
   onChange: (value: T) => void
+  sideSpancing?: number
   bottomSpancing?: number
+  mobileSideSpancing?: number
+  mobileBottomSpancing?: number
 }) {
   return (
     <Container>
@@ -66,6 +84,9 @@ export default function Tabs<T>({
           active={optionValue === value}
           onClick={() => onChange(optionValue)}
           bottomSpancing={bottomSpancing}
+          sideSpancing={sideSpancing}
+          mobileSideSpancing={mobileSideSpancing}
+          mobileBottomSpancing={mobileBottomSpancing}
         >
           {label}
         </Tab>

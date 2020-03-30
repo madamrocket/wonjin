@@ -3,6 +3,7 @@ enum Colors {
   black = '#1b1b1b',
   lightBlack = '#464646',
   blue = '#005596',
+  deep_blue = '#004070',
   gray = '#767676',
   lightGray = '#f4f4f4',
   darkGray = '#d3d3d3',

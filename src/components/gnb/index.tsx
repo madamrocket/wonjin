@@ -18,7 +18,7 @@ const GNBFrame = styled(Container)`
 
   @media ${media.md} {
     width: 100%;
-    padding: 0 1.25rem;
+    padding: 0 1rem;
     height: 48px;
   }
 `
