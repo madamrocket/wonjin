@@ -1,6 +1,10 @@
 export type Center = {
-  id: string
+  id: number
   image: string
   name: string
   address: string
+  description: string
+  info: {
+    [key: string]: string
+  }
 }

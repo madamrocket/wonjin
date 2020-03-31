@@ -7,10 +7,6 @@ import media from '../share/media'
 import { solutions } from './data.json'
 
 const SolutaionFrame = styled(Container)`
-  max-width: 64rem;
-  width: 92.09%;
-  margin: 5.75rem auto 1rem auto;
-
   @media ${media.md} {
     margin: 5.75rem auto 0 auto;
   }
@@ -18,8 +14,6 @@ const SolutaionFrame = styled(Container)`
 
 const SolutionContainer = styled(Container)`
   display: inline-block;
-  width: 46%;
-  margin: 0 0 2.875rem 0;
 
   &:nth-child(2n-1) {
     margin-right: 8%;
@@ -44,7 +38,11 @@ const Title = styled(Text)`
 
 function SolutaionSection() {
   return (
-    <SolutaionFrame>
+    <SolutaionFrame
+      maxWidth="64rem"
+      width="92.09%"
+      margin="5.75rem auto 1rem auto"
+    >
       <Title
         fontSize={1.5}
         mobileFontSize={1.25}
@@ -56,7 +54,7 @@ function SolutaionSection() {
       </Title>
       <Container>
         {solutions.map(({ title, content }, idx) => (
-          <SolutionContainer key={idx}>
+          <SolutionContainer key={idx} width="46%" margin="0 0 2.875rem 0">
             <Text
               color="blue"
               fontSize={1.25}

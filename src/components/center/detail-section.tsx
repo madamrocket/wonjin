@@ -8,11 +8,6 @@ import media from '../share/media'
 import { Center } from './types'
 
 const DetailFrame = styled(Container)`
-  max-width: 40.5rem;
-  width: 92.09%;
-  margin: 0 auto;
-  padding: 1rem 0 4rem 0;
-
   @media ${media.md} {
     padding: 0.25rem 0 2.25rem 0;
   }
@@ -26,7 +21,12 @@ function DetailSection({ center }: { center: Center }) {
   const { image, description, info, name } = center
 
   return (
-    <DetailFrame>
+    <DetailFrame
+      maxWidth="40.5rem"
+      width="92.09%"
+      margin="0 auto"
+      padding="1rem 0 4rem 0"
+    >
       <Image src={image} />
       <Text
         fontSize={1.25}

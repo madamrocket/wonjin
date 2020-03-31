@@ -12,10 +12,6 @@ const FooterFrame = styled(Container)`
 `
 
 const FooterContainer = styled(Container)`
-  margin: 0 auto;
-  width: 92.09%;
-  max-width: 64rem;
-
   @media ${media.md} {
     width: 89.33%;
   }
@@ -42,7 +38,7 @@ const LogoContainer = styled.div`
 
 function Footer() {
   return (
-    <FooterFrame>
+    <FooterFrame maxWidth="64rem" margin="0 auto" width="92.09%">
       <FooterContainer
         maxWidth="59rem"
         margin="0 auto"

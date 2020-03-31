@@ -6,8 +6,6 @@ import Text from '../../share/text'
 import media from '../../share/media'
 
 const HistoryFrame = styled(Container)`
-  padding: 1.438rem 2.063rem 0.5625rem 2.063rem;
-
   @media ${media.md} {
     padding: 1rem 1.25rem;
   }
@@ -15,7 +13,7 @@ const HistoryFrame = styled(Container)`
 
 function History() {
   return (
-    <HistoryFrame>
+    <HistoryFrame padding="1.438rem 2.063rem 0.5625rem 2.063rem">
       <Text
         margin="0 0 0.875rem 0"
         fontWeight="bold"

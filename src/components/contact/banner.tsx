@@ -8,7 +8,6 @@ import media from '../share/media'
 import Text, { Emphasis } from '../share/text'
 
 const BannerFrame = styled(Container)`
-  width: 100%;
   background-color: ${getColor('deep_blue')};
 
   @media ${media.md} {
@@ -24,7 +23,7 @@ const BannerContentContainer = styled(Container)`
 
 export default function Banner() {
   return (
-    <BannerFrame padding="2.5rem 0">
+    <BannerFrame width="100%" padding="2.5rem 0">
       <BannerContentContainer
         maxWidth="40.88rem"
         margin="0 auto"

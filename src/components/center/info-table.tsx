@@ -7,9 +7,6 @@ import media from '../share/media'
 import { Center } from './types'
 
 const TableFrame = styled(Container)`
-  max-height: 27.75rem;
-  overflow: auto;
-  padding: 0.75rem 1.5rem;
   border-top: 1px solid #333;
   border-bottom: 1px solid #333;
 
@@ -32,7 +29,12 @@ const Description = styled(Text)`
 
 export default function InfoTable({ info }: { info: Center['info'] }) {
   return (
-    <TableFrame margin="0 0 1.5rem 0">
+    <TableFrame
+      maxWidth="27.75rem"
+      margin="0 0 1.5rem 0"
+      overflow="auto"
+      padding="0.75rem 1.5rem"
+    >
       {Object.keys(info).map((key: string, idx) => {
         return (
           <Container key={idx}>

@@ -21,7 +21,6 @@ const Image = styled.img`
 `
 
 const ContentsContainer = styled(Container)`
-  width: 48%;
   display: inline-block;
 
   &:nth-child(2n - 1) {
@@ -58,7 +57,7 @@ function Contents() {
   return (
     <Container>
       {posts.map(({ title, subTitle, image, content }, idx) => (
-        <ContentsContainer key={idx}>
+        <ContentsContainer width="48%" key={idx}>
           <Responsive target="pc" margin="0 0 1.25rem 0">
             <Text color="green" fontSize={1.5} fontWeight="bold">
               {title}

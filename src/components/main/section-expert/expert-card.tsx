@@ -8,10 +8,7 @@ import { Card } from './types'
 import IconButton from '../../share/icon-button'
 
 const CardFrame = styled(Container)`
-  width: 48%;
-  margin-bottom: 3.5rem;
   display: inline-block;
-  text-align: left;
 
   &:nth-child(2n - 1) {
     margin-right: 2%;
@@ -46,7 +43,7 @@ function CompetencyCard({
   const { image, title, description, link } = card
 
   return (
-    <CardFrame>
+    <CardFrame width="48%" margin="0 0 3.5rem 0" textAlign="left">
       <Image src={image} />
       <Text
         fontSize={0.875}

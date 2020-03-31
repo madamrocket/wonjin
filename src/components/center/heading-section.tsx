@@ -1,5 +1,4 @@
 import React, { useMemo } from 'react'
-import styled from 'styled-components'
 
 import Container from '../share/container'
 import Text from '../share/text'
@@ -11,12 +10,6 @@ interface HeadingSectionProps {
   selectedId: number
   onClick: (id: number) => void
 }
-
-const HeadingSectionFrame = styled(Container)`
-  width: 92.09%;
-  max-width: 64rem;
-  margin: 0 auto;
-`
 
 export default function HeadingSection({
   onClick,
@@ -32,7 +25,13 @@ export default function HeadingSection({
     [],
   )
   return (
-    <HeadingSectionFrame position="relative" textAlign="center">
+    <Container
+      maxWidth="64rem"
+      position="relative"
+      textAlign="center"
+      width="92.09%"
+      margin="0 auto"
+    >
       <Text
         margin="2.25rem 0"
         mobileineMargin="1.5rem 0"
@@ -51,6 +50,6 @@ export default function HeadingSection({
         mobileSideSpancing={0.5}
         mobileBottomSpancing={1.25}
       />
-    </HeadingSectionFrame>
+    </Container>
   )
 }

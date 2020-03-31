@@ -14,12 +14,6 @@ interface Keyword {
 }
 
 const KeywordFrame = styled(Containter)`
-  text-align: center;
-  padding: 2.438rem 2rem 2.5rem 2rem;
-  width: 92.09%;
-  max-width: 64rem;
-  margin: 0 auto;
-
   @media ${media.md} {
     padding: 1.25rem 0 2.25rem 0;
   }
@@ -66,7 +60,13 @@ const Icon = styled.span<{ src: string }>`
 
 function Keyword() {
   return (
-    <KeywordFrame>
+    <KeywordFrame
+      maxWidth="64rem"
+      width="92.09%"
+      margin="0 auto"
+      padding="2.438rem 2rem 2.5rem 2rem"
+      textAlign="center"
+    >
       {(data as Keyword[]).map(({ title, body, image }, idx) => (
         <KeyWrodBox key={idx} position="relative">
           <Icon src={image} />

@@ -10,7 +10,6 @@ import media from '../../share/media'
 const CardFrame = styled(Container)`
   left: -10000px;
   display: block;
-  width: 33.3%;
   z-index: 3;
 
   > img {
@@ -56,7 +55,7 @@ function Card({
   const { id, name, image, address } = source
 
   return (
-    <CardFrame>
+    <CardFrame width="33.3%">
       <Link to={`/center?id=${id}`}>
         <Image src={image} alt={name} onLoad={imageOnload} />
         <Text

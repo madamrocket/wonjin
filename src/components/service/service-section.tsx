@@ -15,11 +15,6 @@ interface Service {
 }
 
 const ServiceFrame = styled(Container)`
-  max-width: 64rem;
-  width: 92.09%;
-  margin: 0 auto;
-  padding: 2.063rem 0 2.5rem 0;
-
   @media ${media.md} {
     padding: 2rem 0 0 0;
   }
@@ -53,7 +48,6 @@ const ServiceContainer = styled(Container)`
 
 const ContentContainer = styled(Container)`
   width: calc(100% - 15.063rem);
-  float: right;
 
   @media ${media.md} {
     float: auto;
@@ -69,7 +63,12 @@ const Title = styled(Text)`
 
 function ServiceSeciton() {
   return (
-    <ServiceFrame>
+    <ServiceFrame
+      maxWidth="64rem"
+      width="92.09%"
+      margin="0 auto"
+      padding="2.063rem 0 2.5rem 0"
+    >
       <Title
         fontSize={1.5}
         mobileFontSize={1.25}
@@ -83,7 +82,7 @@ function ServiceSeciton() {
       {(services as Service[]).map(({ image, title, content, tit_mo }, idx) => (
         <ServiceContainer key={idx} overflow="hidden">
           <Image src={image} />
-          <ContentContainer>
+          <ContentContainer float="right">
             <Responsive target="pc">
               <Text
                 color="blue"

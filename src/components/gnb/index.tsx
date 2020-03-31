@@ -15,9 +15,6 @@ const GNBFrame = styled(Container)`
 
 const GNBContainer = styled(Container)`
   vertical-align: top;
-  width: 92.09%;
-  max-width: 64rem;
-  margin: 0 auto;
   height: 5rem;
 
   @media ${media.md} {
@@ -54,7 +51,13 @@ function GNB({ pathname }: { pathname: string }) {
 
   return (
     <GNBFrame>
-      <GNBContainer overflow="hidden" position="relative">
+      <GNBContainer
+        maxWidth="64rem"
+        width="92.09%"
+        overflow="hidden"
+        margin="0 auto"
+        position="relative"
+      >
         <Responsive target="pc" float="left">
           <Logo to="/" />
         </Responsive>

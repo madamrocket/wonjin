@@ -21,8 +21,6 @@ const InfoContainer = styled(Container)<{ focusing?: boolean }>`
 `
 
 const CompanyInfoSectionFrame = styled(Container)`
-  padding: 0 0 4rem 0;
-
   @media ${media.md} {
     padding: 0 0 1.875rem 0;
   }
@@ -33,7 +31,12 @@ function CompanyInfoSection() {
     window.location.href = link
   }
   return (
-    <CompanyInfoSectionFrame maxWidth="40.88rem" width="92.09%" margin="0 auto">
+    <CompanyInfoSectionFrame
+      maxWidth="40.88rem"
+      width="92.09%"
+      margin="0 auto"
+      padding="0 0 4rem 0"
+    >
       {INFO.map(({ label, value, link }, idx) => (
         <InfoContainer
           key={idx}

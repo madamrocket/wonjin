@@ -44,14 +44,9 @@ const Dot = styled.div<{ active?: boolean }>`
 
 const CarouselFrame = styled(Container)`
   overflow: visible;
-  width: 100%;
 
   img {
     pointer-events: none;
-  }
-
-  @media ${media.md} {
-    width: 100%;
   }
 `
 
@@ -114,7 +109,7 @@ function Carousel() {
   const hasNextPage = currentIndex + 1 < pageCount
 
   return (
-    <CarouselFrame float="right" position="relative">
+    <CarouselFrame width="100%" float="right" position="relative">
       <Flicking
         ref={flickingRef}
         collectStatistics={false}

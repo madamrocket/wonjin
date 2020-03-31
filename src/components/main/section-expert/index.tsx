@@ -8,11 +8,6 @@ import media from '../../share/media'
 import Text from '../../share/text'
 
 const SectionExpertFrame = styled(Container)`
-  width: 92.09%;
-  max-width: 64rem;
-  text-align: center;
-  margin: 0 auto;
-
   @media ${media.md} {
     width: 89.33%;
     text-align: left;
@@ -52,7 +47,13 @@ function SectionExpert() {
   }
 
   return (
-    <SectionExpertFrame padding="3.75rem 0 0 0">
+    <SectionExpertFrame
+      width="92.09%"
+      maxWidth="64rem"
+      margin="0 auto"
+      padding="3.75rem 0 0 0"
+      textAlign="center"
+    >
       <HeadingTextContainer margin="0 0 0.75rem 0">
         <Text
           color="green"

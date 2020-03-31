@@ -12,9 +12,7 @@ import Responsive from '../../share/responsive'
 import media from '../../share/media'
 
 const SectionCenterFrame = styled(Container)`
-  padding: 3.25rem 0 2.5rem 0;
   background: ${getColor('lightGray')};
-  overflow: hidden;
 
   @media ${media.md} {
     padding: 2.25rem 0;
@@ -22,9 +20,6 @@ const SectionCenterFrame = styled(Container)`
 `
 
 const SectionCenterContainer = styled(Container)`
-  width: 92.09%;
-  max-width: 64rem;
-
   @media ${media.md} {
     width: 100%;
     padding-left: 1.25rem;
@@ -32,8 +27,6 @@ const SectionCenterContainer = styled(Container)`
 `
 
 const TextContainer = styled(Container)`
-  position: relative;
-
   @media ${media.md} {
     text-align: left;
 
@@ -52,13 +45,18 @@ const ContentText = styled(Text)`
 
 function SectionIntroCenter() {
   return (
-    <SectionCenterFrame>
+    <SectionCenterFrame padding="3.25rem 0 2.5rem 0" overflow="hidden">
       <SectionCenterContainer
-        maxWidth="59rem"
+        width="92.09%"
+        maxWidth="64rem"
         margin="0 auto"
         position="relative"
       >
-        <TextContainer margin="0 0 1.438rem 0" textAlign="center">
+        <TextContainer
+          position="relative"
+          margin="0 0 1.438rem 0"
+          textAlign="center"
+        >
           <Text
             fontSize={1.75}
             color="blue"

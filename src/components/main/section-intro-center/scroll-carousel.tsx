@@ -7,18 +7,15 @@ import Card from './card'
 import Container from '../../share/container'
 
 const ScrollCarouselFrame = styled(Container)`
-  width: 100%;
   white-space: nowrap;
   overflow-x: scroll;
   overflow-y: hidden;
 `
 
 function ScrollCarousel() {
-  const centers = data as Center[]
-
   return (
-    <ScrollCarouselFrame float="right" position="relative">
-      {centers.map((center, idx) => (
+    <ScrollCarouselFrame width="100%" float="right" position="relative">
+      {(data as Center[]).map((center, idx) => (
         <Card source={center} key={idx} />
       ))}
     </ScrollCarouselFrame>
