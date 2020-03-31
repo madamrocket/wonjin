@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
+import { GoogleApiWrapper, Map, MapProps, Marker } from 'google-maps-react'
 
 import Container from '../share/container'
 import Text from '../share/text'
@@ -9,22 +10,27 @@ const MAPS = [
   {
     label: '본사',
     value: 0,
+    lat: 37.180055,
+    lng: 127.337614,
   },
   {
     label: '판교사무실',
     value: 1,
+    lat: 37.4106752,
+    lng: 127.0931202,
   },
 ]
 
-const Empty = styled.div`
+const MapContainer = styled.div`
+  position: relative;
   width: 100%;
   height: 320px;
-  background: #efefef;
   margin: 0 0 1.25rem 0;
 `
 
-export default function Map() {
+function GoogleMap({ google }: MapProps) {
   const [currentTab, setCurrentTab] = useState(0)
+  const { lng, lat, label } = MAPS[currentTab]
 
   return (
     <Container
@@ -53,7 +59,24 @@ export default function Map() {
         bottomSpancing={1.625}
         mobileBottomSpancing={1.125}
       />
-      <Empty />
+      <MapContainer>
+        <Map
+          key={label}
+          google={google}
+          zoom={16}
+          initialCenter={{
+            lat,
+            lng,
+          }}
+        >
+          <Marker position={{ lat, lng }} />
+        </Map>
+      </MapContainer>
     </Container>
   )
 }
+
+export default GoogleApiWrapper({
+  apiKey: process.env.GOOGLE_MAP_API_KEY as string,
+  language: 'ko',
+})(GoogleMap)
