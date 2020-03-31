@@ -9,6 +9,7 @@ export default styled.button<{
 }>`
   position: relative;
   font-size: ${({ size }) => size || '0.75rem'};
+  cursor: pointer;
 
   ${({ color }) => `
     background: ${getColor(color === 'blue' ? 'blue' : 'white')};

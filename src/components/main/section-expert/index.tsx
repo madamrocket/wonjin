@@ -47,6 +47,10 @@ const ContentTitle = styled(Text)`
 `
 
 function SectionExpert() {
+  const handleOpenLink = (link: string) => {
+    window.open(link, '_blank')
+  }
+
   return (
     <SectionExpertFrame padding="3.75rem 0 0 0">
       <HeadingTextContainer margin="0 0 0.75rem 0">
@@ -72,7 +76,7 @@ function SectionExpert() {
       </ContentTitle>
       <ExpertCardContainer margin="2rem auto 0 auto">
         {data.map((card, key) => (
-          <ExpertCard key={key} card={card} />
+          <ExpertCard key={key} card={card} onClick={handleOpenLink} />
         ))}
       </ExpertCardContainer>
     </SectionExpertFrame>

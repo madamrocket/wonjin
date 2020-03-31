@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'gatsby'
 
 import Container from '../../share/container'
 import Text from '../../share/text'
@@ -79,9 +80,11 @@ function SectionIntroCenter() {
           >
             원하시는 조건을 알려주세요. 원진물류가 최적의 창고를 찾아드립니다.
           </ContentText>
-          <IconButton width="10.19rem" color="blue">
-            원진물류센터 둘러보기
-          </IconButton>
+          <Link to="/center">
+            <IconButton width="10.19rem" color="blue">
+              원진물류센터 둘러보기
+            </IconButton>
+          </Link>
         </TextContainer>
         <Responsive target="pc">
           <Carousel />

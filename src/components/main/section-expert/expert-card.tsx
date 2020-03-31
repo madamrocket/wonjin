@@ -36,8 +36,14 @@ const Image = styled.img`
   width: 100%;
 `
 
-function CompetencyCard({ card }: { card: Card }) {
-  const { image, title, description } = card
+function CompetencyCard({
+  card,
+  onClick,
+}: {
+  card: Card
+  onClick: (link: string) => void
+}) {
+  const { image, title, description, link } = card
 
   return (
     <CardFrame>
@@ -63,7 +69,12 @@ function CompetencyCard({ card }: { card: Card }) {
       >
         {description}
       </Text>
-      <IconButton width="7.375rem" color="green" size="0.875rem">
+      <IconButton
+        width="7.375rem"
+        color="green"
+        size="0.875rem"
+        onClick={() => onClick(link)}
+      >
         글 확인하기
       </IconButton>
     </CardFrame>

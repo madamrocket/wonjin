@@ -69,6 +69,7 @@ const ControllButton = styled.span<{ type: 'prev' | 'next' }>`
     right: -1rem;
   `}
 
+  cursor: pointer;
   width: 1.125rem;
   height: 1.125rem;
   position: absolute;
@@ -146,7 +147,11 @@ function Carousel() {
       )}
       <DotContainer textAlign="center" margin="2.25rem 0 0 0">
         {[...new Array(pageCount)].map((_, idx) => (
-          <Dot active={idx === currentIndex} onClick={() => handleMove(idx)} />
+          <Dot
+            key={idx}
+            active={idx === currentIndex}
+            onClick={() => handleMove(idx)}
+          />
         ))}
       </DotContainer>
     </CarouselFrame>

@@ -51,7 +51,7 @@ function Card({
   imageOnload,
 }: {
   source: Center
-  imageOnload: () => void
+  imageOnload?: () => void
 }) {
   const { id, name, image, address } = source
 
