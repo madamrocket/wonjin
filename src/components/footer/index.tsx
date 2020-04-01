@@ -38,9 +38,10 @@ const LogoContainer = styled.div`
 
 function Footer() {
   return (
-    <FooterFrame maxWidth="64rem" margin="0 auto" width="92.09%">
+    <FooterFrame margin="0 auto">
       <FooterContainer
-        maxWidth="59rem"
+        width="92.09%"
+        maxWidth="64rem"
         margin="0 auto"
         position="relative"
         padding="1.563rem 0"
