@@ -4,6 +4,11 @@ import styled from 'styled-components'
 import getColor from './share/color'
 import media from './share/media'
 
+const LINKS = {
+  naver: '',
+  facebook: '',
+}
+
 const Icon = styled.span<{ type: 'naver' | 'facebook' }>`
   background: ${({ type }) => `url(/images/logo-${type}-gray@2x.png)`} no-repeat;
   background-size: 1.625rem;
@@ -30,10 +35,14 @@ const Icon = styled.span<{ type: 'naver' | 'facebook' }>`
 `
 
 export default function SocialButton() {
+  const handleOpenLink = (link: string) => {
+    window.open(link, '_blank')
+  }
+
   return (
     <>
-      <Icon type="naver" />
-      <Icon type="facebook" />
+      <Icon type="naver" onClick={() => handleOpenLink(LINKS.naver)} />
+      <Icon type="facebook" onClick={() => handleOpenLink(LINKS.facebook)} />
     </>
   )
 }
