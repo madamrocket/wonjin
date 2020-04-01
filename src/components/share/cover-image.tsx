@@ -57,7 +57,7 @@ function CoverImage({
       opacity={opacity}
       mobileHeight={mobileHeight}
     >
-      <Image src={src} />
+      <Image src={src} alt="커버 이미지" />
     </ImageFrame>
   )
 }

@@ -44,7 +44,7 @@ function CompetencyCard({
 
   return (
     <CardFrame width="48%" margin="0 0 3.5rem 0" textAlign="left">
-      <Image src={image} />
+      <Image src={image} alt={title} />
       <Text
         fontSize={0.875}
         fontWeight="bold"

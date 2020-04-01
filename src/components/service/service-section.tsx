@@ -81,7 +81,7 @@ function ServiceSeciton() {
       </Title>
       {(services as Service[]).map(({ image, title, content, tit_mo }, idx) => (
         <ServiceContainer key={idx} overflow="hidden">
-          <Image src={image} />
+          <Image src={image} alt={title} />
           <ContentContainer float="right">
             <Responsive target="pc">
               <Text

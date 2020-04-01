@@ -63,7 +63,7 @@ function Contents() {
               {title}
             </Text>
           </Responsive>
-          <Image src={image} />
+          <Image src={image} alt={title} />
           <ContentBodyContainer>
             <Responsive target="mo" margin="0 0 0.5rem 0">
               <Text color="green" fontSize={1.25} fontWeight="bold">

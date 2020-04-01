@@ -27,7 +27,7 @@ function DetailSection({ center }: { center: Center }) {
       margin="0 auto"
       padding="1rem 0 4rem 0"
     >
-      <Image src={image} />
+      <Image src={image} alt={name} />
       <Text
         fontSize={1.25}
         margin="2.625rem 0 0.5rem 1.5rem"
