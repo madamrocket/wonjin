@@ -1,5 +1,10 @@
 # WONJIN
 
+## 배포
+
+- 배포는 [`now`](https://zeit.co/madamrocket) 를 통해 이루어집니다.
+- master merge시 자동 배포됩니다.
+
 ## 공통
 
 - 이미지 파일들은 static/images 에 모여있습니다.

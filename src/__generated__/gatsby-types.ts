@@ -2665,10 +2665,10 @@ export type StringQueryOperatorInput = {
   readonly glob: Maybe<Scalars['String']>;
 };
 
-export type SiteTitleQueryQueryVariables = {};
+export type Unnamed_1_QueryVariables = {};
 
 
-export type SiteTitleQueryQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title'>> }> };
+export type Unnamed_1_Query = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title' | 'description'>> }> };
 
 export type GatsbyImageSharpFixedFragment = Pick<ImageSharpFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet'>;
 
@@ -2718,12 +2718,12 @@ export type GatsbyImageSharpSizes_noBase64Fragment = Pick<ImageSharpSizes, 'aspe
 
 export type GatsbyImageSharpSizes_withWebp_noBase64Fragment = Pick<ImageSharpSizes, 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
 
+export type SiteTitleQueryQueryVariables = {};
+
+
+export type SiteTitleQueryQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title'>> }> };
+
 export type PagesQueryQueryVariables = {};
 
 
 export type PagesQueryQuery = { readonly allSitePage: { readonly nodes: ReadonlyArray<Pick<SitePage, 'path'>> } };
-
-export type Unnamed_1_QueryVariables = {};
-
-
-export type Unnamed_1_Query = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title' | 'description'>> }> };

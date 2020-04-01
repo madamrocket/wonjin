@@ -34,18 +34,6 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icons: [
-          {
-            src: '/logos/gatsby-icon.png',
-            sizes: '48x48',
-            type: 'image/png',
-          },
-          {
-            src: '/logos/gatsby-icon.png',
-            sizes: '1024x1024',
-            type: 'image/png',
-          },
-        ],
       },
     },
   ],
