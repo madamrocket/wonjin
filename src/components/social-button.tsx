@@ -5,8 +5,8 @@ import getColor from './share/color'
 import media from './share/media'
 
 const LINKS = {
-  naver: '',
-  facebook: '',
+  naver: 'https://blog.naver.com/wonjinlogis',
+  facebook: 'https://www.facebook.com/wonjinlogis',
 }
 
 const Icon = styled.span<{ type: 'naver' | 'facebook' }>`
