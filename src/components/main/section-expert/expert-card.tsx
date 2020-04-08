@@ -40,7 +40,7 @@ function CompetencyCard({
   card: Card
   onClick: (link: string) => void
 }) {
-  const { image, title, description, link } = card
+  const { category, image, title, description, link } = card
 
   return (
     <CardFrame width="48%" margin="0 0 3.5rem 0" textAlign="left">
@@ -53,7 +53,7 @@ function CompetencyCard({
         lignHeight={1.5}
         mobileFontSize={0.75}
       >
-        Interview
+        {category}
       </Text>
       <Text fontSize={1.5} fontWeight="bold" mobileFontSize={1.125}>
         {title}
