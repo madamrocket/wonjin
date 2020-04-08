@@ -18,6 +18,7 @@ const Icon = styled.span<{ type: 'naver' | 'facebook' }>`
   background-color: ${getColor('lightBlack')};
   border-radius: 100%;
   background-position: center;
+  cursor: pointer;
 
   &:not(:last-child) {
     margin-right: 0.75rem;
