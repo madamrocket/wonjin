@@ -67,7 +67,7 @@
   },
   {
     "id": 3,
-    "image": "/images/yongin-c.png",
+    "image": "/images/cp-yongin-2.png",
     "name": "용인2센터",
     "address": "경기도 용인시 양지면 대대리",
     "info": {
@@ -98,7 +98,7 @@
   },
   {
     "id": 4,
-    "image": "/images/yongin-d.png",
+    "image": "/images/cp-yongin-3.png",
     "name": "용인3센터",
     "address": "경기도 용인시 원삼면 맹리",
     "info": {
@@ -129,8 +129,8 @@
   },
   {
     "id": 5,
-    "image": "/images/yongin-a.png",
-    "name": "용인4센터",
+    "image": "/images/cp-yongin-c2.png",
+    "name": "용인1센터 C동",
     "address": "경기도 용인시 원삼면 맹리",
     "description": "양지IC 인접하며, 영동고속도로와 17번국도에서 접근하기 쉬움",
     "info": {
@@ -161,7 +161,7 @@
   },
   {
     "id": 6,
-    "image": "/images/yongin-a.png",
+    "image": "/images/cp-yongin-5.png",
     "name": "용인5센터",
     "address": "경기도 용인시 원삼면 맹리",
     "description": "높은 층고로 5단렉 설치 가능하여 공간 효율 극대화 가능 넓은 야드로 컨테이너, 트렝일러 하역 작업 가능용인 6센터와 야드 연결 활용 가능",
@@ -193,7 +193,7 @@
   },
   {
     "id": 7,
-    "image": "/images/yongin-a.png",
+    "image": "/images/cp-yongin-6.png",
     "name": "용인6센터",
     "address": "경기도 용인시 원삼면 맹리",
     "description": "높은 층고로 5단렉 설치 가능하여 공간 효율 극대화 가능 넓은 야드로 컨테이너, 트렝일러 하역 작업 가능용인 5센터와 야드 연결 활용 가능",
@@ -225,7 +225,7 @@
   },
   {
     "id": 8,
-    "image": "/images/yongin-a.png",
+    "image": "/images/cp-yj.png",
     "name": "여주삼승센터",
     "address": "경기도 용인시 원삼면 맹리",
     "description": "일반 상온창고 & 위험물 창고로 활용 가능하며 중부내륙고속도로에 근접 위치하여 광고효과의 장점도 갖추고 있음",
@@ -257,7 +257,7 @@
   },
   {
     "id": 9,
-    "image": "/images/yongin-a.png",
+    "image": "/images/cp-chunan.png",
     "name": "천안센터",
     "address": "경기도 용인시 원삼면 맹리",
     "description": "넓은 야드로 컨테이너, 트레일러 접안 가능하며 야드적재 가능",
@@ -289,7 +289,7 @@
   },
   {
     "id": 10,
-    "image": "/images/yongin-a.png",
+    "image": "/images/cp-pt.png",
     "name": "평택센터",
     "address": "경기도 용인시 원삼면 맹리",
     "description": "넓은 야드로 컨테이너, 트레일러 접안 가능하며 야드적재 가능 평택항, 서해안 고속도로 인접",
@@ -321,7 +321,7 @@
   },
   {
     "id": 11,
-    "image": "/images/yongin-a.png",
+    "image": "/images/cp-yg-fresh.png",
     "name": "양지Fresh센터",
     "address": "경기도 용인시 원삼면 맹리",
     "description": "양지IC, 17번 국도 인접하여 접근성 용이함",
@@ -353,7 +353,7 @@
   },
   {
     "id": 12,
-    "image": "/images/yongin-a.png",
+    "image": "/images/cp-beakam-fresh.png",
     "name": "백암Fresh센터",
     "address": "경기도 용인시 원삼면 맹리",
     "description": "양지IC, 일죽IC, 17번 국도 인접하여 접근성 용이함",
