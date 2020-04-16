@@ -9,6 +9,11 @@ import Container from '../../share/container'
 import getColor from '../../share/color'
 import media from '../../share/media'
 
+const EmptyCard = styled.div`
+  width: 33.3%;
+  height: 100%;
+`
+
 const DotContainer = styled(Container)`
   @media ${media.md} {
     margin: 5.8% 0 0 0;
@@ -79,7 +84,9 @@ const ControllButton = styled.span<{ type: 'prev' | 'next' }>`
 function Carousel() {
   const centers = data as Center[]
   const [currentIndex, setCurrentIndex] = useState(0)
-  const pageCount = centers.length / 3
+  const viewCount = 3
+  const pageCount = Math.ceil(centers.length / viewCount)
+  const emptyCount = pageCount * viewCount - centers.length
 
   const flickingRef = useRef() as RefObject<Flicking>
 
@@ -126,6 +133,9 @@ function Carousel() {
       >
         {centers.map((center, idx) => (
           <Card source={center} key={idx} imageOnload={handleResizeFlicking} />
+        ))}
+        {[...new Array(emptyCount)].map((_, idx) => (
+          <EmptyCard key={idx} />
         ))}
       </Flicking>
       {hasPrevPage && (
