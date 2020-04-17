@@ -1,26 +1,30 @@
 [
   {
+    "category":"Blog",
     "image": "/images/competency-01.png",
-    "title": "사람과 세상 그 이상을 연결하는 원진",
-    "description": "물류 인재들로 구성된 원진의 전문가 그룹은 현장 중심의 풍부한 물류 경험을 바탕으로 기업별 최고의 맞춤 서비스를 제공함니다.",
-    "link": "https://www.naver.com"
-  },
-  {
-    "image": "/images/competency-03.png",
-    "title": "원진물류는 어떤기업인가?",
-    "description": "원진물류는 1993년부터 국내 유수 기업에 물류창고 인프라와 위수탁 서비스를 제공해온 최장수 물류회사입니다",
+    "title": "원진물류는 어떤 회사인가요?",
+    "description": "지난 30여년간 물류 센터를 직접 개발하고 운영, 관리 하였던 경험을 바탕으로, 고객사에게 최상의 물류센터 및 제반 시설을 제공하고 있습니다.",
     "link": "https://blog.naver.com/wonjinlogis/221911393310"
   },
   {
-    "image": "/images/competency-02.png",
-    "title": "저온 물류센터 시장 분석 with 원진물류",
-    "description": "왜 저온물류센터가 고객사 니즈에 발맞추어 대두되고 있는가?",
+    "category":"Blog",
+    "image": "/images/competency-03.png",
+    "title": "저온 물류센터 시장 분석",
+    "description": "최근 창고업 등록 현황 기준으로 전국 대비 경기도 저온 센터가 14.4%를 차지하고 있는 가운데 저온 온라인몰의 급성장으로 수도권 인근 저온 수요가 급증하고 있습니다.",
     "link": "https://blog.naver.com/wonjinlogis/221911577893"
   },
   {
-    "image": "/images/competency-04.png",
+    "category":"Blog",
+    "image": "/images/competency-02.png",
     "title": "교통의 중심지, 최적의 입지조건 제공",
-    "description": "수도권 교통의 중심지인 용인 양지 백암 왜 그곳에 물류센터가 밀집하고 있는가?",
+    "description": "수도권 교통의 중심지인 용인 양지, 백암에 위치하여 서울 경기 40분이내 진입 가능한 최적의 입지조건을 제공합니다.",
     "link": "https://blog.naver.com/wonjinlogis/221911602141"
+  },
+  {
+    "category":"Blog",
+    "image": "/images/competency-04.png",
+    "title": "물류 창고업, 핵심 성공키워드 '8가지'",
+    "description": "물류 창고업에서의 경쟁력이 기업 경쟁력으로 더욱 중요한 위치가 되고 있는 요즘, 8가지 성공 키워드를 살펴봅니다.",
+    "link": "https://blog.naver.com/wonjinlogis/221912615724"
   }
 ]
