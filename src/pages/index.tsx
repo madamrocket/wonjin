@@ -10,7 +10,6 @@ interface IndexPageProps {
 }
 
 function IndexPage({ location }: IndexPageProps) {
-  console.log('renewal')
   return (
     <Layout location={location}>
       <SectionIntroWonjin />

@@ -22,13 +22,14 @@ const KeywordFrame = styled(Containter)`
 const KeyWrodBox = styled(Containter)`
   width: 33.3%;
   display: inline-block;
-  text-align: left;
+  text-align: center;
 
   @media ${media.md} {
     display: block;
     margin: 0 auto;
     width: 17.19rem;
     padding-left: 4.25rem;
+    text-align: left;
 
     &:not(:last-child) {
       margin-bottom: 2rem;
@@ -45,7 +46,7 @@ const Icon = styled.span<{ src: string }>`
 
   ${({ src }) => `
     background-image: url(${src});
-    background-size: 2rem;
+    background-size: 3rem;
     background-repeat: no-repeat;
     background-position: center;
   `}
@@ -72,7 +73,7 @@ function Keyword() {
           <Icon src={image} />
           <Containter>
             <Text
-              fontSize={1.25}
+              fontSize={1}
               mobileFontSize={0.9375}
               fontWeight="bold"
               margin="0.5rem 0 0.25rem 0"
