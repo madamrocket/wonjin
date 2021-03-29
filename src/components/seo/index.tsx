@@ -103,7 +103,7 @@ export default function Head({
         )
         .concat(meta)}
     >
-      <link rel="icon" href="/images/fav-32@3x.png" />
+      <link rel="icon" href="/images/wonjin-logo.png" />
     </Helmet>
   )
 }

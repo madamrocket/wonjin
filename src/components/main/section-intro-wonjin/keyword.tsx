@@ -4,7 +4,6 @@ import styled from 'styled-components'
 import Containter from '../../share/container'
 import media from '../../share/media'
 import Text from '../../share/text'
-import getColor from '../../share/color'
 import data from './data.json'
 
 interface Keyword {
@@ -40,7 +39,6 @@ const KeyWrodBox = styled(Containter)`
 const Icon = styled.span<{ src: string }>`
   width: 3rem;
   height: 3rem;
-  background: ${getColor('green')};
   display: inline-block;
   border-radius: 100%;
 
