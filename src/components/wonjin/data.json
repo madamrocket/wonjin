@@ -1,18 +1,27 @@
 [
   {
+    "year": "2021",
+    "histories": [
+      {
+        "month": "02",
+        "contents": ["양지  Fresh센터   준공"]
+      },
+      {
+        "month": "01",
+        "contents": ["용인 1센터 E동 개설"]
+      }
+    ]
+  },
+  {
     "year": "2020",
     "histories": [
       {
-        "month": "10",
-        "contents": ["백암 Fresh센터 준공 예정"]
+        "month": "12",
+        "contents": ["백암 Fresh센터 준공 "]
       },
       {
-        "month": "07",
-        "contents": ["양지 Fresh센터 준공 예정"]
-      },
-      {
-        "month": "03",
-        "contents": ["용인 1센터 C동 준공 에정"]
+        "month": "08",
+        "contents": ["용인 1센터 C동 준공"]
       },
       {
         "month": "01",

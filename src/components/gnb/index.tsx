@@ -26,9 +26,9 @@ const GNBContainer = styled(Container)`
 
 const Logo = styled(Link)`
   display: inline-block;
-  width: 11.38rem;
+  width: 3.5rem;
   height: 3.5rem;
-  background-image: url(/images/logo-gnb@3x.png);
+  background-image: url(/images/wonjin-logo.png);
   background-size: 100%;
   vertical-align: top;
   background-repeat: no-repeat;
@@ -37,9 +37,9 @@ const Logo = styled(Link)`
   transform: translateY(-50%);
 
   @media ${media.md} {
-    width: 6.875rem;
-    height: 1rem;
-    background-image: url(/images/logo-gnb-mo@3x.png);
+    width: 2rem;
+    height: 2rem;
+    background-image: url(/images/wonjin-logo.png);
     margin: 0;
   }
 `
