@@ -39,8 +39,7 @@ function History() {
         mobileFontSize={0.8125}
         fontWeight={400}
       >
-        상담문의 <br /> · 010-5204-4512 이현주 차장 <br /> · 010-9262-5274
-        윤석준 차장
+        상담문의 <br /> · 010-5109-5030 영업팀
       </Text>
     </HistoryFrame>
   )
