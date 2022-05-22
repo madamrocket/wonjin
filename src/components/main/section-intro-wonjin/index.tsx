@@ -34,25 +34,15 @@ function SectionIntroWonjin() {
             color="white"
             fontWeight="bold"
           >
-            대한민국 창고 1호기,
+            프리미엄 물류센터,
           </Text>
           <Text
             fontSize={2.25}
             lignHeight={1.2}
             mobileFontSize={1.25}
             color="white"
-            fontWeight="bold"
           >
-            원진물류
-          </Text>
-          <Text
-            fontSize={2.25}
-            lignHeight={1.2}
-            mobileFontSize={1.25}
-            color="white"
-            fontWeight="bold"
-          >
-            Since 1993
+            그 이상의 가치.
           </Text>
         </Title>
         <Heading

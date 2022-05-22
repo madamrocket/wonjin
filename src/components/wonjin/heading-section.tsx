@@ -40,7 +40,6 @@ export default function HeadingSection() {
       >
         <MessageContainer textAlign="left" padding="2rem 1rem 3.438rem 2rem">
           <Text color="blue" fontSize={2.25} mobileFontSize={1.25} inlineBlock>
-            대한민국 창고1호기 원진물류, 이제는
             <Emphasis
               color="blue"
               fontSize={2.25}
@@ -48,7 +47,8 @@ export default function HeadingSection() {
               fontWeight="bold"
               inlineBlock
             >
-              글로벌ㆍ상생ㆍ혁신ㆍ문화ㆍ브랜드가 되겠습니다.
+              원진물류는 30년 이상 축적된 노하우를 바탕으로 물류센터 운영에 대한
+              차별성을 가진 전문 운영사입니다.
             </Emphasis>
           </Text>
         </MessageContainer>
@@ -59,11 +59,12 @@ export default function HeadingSection() {
         </Text>
         <Container margin="1.625rem 0 0 0">
           <Text color="lightBlack" mobileFontSize={0.8125} lignHeight={1.75}>
-            원진물류는 1993년부터 국내 유수 기업에 물류 시설을 제공하며 성장해
-            온 최장수 물류센터 전문 기 업 입니다. 최첨단 물류센터를 직접
-            운영하며, 고객사 공급망에 대한 치밀한 분석과 현장 중심의 풍부한 물류
-            경험을 바탕으로 고객사 맞춤형의 물류 센터 솔루션을 제공합니다.
-            원진물류가 물류에 대한 모든 해결책이 되어드리겠습니다.
+            원진물류는 국내 교통의 요충지들에 최첨단 물류센터를 직접 운영하며,
+            고객사 공급망에 대한 치밀한 분석과 현장 중심의 풍부한 물류 경험을
+            바탕으로 고객사 맞춤형의 물류 센터 솔루션을 제공합니다. 원진물류는
+            경영진에서부터 현장 최접점에 이르기까지 일체화된 노력으로 안전성과
+            사용성을 확보한 적법한 물류 시설이 될 수 있도록 최선을 다하고
+            있습니다.
           </Text>
         </Container>
       </ContentContainer>

@@ -1,14 +1,23 @@
 [
   {
+    "year": "2022",
+    "histories": [
+      {
+        "month": "05",
+        "contents": ["평택 Fresh센터 오픈"]
+      }
+    ]
+  },
+  {
     "year": "2021",
     "histories": [
       {
-        "month": "02",
-        "contents": ["양지  Fresh센터   준공"]
+        "month": "05",
+        "contents": ["양지 Fresh센터 준공"]
       },
       {
         "month": "01",
-        "contents": ["용인 1센터 E동 개설"]
+        "contents": ["용인 1센터 D동 개설"]
       }
     ]
   },

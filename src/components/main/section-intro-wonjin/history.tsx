@@ -21,7 +21,7 @@ function History() {
         lignHeight={1.4}
         mobileFontSize={1.25}
       >
-        NEWS
+        원진물류 Since 1998
       </Text>
       <Text
         margin="0 0 0.875rem 0"
