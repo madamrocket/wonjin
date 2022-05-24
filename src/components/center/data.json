@@ -97,7 +97,7 @@
   },
   {
     "id": 4,
-    "image": "/images/cp-yi-e.jpg",
+    "image": "/images/yongin-d.png",
     "name": "용인1센터 D동",
     "address": "경기도 용인시 처인구 원삼면",
     "description": "",
@@ -129,7 +129,7 @@
   },
   {
     "id": 5,
-    "image": "/images/cp-yi-2.jpg",
+    "image": "/images/cp-yi-2.png",
     "name": "용인2센터",
     "address": "경기도 용인시 양지면",
     "info": {
@@ -160,7 +160,7 @@
   },
   {
     "id": 7,
-    "image": "/images/cp-pt-re.jpg",
+    "image": "/images/cp-pt-re.png",
     "name": "평택센터",
     "address": "경기도 평택시 포승읍",
     "description": "넓은 야드로 컨테이너, 트레일러 접안 가능하며 야드적재 가능 평택항, 서해안 고속도로 인접",
@@ -255,7 +255,7 @@
   },
   {
     "id": 12,
-    "image": "/images/cp-beakam-fresh.jpg",
+    "image": "/images/cp-pt-fresh.jpg",
     "name": "평택Fresh센터",
     "address": "경기도 평택시 합정동",
     "info": {
@@ -286,7 +286,7 @@
   },
   {
     "id": 10,
-    "image": "/images/cp-oc.jpg",
+    "image": "/images/cp-oc.jpeg",
     "name": "옥천센터",
     "address": "충북 옥천군 동이면",
     "info": {

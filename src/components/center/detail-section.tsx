@@ -12,9 +12,20 @@ const DetailFrame = styled(Container)`
     padding: 0.25rem 0 2.25rem 0;
   }
 `
+const ImageContainer = styled.div`
+  position: relative;
+  padding-bottom: 56%;
+`
 
 const Image = styled.img`
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 `
 
 function DetailSection({ center }: { center: Center }) {
@@ -27,7 +38,9 @@ function DetailSection({ center }: { center: Center }) {
       margin="0 auto"
       padding="1rem 0 4rem 0"
     >
-      <Image src={image} alt={name} />
+      <ImageContainer>
+        <Image src={image} alt={name} />
+      </ImageContainer>
       <Text
         fontSize={1.25}
         margin="2.625rem 0 0.5rem 1.5rem"

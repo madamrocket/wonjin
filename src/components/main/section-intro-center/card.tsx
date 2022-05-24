@@ -36,13 +36,24 @@ const CardFrame = styled(Container)`
 `
 
 const Image = styled.img`
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
   width: 100%;
+  height: 100%;
 `
 
 const Link = styled(BaseLink)`
   display: block;
   width: 100%;
   height: 100%;
+`
+
+const ImageContainer = styled.div`
+  position: relative;
+  padding-bottom: 56%;
 `
 
 function Card({
@@ -57,7 +68,9 @@ function Card({
   return (
     <CardFrame width="33.3%">
       <Link to={`/center?id=${id}`}>
-        <Image src={image} alt={name} onLoad={imageOnload} />
+        <ImageContainer>
+          <Image src={image} alt={name} onLoad={imageOnload} />
+        </ImageContainer>
         <Text
           lignHeight={2}
           fontSize={1.25}

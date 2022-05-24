@@ -10,7 +10,7 @@ const Image = styled.div<{ name: string }>`
   width: 8.875rem;
   height: 3.875rem;
   background-size: 100%;
-  background-image: url(/images/${({ name }) => `logo-${name}-pc@3x.png`});
+  background-image: url(/images/${({ name }) => name});
 
   &:not(:last-child) {
     margin-right: 1.875rem;

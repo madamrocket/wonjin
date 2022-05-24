@@ -15,9 +15,15 @@ interface Post {
 }
 
 const Image = styled.img`
-  width: 100%;
   vertical-align: top;
-  margin-bottom: 1.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 `
 
 const ContentsContainer = styled(Container)`
@@ -51,6 +57,12 @@ const BodyContainer = styled(Container)`
   }
 `
 
+const ImageContainer = styled.div`
+  position: relative;
+  padding-bottom: 42%;
+  margin-bottom: 1.5rem;
+`
+
 function Contents() {
   const posts = data as Post[]
 
@@ -63,7 +75,9 @@ function Contents() {
               {title}
             </Text>
           </Responsive>
-          <Image src={image} alt={title} />
+          <ImageContainer>
+            <Image src={image} alt={title} />
+          </ImageContainer>
           <ContentBodyContainer>
             <Responsive target="mo" margin="0 0 0.5rem 0">
               <Text color="green" fontSize={1.25} fontWeight="bold">
