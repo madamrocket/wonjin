@@ -24,22 +24,15 @@ function History() {
         원진물류 Since 1998
       </Text>
       <Text
-        margin="0 0 0.875rem 0"
-        fontWeight="bold"
-        fontSize={1.25}
-        lignHeight={1.4}
-        mobileFontSize={1.25}
-      >
-        용인 백암 FRESH 센터 <br /> 용인 양지 FRESH 센터 오픈 !
-      </Text>
-
-      <Text
         lignHeight={1.43}
         fontSize={0.875}
         mobileFontSize={0.8125}
         fontWeight={400}
       >
-        상담문의 <br /> · 010-5109-5030 영업팀
+        원진물류는 1998년부터 국내 유수 기업에 물류 시설을 제공하며 성장해 온
+        최장수 물류센터 전문기업입니다. 최첨단 물류센터를 직접 운영하며, 고객사
+        공급망에 대한 치밀한 분석과 현장 중심의 풍부한 물류 경험을 바탕으로
+        고객사 맞춤형의 물류센터 솔루션을 제공합니다.
       </Text>
     </HistoryFrame>
   )

@@ -21,14 +21,13 @@ const KeywordFrame = styled(Containter)`
 const KeyWrodBox = styled(Containter)`
   width: 33.3%;
   display: inline-block;
-  text-align: center;
+  text-align: left;
 
   @media ${media.md} {
     display: block;
     margin: 0 auto;
     width: 17.19rem;
     padding-left: 4.25rem;
-    text-align: left;
 
     &:not(:last-child) {
       margin-bottom: 2rem;
