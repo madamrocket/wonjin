@@ -8,7 +8,7 @@
     "@egjs/flicking": "^3.4.7",
     "@egjs/react-flicking": "^3.2.1",
     "csstype": "^2.6.9",
-    "gatsby": "^2.19.7",
+    "gatsby": "^5.3.3",
     "gatsby-image": "^2.2.39",
     "gatsby-plugin-manifest": "^2.2.39",
     "gatsby-plugin-offline": "^3.0.32",
