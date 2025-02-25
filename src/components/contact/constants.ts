@@ -1,7 +1,7 @@
 export const INFO = [
   {
     label: '본사',
-    value: '경기도 용인시 원삼면 죽양대로 1566',
+    value: '경기도 용인시 양지면 죽양대로 2136',
   },
   {
     label: '판교사무실',
