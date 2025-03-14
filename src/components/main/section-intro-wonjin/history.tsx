@@ -21,7 +21,7 @@ function History() {
         lignHeight={1.4}
         mobileFontSize={1.25}
       >
-        원진물류 Since 19888
+        원진물류 Since 1988
       </Text>
       <Text
         lignHeight={1.43}
